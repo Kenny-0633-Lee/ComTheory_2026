@@ -1,0 +1,14 @@
+# Python 필수 제외
+__pycache__/
+*.py[cod]
+.venv/
+.env
+
+# OS 파일 제외
+.DS_Store
+Thumbs.db
+
+# (선택) 재생성 가능한 에셋 제외 (PDF 용량 관리)
+# 원본 코드만 관리하고 싶다면 아래 주석 해제
+# assets/*.pdf
+# assets/*.svg
