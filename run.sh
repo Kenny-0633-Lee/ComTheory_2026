@@ -8,33 +8,67 @@ export UV_LINK_MODE=copy
 # ------------------------------------------------------------------
 VENV_DIR=".venv"
 
+# echo "🚀 [Step 1] Python 가상환경 점검"
+# # 1. 가상환경 폴더가 없으면 생성 (이게 가장 먼저 와야 함!)
+# if [ ! -d "$VENV_DIR" ]; then
+#     echo "   -> 가상환경 생성 및 라이브러리 설치..."
+#     if command -v uv &> /dev/null; then
+#         uv venv --python 3.12
+#         uv pip install numpy matplotlib diagrams
+#     else
+#         python3 -m venv $VENV_DIR
+#         # 가상환경 내의 pip 사용
+#         if [ -f "$VENV_DIR/bin/python" ]; then
+#             "$VENV_DIR/bin/python" -m pip install numpy matplotlib
+#         elif [ -f "$VENV_DIR/Scripts/python" ]; then
+#             "$VENV_DIR/Scripts/python" -m pip install numpy matplotlib
+#         fi
+#     fi
+# fi
+
+# # 2. 실행할 Python 경로 결정 (이제는 무조건 존재함)
+# if [ -f "$VENV_DIR/bin/python" ]; then
+#     PYTHON="$VENV_DIR/bin/python"      # Mac/Linux
+# elif [ -f "$VENV_DIR/Scripts/python" ]; then
+#     PYTHON="$VENV_DIR/Scripts/python"  # Windows (Git Bash)
+# else
+#     echo "❌ 치명적 에러: 가상환경 생성 실패. Python을 찾을 수 없습니다."
+#     exit 1
+# fi
+
+#
 echo "🚀 [Step 1] Python 가상환경 점검"
-# 1. 가상환경 폴더가 없으면 생성 (이게 가장 먼저 와야 함!)
+# 1. 가상환경이 없으면 껍데기만 생성
 if [ ! -d "$VENV_DIR" ]; then
-    echo "   -> 가상환경 생성 및 라이브러리 설치..."
+    echo "   -> 가상환경 폴더 생성..."
     if command -v uv &> /dev/null; then
         uv venv --python 3.12
-        uv pip install numpy matplotlib
     else
         python3 -m venv $VENV_DIR
-        # 가상환경 내의 pip 사용
-        if [ -f "$VENV_DIR/bin/python" ]; then
-            "$VENV_DIR/bin/python" -m pip install numpy matplotlib
-        elif [ -f "$VENV_DIR/Scripts/python" ]; then
-            "$VENV_DIR/Scripts/python" -m pip install numpy matplotlib
-        fi
     fi
 fi
 
-# 2. 실행할 Python 경로 결정 (이제는 무조건 존재함)
+# 2. Python 경로 확정
 if [ -f "$VENV_DIR/bin/python" ]; then
-    PYTHON="$VENV_DIR/bin/python"      # Mac/Linux
+    PYTHON="$VENV_DIR/bin/python"
 elif [ -f "$VENV_DIR/Scripts/python" ]; then
-    PYTHON="$VENV_DIR/Scripts/python"  # Windows (Git Bash)
+    PYTHON="$VENV_DIR/Scripts/python"
 else
-    echo "❌ 치명적 에러: 가상환경 생성 실패. Python을 찾을 수 없습니다."
+    echo "❌ 가상환경 생성 실패"
     exit 1
 fi
+
+# 3. [중요] 라이브러리 설치는 '항상' 수행 (이미 깔려있으면 1초 만에 넘어감)
+echo "   -> 라이브러리 최신화 (numpy, matplotlib, diagrams)..."
+if command -v uv &> /dev/null; then
+    uv pip install numpy matplotlib diagrams
+else
+    $PYTHON -m pip install numpy matplotlib diagrams
+fi
+
+#
+
+
 
 echo "   -> 사용 중인 Python: $PYTHON"
 
