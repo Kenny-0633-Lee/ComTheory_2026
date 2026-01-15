@@ -4,8 +4,7 @@ import sys
 
 # [수정] src 패키지에서 모듈 불러오기
 # 폴더명(srs) . 파일명(ch04_am) 형식으로 임포트
-from src import ch01_shannon, ch02_signals, ch03_spectrum, ch04_am, ch07_digital, fig_network
-
+from src import ch01_shannon, ch02_signals, ch03_spectrum, ch04_am, ch07_digital, fig_network, anim_fourier
 
 def main():
     print("🚀 Asset Factory Started (Modular Structure)...")
@@ -19,9 +18,7 @@ def main():
     if hasattr(ch01_shannon, 'run'):
         all_cards.extend(ch01_shannon.run())
 
-    # ---------------------------------------------------------
-    # Chapter 02 실행 구역
-    # ---------------------------------------------------------
+    # [Chapter 02] 실행 구역
     print("   👉 Running Chapter 02...", end=" ")
     try:
         if hasattr(ch02_signals, 'run'):
@@ -57,6 +54,12 @@ def main():
         fig_network.run()
     # ----------------------------------
     
+    # -----------------------------------------------------
+    # [추가] 애니메이션 생성 (시간이 좀 걸릴 수 있음)
+    # -----------------------------------------------------
+    if hasattr(anim_fourier, 'run'):
+        anim_fourier.run()
+
 
     # 2. 통합 Flashcard 데이터 저장 (root 폴더)
     # [수정] ensure_ascii=False 옵션을 추가하여 한글이 깨지지 않고 그대로 저장되게 함
