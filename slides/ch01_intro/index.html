@@ -1,0 +1,155 @@
+<!doctype html>
+<html lang="ko">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Communication Theory 2026 - Orientation</title>
+
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/reveal.js@4.5.0/dist/reveal.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/reveal.js@4.5.0/dist/theme/white.css" id="theme">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.7.0/styles/monokai.min.css">
+
+    <style>
+        /* Pretendard 폰트 적용 (없으면 시스템 폰트) */
+        @import url('https://cdn.jsdelivr.net/gh/orioncactus/pretendard/dist/web/static/pretendard.css');
+        
+        :root { --r-main-font: 'Pretendard', sans-serif; --r-heading-font: 'Pretendard', sans-serif; }
+        
+        .reveal h1, .reveal h2, .reveal h3 { font-weight: 700; letter-spacing: -0.02em; }
+        .reveal p { font-weight: 400; line-height: 1.6; }
+        
+        /* 이미지 그림자 효과 */
+        .reveal img { box-shadow: 0 4px 10px rgba(0,0,0,0.1); border-radius: 8px; }
+        
+        /* 강조 색상 (Metropolis 테마 느낌) */
+        .highlight { color: #eb811b; font-weight: bold; }
+        .sub-highlight { color: #23373b; }
+        
+        /* 레이아웃 헬퍼 */
+        .container { display: flex; justify-content: space-between; align-items: center; }
+        .col { flex: 1; margin: 10px; }
+    </style>
+</head>
+
+<body>
+    <div class="reveal">
+        <div class="slides">
+
+            <section data-background-gradient="linear-gradient(to bottom right, #ffffff, #f0f0f0)">
+                <h3>Communication Theory 2026</h3>
+                <h5 class="sub-highlight">From 5G Smartphones to SpaceX Starlink</h5>
+                <hr style="width: 50%; border: 1px solid #eb811b;">
+                <p>
+                    <small>Prof. Kenny Lee (이경근)<br>EE / KNU</small>
+                </p>
+                <p style="font-size: 0.6em; color: gray;">
+                    <i class="fas fa-code"></i> Python Simulation & Engineering Approach
+                </p>
+            </section>
+
+            <section>
+                <h3>The Magic in Your Hand</h3>
+                <p>여러분이 <strong>[Send]</strong> 버튼을 누를 때,<br> 0과 1은 어떻게 공중으로 날아갈까요?</p>
+                
+                <div class="fragment fade-up" style="margin-top: 30px; padding: 20px; background: #f9f9f9; border-left: 5px solid #eb811b;">
+                    <p>"Antennas don't speak Digital.<br>They only speak <strong>Analog Waves</strong>."</p>
+                </div>
+            </section>
+
+            <section>
+                <h3>Connecting the World: Starlink</h3>
+                <div class="container">
+                    <div class="col" style="font-size: 0.7em; text-align: left;">
+                        <ul>
+                            <li class="fragment"><strong>Doppler Effect:</strong><br> 위성이 시속 27,000km로 움직일 때 주파수는?</li>
+                            <li class="fragment"><strong>Link Budget:</strong><br> 우주 잡음 속에서 신호를 어떻게 건져내는가?</li>
+                        </ul>
+                        <br>
+                        <div class="fragment">
+                            <p>이 모든 것의 기초:</p>
+                            $$ C = B \log_2 \left( 1 + \frac{S}{N} \right) $$
+                            <small>(Shannon-Hartley Theorem)</small>
+                        </div>
+                    </div>
+                    <div class="col">
+                        <img src="https://images.unsplash.com/photo-1516849841032-87cbac4d88f7?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80" alt="Satellite">
+                    </div>
+                </div>
+            </section>
+
+            <section>
+                <h3>Why Python? Visualizing Math</h3>
+                <p style="font-size: 0.7em;">수식으로만 보던 푸리에 급수, 눈으로 확인합니다.</p>
+                
+                <div class="container">
+                    <div class="col">
+                        <img src="../../assets/anim_01_square_wave_synthesis.gif" alt="Fourier GIF" style="width: 100%;">
+                    </div>
+                    <div class="col">
+                        <pre><code class="python" data-trim data-noescape>
+# Python Code Example
+import numpy as np
+
+# Summing Sinusoids
+for n in range(1, 30, 2):
+    term = (4/(n*np.pi)) * np.sin(...)
+    current_sum += term
+                        </code></pre>
+                    </div>
+                </div>
+            </section>
+
+            <section>
+                <section>
+                    <h3>Ch 3. AM Frequency Shifting</h3>
+                    <img src="../../assets/fig_03_am_shift.svg" alt="AM Shift" style="background: white; padding: 10px;">
+                    <p class="fragment" style="font-size: 0.8em;">
+                        "Modulation is just <strong>Moving</strong> the Spectrum."
+                    </p>
+                </section>
+                <section>
+                    <h3>Ch 4. FM Accordion Effect</h3>
+                    <div class="container">
+                        <div class="col">
+                            <img src="../../assets/fig_04_fm_accordion.svg" style="background: white;">
+                        </div>
+                        <div class="col" style="font-size: 0.6em; text-align: left;">
+                            <p><strong>High Amp</strong> → Compressed (High Freq)</p>
+                            <p><strong>Low Amp</strong> → Relaxed (Low Freq)</p>
+                        </div>
+                    </div>
+                </section>
+            </section>
+
+            <section data-background="#23373b" style="color: white;">
+                <h3>Ready to be an Engineer?</h3>
+                <ul>
+                    <li>Understand the <strong>Physical Layer</strong></li>
+                    <li>Master <strong>Python Simulation</strong></li>
+                    <li>Design the <strong>Future of Connection</strong></li>
+                </ul>
+                <br><br>
+                <p style="color: #eb811b; font-weight: bold;">See you in Class.</p>
+            </section>
+
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/reveal.js@4.5.0/dist/reveal.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/reveal.js@4.5.0/plugin/math/math.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/reveal.js@4.5.0/plugin/highlight/highlight.js"></script>
+    
+    <script>
+        // Reveal.js 초기화 설정
+        Reveal.initialize({
+            hash: true,            // URL에 슬라이드 번호 표시 (#/1)
+            center: true,          // 슬라이드 중앙 정렬
+            transition: 'slide',   // 전환 효과 (slide, fade, convex, concave, zoom)
+            
+            // 플러그인 설정 (수식, 코드 하이라이팅)
+            plugins: [ RevealMath.KaTeX, RevealHighlight ]
+        });
+    </script>
+</body>
+</html>

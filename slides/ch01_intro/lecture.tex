@@ -9,6 +9,8 @@
 \usepackage{kotex}
 \usepackage{tikz} 
 \usepackage{graphicx, caption, hyperref, fontawesome5}
+% [추가] subfigure 환경을 사용하기 위해 필수입니다!
+\usepackage{subcaption}
 
 % [수식 및 폰트 핵심 설정]
 \usepackage{amsmath}
@@ -44,7 +46,7 @@
     }
 }
 \institute{EE / KNU}
-\graphicspath{{./assets/}}
+\graphicspath{ {./} {../../assets/} {../assets/} }
 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -57,12 +59,12 @@
     \titlepage
 \end{frame}
 
-\begin{frame}
-    \[
-        \int_0^{\pi} \sin x \, \mathrm{d}x = 2
-    \]
+% \begin{frame}
+%     \[
+%         \int_0^{\pi} \sin x \, \mathrm{d}x = 2
+%     \]
 
-\end{frame}
+% \end{frame}
 
 % --- Introduction ---
 \begin{frame}{Introduction}
@@ -88,7 +90,7 @@
         % [Left] Python Generated Visual
         \begin{column}{0.6\textwidth}
             \centering
-            \includegraphics[width=\textwidth]{fig_ch01_shannon.pdf}
+            \includegraphics[width=\textwidth]{fig_ch01_shannon}
         \end{column}
         
         % [Right] Mathematical Proof
@@ -113,10 +115,10 @@
     \end{columns}
 \end{frame}
 
-% --- Ch 3. Channel 예제 ---
+% --- 5G Spectrum ---
 \begin{frame}{Practical Application: 5G Spectrum in Korea}
     \centering
-    \includegraphics[width=0.9\textwidth]{fig_ch3_5g_spectrum.pdf}
+    \includegraphics[width=0.9\textwidth]{fig_ch3_5g_spectrum}
     
     \vspace{0.5cm}
     \begin{block}{Shannon-Hartley Theorem in Practice}
@@ -129,21 +131,105 @@
     \small \textit{Observation: 광대역 연속 블록 확보가 스펙트럼 효율의 핵심입니다.}
 \end{frame}
 
+% --- Chapter 2 Preview ---
+\begin{frame}{Chapter 2 Preview: The Fourier Series}
+    \framesubtitle{All signals are sums of sinusoids}
+    
+    % 그림 3개를 가로로 나란히 배치
+    \begin{figure}
+        \centering
+        \begin{subfigure}{0.32\textwidth}
+            \includegraphics[width=\linewidth]{fourier_step_1}
+            \caption{N=1 (Fundamental)}
+        \end{subfigure}
+        \hfill
+        \begin{subfigure}{0.32\textwidth}
+            \includegraphics[width=\linewidth]{fourier_step_5}
+            \caption{N=5 (Adding Harmonics)}
+        \end{subfigure}
+        \hfill
+        \begin{subfigure}{0.32\textwidth}
+            \includegraphics[width=\linewidth]{fourier_step_29}
+            \caption{N=29 (Square Wave)}
+        \end{subfigure}
+        
+        \caption{Gibbs Phenomenon visualized using Python}
+    \end{figure}
+    
+    \begin{itemize}
+        \item We will learn how to decompose any signal into simple sine waves.
+    \end{itemize}
+\end{frame}
+
+% --- Ch 3. AM Frequency Shifting ---
+\begin{frame}{Chapter 3. Amplitude Modulation (AM)}
+    \framesubtitle{The Modulation Theorem: Frequency Shifting}
+    
+    \centering
+    % 가로 너비를 화면의 90%로 설정하여 시원하게 보여줍니다.
+    \includegraphics[width=0.9\textwidth]{fig_03_am_shift}
+    
+    \vspace{0.3cm}
+    
+    \begin{block}{Frequency Shifting Property}
+        Time Domain에서 $\cos(2\pi f_c t)$를 곱하면,\\
+        Frequency Domain에서는 스펙트럼이 $\pm f_c$로 \textbf{이사(Shift)} 갑니다.
+        \[
+            x(t) = m(t) \cos(2\pi f_c t) \iff X(f) = \frac{1}{2} [M(f-f_c) + M(f+f_c)]
+        \]
+    \end{block}
+\end{frame}
+
 % --- Ch 4. AM 예제 ---
 \begin{frame}{Chapter 4. Amplitude Modulation}
     \begin{columns}
         \begin{column}{0.5\textwidth}
             \textbf{Time Domain}
-            \includegraphics[width=\textwidth]{fig_ch4_am_time.pdf}
+            \includegraphics[width=\textwidth]{fig_ch4_am_time}
         \end{column}
         \begin{column}{0.5\textwidth}
             \textbf{Frequency Domain}
-            \includegraphics[width=\textwidth]{fig_ch4_am_spec.pdf}
+            \includegraphics[width=\textwidth]{fig_ch4_am_spec}
         \end{column}
     \end{columns}
     \vspace{0.2cm}
     \centering
     \small AM 신호는 시간 영역의 포락선(Envelope)과 주파수 영역의 측파대(Sidebands)로 해석됩니다.
+\end{frame}
+
+% --- Ch 4. FM Accordion Effect ---
+\begin{frame}{Chapter 4. Frequency Modulation (FM)}
+    \framesubtitle{Visualizing Instantaneous Frequency}
+
+    \begin{columns}
+        % [Left Column] 그림 영역
+        \begin{column}{0.6\textwidth}
+            \centering
+            % 높이를 화면의 80%로 맞춰서 위아래가 잘리지 않게 합니다.
+            \includegraphics[height=0.8\textheight]{fig_04_fm_accordion}
+        \end{column}
+        
+        % [Right Column] 설명 영역
+        \begin{column}{0.4\textwidth}
+            \textbf{The "Accordion" Effect}
+            \vspace{0.2cm}
+            \begin{itemize}
+                \item \textbf{High Amplitude:} \\
+                $\rightarrow$ 주파수가 높아짐 \\
+                (파형이 촘촘해짐, Compressed)
+                
+                \vspace{0.3cm} % 항목 간 간격
+                
+                \item \textbf{Low Amplitude:} \\
+                $\rightarrow$ 주파수가 낮아짐 \\
+                (파형이 느슨해짐, Relaxed)
+            \end{itemize}
+            
+            \vspace{0.5cm}
+            \small
+            \textit{Insight: 진폭(Amplitude)은 일정하므로 잡음(Noise)에 강합니다.}
+        \end{column}
+    \end{columns}
 \end{frame}
 
 % --- Ch 7. Digital 예제 ---
@@ -152,7 +238,7 @@
         \begin{column}{0.6\textwidth}
             \centering
             % 정사각형 비율 유지를 위해 height 지정
-            \includegraphics[height=0.6\textheight]{fig_ch7_qpsk.pdf}
+            \includegraphics[height=0.6\textheight]{fig_ch7_qpsk}
         \end{column}
         \begin{column}{0.4\textwidth}
             \textbf{QPSK 특징:}

@@ -4,7 +4,8 @@ import sys
 
 # [수정] src 패키지에서 모듈 불러오기
 # 폴더명(srs) . 파일명(ch04_am) 형식으로 임포트
-from src import ch01_shannon, ch02_signals, ch03_spectrum, ch04_am, ch07_digital, fig_network, anim_fourier
+from src import ch01_shannon, ch02_signals, ch03_spectrum, ch04_am, ch07_digital, fig_network, anim_fourier, ch02_fourier_steps, ch05_eye, ch06_aliasing, ch03_am_shift, ch04_fm_accordion
+
 
 def main():
     print("🚀 Asset Factory Started (Modular Structure)...")
@@ -33,6 +34,11 @@ def main():
         print(f"\n❌ Error in Ch02: {e}")
         import traceback
         traceback.print_exc() # 상세 에러 로그 출력
+        
+    # --- Ch 02 ---
+    if hasattr(ch02_fourier_steps, 'run'):
+        ch02_fourier_steps.run()
+    # (anim_fourier는 시간 걸리니 필요할 때만 주석 해제하거나 맨 뒤로)
 
     # [Chapter 03]
     if hasattr(ch03_spectrum, 'run'):
@@ -41,6 +47,18 @@ def main():
     # [Chapter 04]
     if hasattr(ch04_am, 'run'):
         all_cards.extend(ch04_am.run())
+    
+    # --- Ch 05 ---
+    if hasattr(ch05_eye, 'run'):
+        ch05_eye.run()
+    
+    # --- Ch 06 ---
+    if hasattr(ch06_aliasing, 'run'):
+        ch06_aliasing.run()
+    
+    # 신규 추가될 모듈 실행
+    if hasattr(ch03_am_shift, 'run'): ch03_am_shift.run()
+    if hasattr(ch04_fm_accordion, 'run'): ch04_fm_accordion.run()
     
     # [Chapter 07]
     if hasattr(ch07_digital, 'run'):
@@ -54,12 +72,12 @@ def main():
         fig_network.run()
     # ----------------------------------
     
-    # -----------------------------------------------------
+    # -------------------------------------
     # [추가] 애니메이션 생성 (시간이 좀 걸릴 수 있음)
-    # -----------------------------------------------------
+    # -------------------------------------
     if hasattr(anim_fourier, 'run'):
         anim_fourier.run()
-
+    # ----------------------------------
 
     # 2. 통합 Flashcard 데이터 저장 (root 폴더)
     # [수정] ensure_ascii=False 옵션을 추가하여 한글이 깨지지 않고 그대로 저장되게 함
