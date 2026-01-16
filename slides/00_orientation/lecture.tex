@@ -1,0 +1,237 @@
+% !TEX program = xelatex
+\documentclass[11pt, aspectratio=169]{beamer}
+\usetheme{metropolis}
+\usecolortheme{metropolis}
+\usefonttheme{professionalfonts}
+
+% --- 패키지 설정 ---
+\usepackage{kotex}
+\usepackage{graphicx}
+\usepackage{subcaption} % [필수] 이미지 나란히 배치용
+\usepackage{hyperref}
+\usepackage{fontawesome5}
+\usepackage{booktabs}
+\usepackage{amsmath}
+\usepackage[math-style=ISO, bold-style=ISO]{unicode-math}
+
+% [추가] TikZ 및 관련 라이브러리 로드 (필수!)
+\usepackage{tikz}
+\usetikzlibrary{shapes, arrows, positioning}
+
+% --- 폰트 설정 (Pretendard / Fira Math) ---
+\setmainfont[Ligatures=TeX, BoldFont={* Bold}, AutoFakeSlant=0.2]{Pretendard}
+\setsansfont[Ligatures=TeX, BoldFont={* Bold}, AutoFakeSlant=0.2]{Pretendard}
+\setmainhangulfont[BoldFont={* Bold}]{Pretendard}
+\setsanshangulfont[BoldFont={* Bold}]{Pretendard}
+\setmathfont{Fira Math}
+\setmathfont[range={up, bfup}, Scale=MatchLowercase]{Pretendard}
+\setmathfont[range={it, bfit}, Scale=MatchLowercase, FakeSlant=0.2]{Pretendard}
+
+% --- 이미지 경로 설정 ---
+% assets 폴더 위치를 자동으로 찾습니다.
+\graphicspath{ {./} {../../assets/} {../assets/} }
+
+% --- 메타데이터 ---
+\title{Communication Theory}
+\subtitle{EE 2026 Spring Semester}
+\date{\today}
+\author{
+    Prof. Keung-Kun Lee (이경근) \\
+    {\tiny \faEnvelope \ \href{mailto:infosec@knu.ac.kr}{infosec@knu.ac.kr}}
+}
+\institute{School of Electronics Engineering, KNU}
+
+\begin{document}
+
+% #1. Title Page
+\begin{frame}[plain]
+    \titlepage
+\end{frame}
+
+% #2. Intro: The Black Box
+\begin{frame}{Introduction: The Black Box}
+    \begin{columns}
+        \begin{column}{0.4\textwidth}
+            \LARGE
+            \centering
+            \textbf{Smartphone}
+            
+            \vspace{1cm}
+            \normalsize
+            \textit{"We use it every day,\\but how does it work?"}
+        \end{column}
+        \begin{column}{0.6\textwidth}
+            \begin{block}{The Physical Question}
+                여러분이 카카오톡 \textbf{[전송]} 버튼을 누를 때, \\
+                0과 1의 데이터는 어떻게 \textbf{물리적인 파동(Wave)}이 되어 \\
+                공기 중으로 날아가는가?
+            \end{block}
+            \vspace{0.3cm}
+            \small \faArrowRight \ 본 강의는 그 \textbf{"물리적 변환(Transformation)"}의 과정을 배웁니다.
+        \end{column}
+    \end{columns}
+\end{frame}
+
+% #3. The Roadmap (Block Diagram)
+\begin{frame}{Course Roadmap: The Communication System}
+    % Lathi 교재의 블록 다이어그램을 개념적으로 설명
+    \centering
+    \begin{tikzpicture}[node distance=2cm, auto, thick]
+        % TikZ로 간단한 블록 다이어그램 그리기 (이미지 대체 가능)
+        \node (tx) [draw, rectangle, fill=orange!10, minimum height=1cm] {Transmitter};
+        \node (ch) [draw, cloud, fill=blue!10, right of=tx, node distance=4cm, minimum height=1cm] {Channel};
+        \node (rx) [draw, rectangle, fill=green!10, right of=ch, node distance=4cm, minimum height=1cm] {Receiver};
+        
+        \draw[->] (tx) -- node[above] {\small Signal} (ch);
+        \draw[->] (ch) -- node[above] {\small + Noise} (rx);
+    \end{tikzpicture}
+    
+    \vspace{1cm}
+    \begin{itemize}
+        \item \textbf{Ch 1-3:} 신호와 시스템 (Signals) \hfill \textit{"Language"}
+        \item \textbf{Ch 4-5:} 아날로그 통신 (Modulation) \hfill \textit{"Transmission"}
+        \item \textbf{Ch 6-7:} 디지털 통신 (Digital/Noise) \hfill \textit{"Robustness"}
+    \end{itemize}
+\end{frame}
+
+% #4. Ch 1-3 Preview
+\begin{frame}{Part 1. Signals (Ch 1-3)}
+    \framesubtitle{The Language of Communication: Frequency}
+    
+    \begin{figure}
+        \centering
+        \begin{subfigure}{0.32\textwidth}
+            \includegraphics[width=\linewidth]{fourier_step_1}
+            \caption{N=1}
+        \end{subfigure}
+        \hfill
+        \begin{subfigure}{0.32\textwidth}
+            \includegraphics[width=\linewidth]{fourier_step_5}
+            \caption{N=5}
+        \end{subfigure}
+        \hfill
+        \begin{subfigure}{0.32\textwidth}
+            \includegraphics[width=\linewidth]{fourier_step_29}
+            \caption{Square Wave}
+        \end{subfigure}
+        \caption{Fourier Series: 모든 신호는 사인파의 합이다.}
+    \end{figure}
+    
+    \begin{itemize}
+        \item 복잡한 정보를 주파수(Frequency) 성분으로 분해하는 법을 배웁니다.
+    \end{itemize}
+\end{frame}
+
+% #5. Ch 4-5 Preview
+\begin{frame}{Part 2. Analog Modulation (Ch 4-5)}
+    \framesubtitle{Moving the Spectrum}
+    
+    \begin{columns}
+        \begin{column}{0.5\textwidth}
+            \centering
+            \includegraphics[width=0.95\textwidth]{fig_03_am_shift}
+            \vspace{0.2cm}
+            \small \textbf{AM (Amplitude Modulation)} \\
+            주파수 이사(Frequency Shifting)
+        \end{column}
+        \begin{column}{0.5\textwidth}
+            \centering
+            \includegraphics[width=0.95\textwidth]{fig_04_fm_accordion}
+            \vspace{0.2cm}
+            \small \textbf{FM (Frequency Modulation)} \\
+            아코디언 효과 (Noise Immunity)
+        \end{column}
+    \end{columns}
+\end{frame}
+
+% #6. Ch 6-7 Preview
+\begin{frame}{Part 3. Digital Communication (Ch 6-7)}
+    \framesubtitle{Surviving the Noise}
+    
+    \begin{columns}
+        \begin{column}{0.6\textwidth}
+            \centering
+            \includegraphics[width=0.9\textwidth]{fig_05_eye_diagram}
+        \end{column}
+        \begin{column}{0.4\textwidth}
+            \textbf{The Eye Diagram}
+            \vspace{0.5cm}
+            \begin{itemize}
+                \item 0과 1을 아날로그 파형에 싣는 법
+                \item 잡음(Noise) 속에서 에러 없이 복구하는 법
+                \item \textit{"통신 엔지니어는 신호의 눈(Eye)을 뜨게 만드는 사람이다."}
+            \end{itemize}
+        \end{column}
+    \end{columns}
+\end{frame}
+
+% #7. Methodology
+\begin{frame}{Methodology: Theory meets Code}
+    \begin{columns}
+        \begin{column}{0.5\textwidth}
+            \begin{block}{Textbook (Theory)}
+                \[ C = B \log_2 \left( 1 + \frac{S}{N} \right) \]
+                수학적 엄밀함을 배웁니다.
+            \end{block}
+        \end{column}
+        \begin{column}{0.5\textwidth}
+            \begin{block}{Python (Engineering)}
+                \texttt{>>> import numpy as np} \\
+                \texttt{>>> plt.plot(t, signal)} \\
+                이론을 코드로 검증합니다.
+            \end{block}
+        \end{column}
+    \end{columns}
+    
+    \vspace{0.5cm}
+    \centering
+    \faPython \ \textbf{모든 주요 이론은 Python 시뮬레이션 과제가 제공됩니다.}
+\end{frame}
+
+% #8. Outro: Starlink
+\begin{frame}{Vision: From Textbook to Universe}
+    \framesubtitle{Why we learn this?}
+    
+    \begin{columns}
+        \begin{column}{0.6\textwidth}
+            % 스타링크 이미지가 있다면 넣고, 없으면 텍스트로 대체
+            \centering
+            \LARGE \faSatellite \ \faGlobe
+            \vspace{0.5cm}
+            \normalsize
+            \textbf{SpaceX Starlink}
+        \end{column}
+        \begin{column}{0.4\textwidth}
+            \textbf{Advanced Application}
+            \begin{itemize}
+                \item \textbf{Doppler Effect:} \\
+                위성의 빠른 이동 속도 보정 \\
+                (Related to Ch 4. FM)
+                \item \textbf{Link Budget:} \\
+                우주 잡음 극복 설계 \\
+                (Related to Ch 5. Noise)
+            \end{itemize}
+        \end{column}
+    \end{columns}
+    
+    \vspace{0.5cm}
+    \centering
+    \textit{"기본 이론(Fundamentals)이 미래 기술의 기반입니다."}
+\end{frame}
+
+% #9. Closing
+\begin{frame}[plain]
+    \centering
+    \LARGE
+    \textbf{Questions?}
+    
+    \vspace{1cm}
+    \normalsize
+    See you in the next class.
+    
+    \vspace{0.5cm}
+    \small
+    \faEnvelope \ infosec@knu.ac.kr
+\end{frame}
+
+\end{document}

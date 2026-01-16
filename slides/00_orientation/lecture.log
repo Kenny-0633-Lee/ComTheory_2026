@@ -1,4 +1,4 @@
-This is XeTeX, Version 3.141592653-2.6-0.999997 (TeX Live 2025) (preloaded format=xelatex 2026.1.2)  15 JAN 2026 22:59
+This is XeTeX, Version 3.141592653-2.6-0.999997 (TeX Live 2025) (preloaded format=xelatex 2026.1.2)  16 JAN 2026 10:44
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -921,6 +921,9 @@ Reading Unicode east Asian character class data
  (/usr/local/texlive/2025/texmf-dist/tex/latex/cjk-ko/kolabels-utf.sty
 Package: kolabels-utf 2015/03/20 v1.5 UTF-8 Hangul item labels
 )))
+(/usr/local/texlive/2025/texmf-dist/tex/latex/caption/subcaption.sty
+Package: subcaption 2023/07/28 v1.6b Sub-captions (AR)
+
 (/usr/local/texlive/2025/texmf-dist/tex/latex/caption/caption.sty
 Package: caption 2023/08/05 v3.6o Customizing captions (AR)
 
@@ -946,6 +949,11 @@ Package caption Info: hyperref package is loaded.
 Package caption Info: Hyperref support is turned off
 (caption)             because hyperref has stopped early.
 )
+Package caption Info: New subtype `subfigure' on input line 238.
+\c@subfigure=\count374
+Package caption Info: New subtype `subtable' on input line 238.
+\c@subtable=\count375
+)
 (/usr/local/texlive/2025/texmf-dist/tex/latex/fontawesome5/fontawesome5.sty
 Package: fontawesome5 2022/05/02 v5.15.4 Font Awesome 5
 
@@ -965,12 +973,25 @@ LaTeX Font Info:    Trying to load font information for TU+fontawesomebrands on
  input line 70.
 
 (/usr/local/texlive/2025/texmf-dist/tex/latex/fontawesome5/tufontawesomebrands.
-fd))) (/usr/local/texlive/2025/texmf-dist/tex/latex/caption/subcaption.sty
-Package: subcaption 2023/07/28 v1.6b Sub-captions (AR)
-Package caption Info: New subtype `subfigure' on input line 238.
-\c@subfigure=\count374
-Package caption Info: New subtype `subtable' on input line 238.
-\c@subtable=\count375
+fd))) (/usr/local/texlive/2025/texmf-dist/tex/latex/booktabs/booktabs.sty
+Package: booktabs 2020/01/12 v1.61803398 Publication quality tables
+\heavyrulewidth=\dimen322
+\lightrulewidth=\dimen323
+\cmidrulewidth=\dimen324
+\belowrulesep=\dimen325
+\belowbottomsep=\dimen326
+\aboverulesep=\dimen327
+\abovetopsep=\dimen328
+\cmidrulesep=\dimen329
+\cmidrulekern=\dimen330
+\defaultaddspace=\dimen331
+\@cmidla=\count376
+\@cmidlb=\count377
+\@aboverulesep=\dimen332
+\@belowrulesep=\dimen333
+\@thisruleclass=\count378
+\@lastruleclass=\count379
+\@thisrulewidth=\dimen334
 )
 (/usr/local/texlive/2025/texmf-dist/tex/latex/unicode-math/unicode-math.sty
 Package: unicode-math 2023/08/13 v0.8r Unicode maths in XeLaTeX and LuaLaTeX
@@ -986,13 +1007,94 @@ Package: fix-cm 2020/11/24 v1.1t fixes to LaTeX
 File: ts1enc.def 2001/06/05 v3.0e (jk/car/fm) Standard LaTeX file
 LaTeX Font Info:    Redeclaring font encoding TS1 on input line 47.
 ))
-\g__um_fam_int=\count376
-\g__um_fonts_used_int=\count377
-\l__um_primecount_int=\count378
+\g__um_fam_int=\count380
+\g__um_fonts_used_int=\count381
+\l__um_primecount_int=\count382
 \g__um_primekern_muskip=\muskip19
 
 (/usr/local/texlive/2025/texmf-dist/tex/latex/unicode-math/unicode-math-table.t
 ex)))
+(/usr/local/texlive/2025/texmf-dist/tex/generic/pgf/frontendlayer/tikz/librarie
+s/tikzlibraryshapes.code.tex
+File: tikzlibraryshapes.code.tex 2023-01-15 v3.1.10 (3.1.10)
+
+(/usr/local/texlive/2025/texmf-dist/tex/generic/pgf/frontendlayer/tikz/librarie
+s/tikzlibraryshapes.geometric.code.tex
+File: tikzlibraryshapes.geometric.code.tex 2023-01-15 v3.1.10 (3.1.10)
+
+(/usr/local/texlive/2025/texmf-dist/tex/generic/pgf/libraries/shapes/pgflibrary
+shapes.geometric.code.tex
+File: pgflibraryshapes.geometric.code.tex 2023-01-15 v3.1.10 (3.1.10)
+))
+(/usr/local/texlive/2025/texmf-dist/tex/generic/pgf/frontendlayer/tikz/librarie
+s/tikzlibraryshapes.misc.code.tex
+File: tikzlibraryshapes.misc.code.tex 2023-01-15 v3.1.10 (3.1.10)
+
+(/usr/local/texlive/2025/texmf-dist/tex/generic/pgf/libraries/shapes/pgflibrary
+shapes.misc.code.tex
+File: pgflibraryshapes.misc.code.tex 2023-01-15 v3.1.10 (3.1.10)
+))
+(/usr/local/texlive/2025/texmf-dist/tex/generic/pgf/frontendlayer/tikz/librarie
+s/tikzlibraryshapes.symbols.code.tex
+File: tikzlibraryshapes.symbols.code.tex 2023-01-15 v3.1.10 (3.1.10)
+
+(/usr/local/texlive/2025/texmf-dist/tex/generic/pgf/libraries/shapes/pgflibrary
+shapes.symbols.code.tex
+File: pgflibraryshapes.symbols.code.tex 2023-01-15 v3.1.10 (3.1.10)
+))
+(/usr/local/texlive/2025/texmf-dist/tex/generic/pgf/frontendlayer/tikz/librarie
+s/tikzlibraryshapes.arrows.code.tex
+File: tikzlibraryshapes.arrows.code.tex 2023-01-15 v3.1.10 (3.1.10)
+
+(/usr/local/texlive/2025/texmf-dist/tex/generic/pgf/libraries/shapes/pgflibrary
+shapes.arrows.code.tex
+File: pgflibraryshapes.arrows.code.tex 2023-01-15 v3.1.10 (3.1.10)
+))
+(/usr/local/texlive/2025/texmf-dist/tex/generic/pgf/frontendlayer/tikz/librarie
+s/tikzlibraryshapes.callouts.code.tex
+(/usr/local/texlive/2025/texmf-dist/tex/generic/pgf/libraries/shapes/pgflibrary
+shapes.callouts.code.tex))
+(/usr/local/texlive/2025/texmf-dist/tex/generic/pgf/frontendlayer/tikz/librarie
+s/tikzlibraryshapes.multipart.code.tex
+File: tikzlibraryshapes.multipart.code.tex 2023-01-15 v3.1.10 (3.1.10)
+
+(/usr/local/texlive/2025/texmf-dist/tex/generic/pgf/libraries/shapes/pgflibrary
+shapes.multipart.code.tex
+File: pgflibraryshapes.multipart.code.tex 2023-01-15 v3.1.10 (3.1.10)
+\pgfnodepartlowerbox=\box86
+\pgfnodeparttwobox=\box87
+\pgfnodepartthreebox=\box88
+\pgfnodepartfourbox=\box89
+\pgfnodeparttwentybox=\box90
+\pgfnodepartnineteenbox=\box91
+\pgfnodeparteighteenbox=\box92
+\pgfnodepartseventeenbox=\box93
+\pgfnodepartsixteenbox=\box94
+\pgfnodepartfifteenbox=\box95
+\pgfnodepartfourteenbox=\box96
+\pgfnodepartthirteenbox=\box97
+\pgfnodeparttwelvebox=\box98
+\pgfnodepartelevenbox=\box99
+\pgfnodeparttenbox=\box100
+\pgfnodepartninebox=\box101
+\pgfnodeparteightbox=\box102
+\pgfnodepartsevenbox=\box103
+\pgfnodepartsixbox=\box104
+\pgfnodepartfivebox=\box105
+)))
+(/usr/local/texlive/2025/texmf-dist/tex/generic/pgf/frontendlayer/tikz/librarie
+s/tikzlibraryarrows.code.tex
+File: tikzlibraryarrows.code.tex 2023-01-15 v3.1.10 (3.1.10)
+
+(/usr/local/texlive/2025/texmf-dist/tex/generic/pgf/libraries/pgflibraryarrows.
+code.tex
+File: pgflibraryarrows.code.tex 2023-01-15 v3.1.10 (3.1.10)
+\arrowsize=\dimen335
+))
+(/usr/local/texlive/2025/texmf-dist/tex/generic/pgf/frontendlayer/tikz/librarie
+s/tikzlibrarypositioning.code.tex
+File: tikzlibrarypositioning.code.tex 2023-01-15 v3.1.10 (3.1.10)
+)
 
 Package fontspec Info: 
 (fontspec)             Font family 'Pretendard(0)' created for font
@@ -1037,18 +1139,18 @@ pping=tex-text;"
 x-text;"
 
 LaTeX Font Info:    Overwriting math alphabet `\mathrm' in version `normal'
-(Font)                  OT1/cmr/m/n --> TU/Pretendard(1)/m/n on input line 25.
+(Font)                  OT1/cmr/m/n --> TU/Pretendard(1)/m/n on input line 23.
 LaTeX Font Info:    Overwriting math alphabet `\mathit' in version `normal'
-(Font)                  OT1/cmr/m/it --> TU/Pretendard(1)/m/it on input line 25
+(Font)                  OT1/cmr/m/it --> TU/Pretendard(1)/m/it on input line 23
 .
 LaTeX Font Info:    Overwriting math alphabet `\mathbf' in version `normal'
-(Font)                  OT1/cmr/bx/n --> TU/Pretendard(1)/b/n on input line 25.
+(Font)                  OT1/cmr/bx/n --> TU/Pretendard(1)/b/n on input line 23.
 
 LaTeX Font Info:    Overwriting math alphabet `\mathsf' in version `normal'
-(Font)                  OT1/cmss/m/n --> TU/Pretendard(1)/m/n on input line 26.
+(Font)                  OT1/cmss/m/n --> TU/Pretendard(1)/m/n on input line 24.
 
 LaTeX Font Info:    Overwriting math alphabet `\mathsf' in version `bold'
-(Font)                  OT1/cmss/bx/n --> TU/Pretendard(1)/b/n on input line 26
+(Font)                  OT1/cmss/bx/n --> TU/Pretendard(1)/b/n on input line 24
 .
 
 Package fontspec Info: 
@@ -1120,13 +1222,13 @@ a
 (fontspec)             Math/OT:script=math;language=dflt;+ssty=1;"
 
 LaTeX Font Info:    Encoding `OT1' has changed to `TU' for symbol font
-(Font)              `operators' in the math version `normal' on input line 32.
+(Font)              `operators' in the math version `normal' on input line 27.
 LaTeX Font Info:    Overwriting symbol font `operators' in version `normal'
-(Font)                  OT1/cmr/m/n --> TU/FiraMath(1)/m/n on input line 32.
+(Font)                  OT1/cmr/m/n --> TU/FiraMath(1)/m/n on input line 27.
 LaTeX Font Info:    Encoding `OT1' has changed to `TU' for symbol font
-(Font)              `operators' in the math version `bold' on input line 32.
+(Font)              `operators' in the math version `bold' on input line 27.
 LaTeX Font Info:    Overwriting symbol font `operators' in version `bold'
-(Font)                  OT1/cmr/bx/n --> TU/FiraMath(1)/b/n on input line 32.
+(Font)                  OT1/cmr/bx/n --> TU/FiraMath(1)/b/n on input line 27.
 
 Package fontspec Info: 
 (fontspec)             Fira Math scale = 1.0001.
@@ -1180,13 +1282,13 @@ stment={\fontdimen
 (fontspec)             Math/OT:script=math;language=dflt;+ssty=1;"
 
 LaTeX Font Info:    Encoding `OMS' has changed to `TU' for symbol font
-(Font)              `symbols' in the math version `normal' on input line 32.
+(Font)              `symbols' in the math version `normal' on input line 27.
 LaTeX Font Info:    Overwriting symbol font `symbols' in version `normal'
-(Font)                  OMS/cmsy/m/n --> TU/FiraMath(2)/m/n on input line 32.
+(Font)                  OMS/cmsy/m/n --> TU/FiraMath(2)/m/n on input line 27.
 LaTeX Font Info:    Encoding `OMS' has changed to `TU' for symbol font
-(Font)              `symbols' in the math version `bold' on input line 32.
+(Font)              `symbols' in the math version `bold' on input line 27.
 LaTeX Font Info:    Overwriting symbol font `symbols' in version `bold'
-(Font)                  OMS/cmsy/b/n --> TU/FiraMath(2)/b/n on input line 32.
+(Font)                  OMS/cmsy/b/n --> TU/FiraMath(2)/b/n on input line 27.
 
 Package fontspec Info: 
 (fontspec)             Fira Math scale = 0.9999.
@@ -1234,15 +1336,15 @@ stment={\fontdimen
 (fontspec)             Math/OT:script=math;language=dflt;+ssty=1;"
 
 LaTeX Font Info:    Encoding `OMX' has changed to `TU' for symbol font
-(Font)              `largesymbols' in the math version `normal' on input line 3
-2.
+(Font)              `largesymbols' in the math version `normal' on input line 2
+7.
 LaTeX Font Info:    Overwriting symbol font `largesymbols' in version `normal'
-(Font)                  OMX/cmex/m/n --> TU/FiraMath(3)/m/n on input line 32.
+(Font)                  OMX/cmex/m/n --> TU/FiraMath(3)/m/n on input line 27.
 LaTeX Font Info:    Encoding `OMX' has changed to `TU' for symbol font
-(Font)              `largesymbols' in the math version `bold' on input line 32.
+(Font)              `largesymbols' in the math version `bold' on input line 27.
 
 LaTeX Font Info:    Overwriting symbol font `largesymbols' in version `bold'
-(Font)                  OMX/cmex/m/n --> TU/FiraMath(3)/b/n on input line 32.
+(Font)                  OMX/cmex/m/n --> TU/FiraMath(3)/b/n on input line 27.
 
 Package fontspec Info: 
 (fontspec)             Script 'Math' not explicitly supported within font
@@ -1292,14 +1394,14 @@ h;language=dflt;+ssty=1;"
 nguage=dflt;"
 
 LaTeX Font Info:    Font shape `TU/Pretendard(3)/m/n' will be
-(Font)              scaled to size 10.95pt on input line 35.
+(Font)              scaled to size 10.95pt on input line 28.
 \sym__um_fam1=\mathgroup6
 LaTeX Font Info:    Overwriting symbol font `__um_fam1' in version `normal'
 (Font)                  TU/Pretendard(3)/m/n --> TU/Pretendard(3)/m/n on input 
-line 35.
+line 28.
 LaTeX Font Info:    Overwriting symbol font `__um_fam1' in version `bold'
 (Font)                  TU/Pretendard(3)/m/n --> TU/Pretendard(3)/b/n on input 
-line 35.
+line 28.
 
 Package fontspec Info: 
 (fontspec)             Script 'Math' not explicitly supported within font
@@ -1349,71 +1451,46 @@ endard/OT:script=math;language=dflt;slant=0.2;+ssty=1;"
 nguage=dflt;slant=0.2;"
 
 LaTeX Font Info:    Font shape `TU/Pretendard(4)/m/n' will be
-(Font)              scaled to size 10.95pt on input line 36.
+(Font)              scaled to size 10.95pt on input line 29.
 \sym__um_fam2=\mathgroup7
 LaTeX Font Info:    Overwriting symbol font `__um_fam2' in version `normal'
 (Font)                  TU/Pretendard(4)/m/n --> TU/Pretendard(4)/m/n on input 
-line 36.
+line 29.
 LaTeX Font Info:    Overwriting symbol font `__um_fam2' in version `bold'
 (Font)                  TU/Pretendard(4)/m/n --> TU/Pretendard(4)/b/n on input 
-line 36.
+line 29.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `\\' on input line 47.
+(hyperref)                removing `\\' on input line 41.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `\@ifnextchar' on input line 47.
-
-
-Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `\scalebox' on input line 47.
-
-
-Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `\faPreselectedIcon' on input line 47.
-
-
-Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                \hskip 10.95pt
-(hyperref)                replaced by space on input line 47.
-
-
-Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `\scalebox' on input line 47.
-
-
-Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `\faPreselectedIcon' on input line 47.
-
-
-Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `\scalebox' on input line 47.
+(hyperref)                removing `\faPreselectedIcon' on input line 41.
 
 (./lecture.aux)
 \openout1 = `lecture.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 55.
-LaTeX Font Info:    ... okay on input line 55.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 55.
-LaTeX Font Info:    ... okay on input line 55.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 55.
-LaTeX Font Info:    ... okay on input line 55.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 55.
-LaTeX Font Info:    ... okay on input line 55.
-LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 55.
-LaTeX Font Info:    ... okay on input line 55.
-LaTeX Font Info:    Checking defaults for TU/lmr/m/n on input line 55.
-LaTeX Font Info:    ... okay on input line 55.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 55.
-LaTeX Font Info:    ... okay on input line 55.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 55.
-LaTeX Font Info:    ... okay on input line 55.
-LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 55.
-LaTeX Font Info:    ... okay on input line 55.
-LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 55.
-LaTeX Font Info:    ... okay on input line 55.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 44.
+LaTeX Font Info:    ... okay on input line 44.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 44.
+LaTeX Font Info:    ... okay on input line 44.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 44.
+LaTeX Font Info:    ... okay on input line 44.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 44.
+LaTeX Font Info:    ... okay on input line 44.
+LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 44.
+LaTeX Font Info:    ... okay on input line 44.
+LaTeX Font Info:    Checking defaults for TU/lmr/m/n on input line 44.
+LaTeX Font Info:    ... okay on input line 44.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 44.
+LaTeX Font Info:    ... okay on input line 44.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 44.
+LaTeX Font Info:    ... okay on input line 44.
+LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 44.
+LaTeX Font Info:    ... okay on input line 44.
+LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 44.
+LaTeX Font Info:    ... okay on input line 44.
 
 *geometry* driver: auto-detecting
 *geometry* detected driver: xetex
@@ -1449,10 +1526,14 @@ LaTeX Font Info:    ... okay on input line 55.
 * \@reversemarginfalse
 * (1in=72.27pt=25.4mm, 1cm=28.453pt)
 
-Package hyperref Info: Link coloring OFF on input line 55.
+Package hyperref Info: Link coloring OFF on input line 44.
 (./lecture.out) (./lecture.out)
 \@outlinefile=\write5
 \openout5 = `lecture.out'.
+
+
+
+Package hyperref Warning: Rerun to get /PageLabels entry.
 
 
 (/usr/local/texlive/2025/texmf-dist/tex/latex/translator/translator-basic-dicti
@@ -1503,20 +1584,17 @@ e=dflt;extend=1.03;"
 Package caption Info: Begin \AtBeginDocument code.
 Package caption Info: End \AtBeginDocument code.
 LaTeX Font Info:    Overwriting math alphabet `\mathtt' in version `normal'
-(Font)                  OT1/cmtt/m/n --> TU/lmtt/m/n on input line 55.
+(Font)                  OT1/cmtt/m/n --> TU/lmtt/m/n on input line 44.
 LaTeX Font Info:    Overwriting math alphabet `\mathtt' in version `bold'
-(Font)                  OT1/cmtt/m/n --> TU/lmtt/b/n on input line 55.
- (./lecture.nav)
+(Font)                  OT1/cmtt/m/n --> TU/lmtt/b/n on input line 44.
+
+No file lecture.nav.
 
 LaTeX Font Warning: Font shape `TU/Pretendard(2)/solid/n' undefined
-(Font)              using `TU/Pretendard(2)/m/n' instead on input line 60.
+(Font)              using `TU/Pretendard(2)/m/n' instead on input line 49.
 
 
-LaTeX Font Warning: Font shape `TU/Pretendard(2)/regular/n' undefined
-(Font)              using `TU/Pretendard(2)/m/n' instead on input line 60.
-
-
-Overfull \vbox (15.63992pt too high) detected at line 60
+Overfull \vbox (15.63992pt too high) detected at line 49
  []
 
 
@@ -1525,65 +1603,47 @@ Overfull \vbox (15.63992pt too high) detected at line 60
 
 ]
 
-[2
+LaTeX Font Warning: Font shape `TU/Pretendard(2)/m/it' undefined
+(Font)              using `TU/Pretendard(2)/m/n' instead on input line 73.
 
-]
+LaTeX Font Info:    Font shape `TU/FiraMath(2)/m/n' will be
+(Font)              scaled to size 10.95116pt on input line 73.
+LaTeX Font Info:    Font shape `TU/FiraMath(2)/m/n' will be
+(Font)              scaled to size 7.88484pt on input line 73.
+LaTeX Font Info:    Font shape `TU/FiraMath(2)/m/n' will be
+(Font)              scaled to size 6.35167pt on input line 73.
+LaTeX Font Info:    Font shape `TU/FiraMath(3)/m/n' will be
+(Font)              scaled to size 10.94882pt on input line 73.
+LaTeX Font Info:    Font shape `TU/FiraMath(3)/m/n' will be
+(Font)              scaled to size 7.88315pt on input line 73.
+LaTeX Font Info:    Font shape `TU/FiraMath(3)/m/n' will be
+(Font)              scaled to size 6.35031pt on input line 73.
+LaTeX Font Info:    Trying to load font information for U+msa on input line 73.
 
-[3
-
-]
-File: ../../assets/fig_ch01_shannon.pdf Graphic file (type pdf)
-<use ../../assets/fig_ch01_shannon.pdf>
-LaTeX Font Info:    Font shape `TU/FiraMath(2)/m/n' will be
-(Font)              scaled to size 10.95116pt on input line 116.
-LaTeX Font Info:    Font shape `TU/FiraMath(2)/m/n' will be
-(Font)              scaled to size 7.88484pt on input line 116.
-LaTeX Font Info:    Font shape `TU/FiraMath(2)/m/n' will be
-(Font)              scaled to size 6.35167pt on input line 116.
-LaTeX Font Info:    Font shape `TU/FiraMath(3)/m/n' will be
-(Font)              scaled to size 10.94882pt on input line 116.
-LaTeX Font Info:    Font shape `TU/FiraMath(3)/m/n' will be
-(Font)              scaled to size 7.88315pt on input line 116.
-LaTeX Font Info:    Font shape `TU/FiraMath(3)/m/n' will be
-(Font)              scaled to size 6.35031pt on input line 116.
-LaTeX Font Info:    Trying to load font information for U+msa on input line 116
-.
- (/usr/local/texlive/2025/texmf-dist/tex/latex/amsfonts/umsa.fd
+(/usr/local/texlive/2025/texmf-dist/tex/latex/amsfonts/umsa.fd
 File: umsa.fd 2013/01/14 v3.01 AMS symbols A
 )
-LaTeX Font Info:    Trying to load font information for U+msb on input line 116
-.
+LaTeX Font Info:    Trying to load font information for U+msb on input line 73.
+
 
 (/usr/local/texlive/2025/texmf-dist/tex/latex/amsfonts/umsb.fd
 File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 )
 LaTeX Font Info:    Font shape `TU/Pretendard(3)/m/n' will be
-(Font)              scaled to size 7.884pt on input line 116.
+(Font)              scaled to size 7.884pt on input line 73.
 LaTeX Font Info:    Font shape `TU/Pretendard(3)/m/n' will be
-(Font)              scaled to size 6.351pt on input line 116.
+(Font)              scaled to size 6.351pt on input line 73.
 LaTeX Font Info:    Font shape `TU/Pretendard(4)/m/n' will be
-(Font)              scaled to size 7.884pt on input line 116.
+(Font)              scaled to size 7.884pt on input line 73.
 LaTeX Font Info:    Font shape `TU/Pretendard(4)/m/n' will be
-(Font)              scaled to size 6.351pt on input line 116.
+(Font)              scaled to size 6.351pt on input line 73.
 
 
-LaTeX Font Warning: Font shape `TU/Pretendard(2)/m/it' undefined
-(Font)              using `TU/Pretendard(2)/m/n' instead on input line 116.
-
-
-
-[4
+[2
 
 ]
-File: ../../assets/fig_ch3_5g_spectrum.pdf Graphic file (type pdf)
-<use ../../assets/fig_ch3_5g_spectrum.pdf>
 
-Overfull \vbox (26.4697pt too high) detected at line 132
- []
-
-
-
-[5
+[3
 
 ]
 File: ../../assets/fourier_step_1.png Graphic file (type bmp)
@@ -1594,50 +1654,40 @@ File: ../../assets/fourier_step_29.png Graphic file (type bmp)
 <../../assets/fourier_step_29.png>
 
 
-[6
+[4
 
 ]
 File: ../../assets/fig_03_am_shift.pdf Graphic file (type pdf)
 <use ../../assets/fig_03_am_shift.pdf>
+File: ../../assets/fig_04_fm_accordion.pdf Graphic file (type pdf)
+<use ../../assets/fig_04_fm_accordion.pdf>
 
-Overfull \vbox (117.51476pt too high) detected at line 181
- []
+
+[5
+
+]
+File: ../../assets/fig_05_eye_diagram.pdf Graphic file (type pdf)
+<use ../../assets/fig_05_eye_diagram.pdf>
+
+
+[6
+
+]
+
+LaTeX Font Warning: Font shape `TU/Pretendard(2)/regular/n' undefined
+(Font)              using `TU/Pretendard(2)/m/n' instead on input line 189.
 
 
 
 [7
 
 ]
-File: ../../assets/fig_ch4_am_time.pdf Graphic file (type pdf)
-<use ../../assets/fig_ch4_am_time.pdf>
-File: ../../assets/fig_ch4_am_spec.pdf Graphic file (type pdf)
-<use ../../assets/fig_ch4_am_spec.pdf>
-
 
 [8
 
 ]
-File: ../../assets/fig_04_fm_accordion.pdf Graphic file (type pdf)
-<use ../../assets/fig_04_fm_accordion.pdf>
-
-Overfull \hbox (0.65877pt too wide) in paragraph at lines 233--233
- [][] 
- []
-
-
 
 [9
-
-]
-File: ../../assets/fig_ch7_qpsk.pdf Graphic file (type pdf)
-<use ../../assets/fig_ch7_qpsk.pdf>
-
-
-[10
-
-]
-
-[11
 
 ]
 \tf@nav=\write6
@@ -1662,12 +1712,12 @@ Package rerunfilecheck Info: File `lecture.out' has not changed.
 (rerunfilecheck)             Checksum: D41D8CD98F00B204E9800998ECF8427E;0.
  ) 
 Here is how much of TeX's memory you used:
- 37437 strings out of 473832
- 733682 string characters out of 5729482
- 1247887 words of memory out of 5000000
- 59830 multiletter control sequences out of 15000+600000
- 562769 words of font info for 110 fonts, out of 8000000 for 9000
+ 39934 strings out of 473832
+ 804722 string characters out of 5729482
+ 1267417 words of memory out of 5000000
+ 62269 multiletter control sequences out of 15000+600000
+ 562777 words of font info for 111 fonts, out of 8000000 for 9000
  1348 hyphenation exceptions out of 8191
  128i,13n,139p,1874b,2936s stack positions out of 10000i,1000n,20000p,200000b,200000s
 
-Output written on lecture.pdf (11 pages).
+Output written on lecture.pdf (9 pages).
