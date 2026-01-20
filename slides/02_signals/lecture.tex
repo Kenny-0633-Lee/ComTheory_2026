@@ -13,6 +13,9 @@
 % [수식 및 폰트 설정 - 기존 파일 그대로 유지]
 \usepackage{amsmath}
 \usepackage[math-style=ISO, bold-style=ISO]{unicode-math}
+% [normalem] 옵션은 \emph{} 명령어를 이탤릭체로 유지해줍니다. 
+% (이 옵션이 없으면 \emph가 밑줄로 변해버립니다.)
+\usepackage[normalem]{ulem}
 
 \usefonttheme{professionalfonts}
 
@@ -54,7 +57,41 @@
 \end{frame}
 
 % 2. 강의 목차
-\begin{frame}{Chapter 2 Overview}
+% \begin{frame}
+%     \frametitle{Table of Contents}
+%     \tableofcontents
+% \end{frame}
+
+% Definitions : Signals and Systems
+\begin{frame}{Definitions: Signals and Systems}
+    \begin{block}{\fbox{Signals}}
+        A signal is a set of information or data. \\
+        Examples: Audio signals, video signals, sensor data, etc.\\
+        In all these examples, the signals are mostly functions of the independent variable \textbf{time $t$}.
+    \end{block}
+    \vspace{0.1cm}
+    \begin{block}{\fbox{Systems}}
+        Signals may be processed further by systems, which may modify them or extract additional infromation from them. \\
+        For example, an antiaircraft radar system processes the received signals (inputs) to determine the position and velocity of an aircraft (outputs). \\
+        Thus, a system is an entity that processes signals (\textbf{inputs}) to yield another set of signals (\textbf{outputs}). \\
+        More examples: Amplifiers, filters, modulators, demodulators, etc. \\
+    \end{block}
+\end{frame}
+
+% 2.1 신호의 크기
+\begin{frame}
+    \frametitle{2.1 Size of A Signal}
+    \begin{itemize}
+        \item 신호의 크기(Size of a Signal)란 무엇인가?
+        \item 에너지 신호(Energy Signal)와 전력 신호(Power Signal)
+        \item 신호의 에너지(Energy)와 전력(Power) 계산 방법
+    \end{itemize}
+\end{frame}
+
+
+
+%%% Sample Frames %%%
+\begin{frame}{Overview}
     \begin{itemize}
         \item \textbf{Basic Signals:} 단위 계단 함수 $u(t)$와 델타 함수 $\delta(t)$
         \item \textbf{Signal Operations:} 시간 이동(Shifting)과 스케일링(Scaling)

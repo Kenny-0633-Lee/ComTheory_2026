@@ -1,4 +1,4 @@
-This is XeTeX, Version 3.141592653-2.6-0.999997 (TeX Live 2025) (preloaded format=xelatex 2026.1.5)  20 JAN 2026 09:23
+This is XeTeX, Version 3.141592653-2.6-0.999997 (TeX Live 2025) (preloaded format=xelatex 2026.1.5)  20 JAN 2026 10:32
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1253,6 +1253,18 @@ t line 194.
 \g__um_primekern_muskip=\muskip19
 
 (c:/texlive/2025/texmf-dist/tex/latex/unicode-math/unicode-math-table.tex)))
+(c:/texlive/2025/texmf-dist/tex/generic/ulem/ulem.sty
+\UL@box=\box86
+\UL@hyphenbox=\box87
+\UL@skip=\skip80
+\UL@hook=\toks52
+\UL@height=\dimen329
+\UL@pe=\count390
+\UL@pixel=\dimen330
+\ULC@box=\box88
+Package: ulem 2019/11/18
+\ULdepth=\dimen331
+)
 
 Package fontspec Info: 
 (fontspec)             Font family 'Pretendard(0)' created for font
@@ -1297,18 +1309,18 @@ pping=tex-text;"
 x-text;"
 
 LaTeX Font Info:    Overwriting math alphabet `\mathrm' in version `normal'
-(Font)                  OT1/cmr/m/n --> TU/Pretendard(1)/m/n on input line 21.
+(Font)                  OT1/cmr/m/n --> TU/Pretendard(1)/m/n on input line 24.
 LaTeX Font Info:    Overwriting math alphabet `\mathit' in version `normal'
-(Font)                  OT1/cmr/m/it --> TU/Pretendard(1)/m/it on input line 21
+(Font)                  OT1/cmr/m/it --> TU/Pretendard(1)/m/it on input line 24
 .
 LaTeX Font Info:    Overwriting math alphabet `\mathbf' in version `normal'
-(Font)                  OT1/cmr/bx/n --> TU/Pretendard(1)/b/n on input line 21.
+(Font)                  OT1/cmr/bx/n --> TU/Pretendard(1)/b/n on input line 24.
 
 LaTeX Font Info:    Overwriting math alphabet `\mathsf' in version `normal'
-(Font)                  OT1/cmss/m/n --> TU/Pretendard(1)/m/n on input line 22.
+(Font)                  OT1/cmss/m/n --> TU/Pretendard(1)/m/n on input line 25.
 
 LaTeX Font Info:    Overwriting math alphabet `\mathsf' in version `bold'
-(Font)                  OT1/cmss/bx/n --> TU/Pretendard(1)/b/n on input line 22
+(Font)                  OT1/cmss/bx/n --> TU/Pretendard(1)/b/n on input line 25
 .
 
 Package fontspec Info: 
@@ -1380,13 +1392,13 @@ a
 (fontspec)             Math/OT:script=math;language=dflt;+ssty=1;"
 
 LaTeX Font Info:    Encoding `OT1' has changed to `TU' for symbol font
-(Font)              `operators' in the math version `normal' on input line 27.
+(Font)              `operators' in the math version `normal' on input line 30.
 LaTeX Font Info:    Overwriting symbol font `operators' in version `normal'
-(Font)                  OT1/cmr/m/n --> TU/FiraMath(1)/m/n on input line 27.
+(Font)                  OT1/cmr/m/n --> TU/FiraMath(1)/m/n on input line 30.
 LaTeX Font Info:    Encoding `OT1' has changed to `TU' for symbol font
-(Font)              `operators' in the math version `bold' on input line 27.
+(Font)              `operators' in the math version `bold' on input line 30.
 LaTeX Font Info:    Overwriting symbol font `operators' in version `bold'
-(Font)                  OT1/cmr/bx/n --> TU/FiraMath(1)/b/n on input line 27.
+(Font)                  OT1/cmr/bx/n --> TU/FiraMath(1)/b/n on input line 30.
 
 Package fontspec Info: 
 (fontspec)             Fira Math scale = 1.0001.
@@ -1440,13 +1452,13 @@ stment={\fontdimen
 (fontspec)             Math/OT:script=math;language=dflt;+ssty=1;"
 
 LaTeX Font Info:    Encoding `OMS' has changed to `TU' for symbol font
-(Font)              `symbols' in the math version `normal' on input line 27.
+(Font)              `symbols' in the math version `normal' on input line 30.
 LaTeX Font Info:    Overwriting symbol font `symbols' in version `normal'
-(Font)                  OMS/cmsy/m/n --> TU/FiraMath(2)/m/n on input line 27.
+(Font)                  OMS/cmsy/m/n --> TU/FiraMath(2)/m/n on input line 30.
 LaTeX Font Info:    Encoding `OMS' has changed to `TU' for symbol font
-(Font)              `symbols' in the math version `bold' on input line 27.
+(Font)              `symbols' in the math version `bold' on input line 30.
 LaTeX Font Info:    Overwriting symbol font `symbols' in version `bold'
-(Font)                  OMS/cmsy/b/n --> TU/FiraMath(2)/b/n on input line 27.
+(Font)                  OMS/cmsy/b/n --> TU/FiraMath(2)/b/n on input line 30.
 
 Package fontspec Info: 
 (fontspec)             Fira Math scale = 0.9999.
@@ -1494,15 +1506,15 @@ stment={\fontdimen
 (fontspec)             Math/OT:script=math;language=dflt;+ssty=1;"
 
 LaTeX Font Info:    Encoding `OMX' has changed to `TU' for symbol font
-(Font)              `largesymbols' in the math version `normal' on input line 2
-7.
+(Font)              `largesymbols' in the math version `normal' on input line 3
+0.
 LaTeX Font Info:    Overwriting symbol font `largesymbols' in version `normal'
-(Font)                  OMX/cmex/m/n --> TU/FiraMath(3)/m/n on input line 27.
+(Font)                  OMX/cmex/m/n --> TU/FiraMath(3)/m/n on input line 30.
 LaTeX Font Info:    Encoding `OMX' has changed to `TU' for symbol font
-(Font)              `largesymbols' in the math version `bold' on input line 27.
+(Font)              `largesymbols' in the math version `bold' on input line 30.
 
 LaTeX Font Info:    Overwriting symbol font `largesymbols' in version `bold'
-(Font)                  OMX/cmex/m/n --> TU/FiraMath(3)/b/n on input line 27.
+(Font)                  OMX/cmex/m/n --> TU/FiraMath(3)/b/n on input line 30.
 
 Package fontspec Info: 
 (fontspec)             Script 'Math' not explicitly supported within font
@@ -1552,14 +1564,14 @@ h;language=dflt;+ssty=1;"
 nguage=dflt;"
 
 LaTeX Font Info:    Font shape `TU/Pretendard(3)/m/n' will be
-(Font)              scaled to size 10.95pt on input line 28.
+(Font)              scaled to size 10.95pt on input line 31.
 \sym__um_fam1=\mathgroup6
 LaTeX Font Info:    Overwriting symbol font `__um_fam1' in version `normal'
 (Font)                  TU/Pretendard(3)/m/n --> TU/Pretendard(3)/m/n on input 
-line 28.
+line 31.
 LaTeX Font Info:    Overwriting symbol font `__um_fam1' in version `bold'
 (Font)                  TU/Pretendard(3)/m/n --> TU/Pretendard(3)/b/n on input 
-line 28.
+line 31.
 
 Package fontspec Info: 
 (fontspec)             Script 'Math' not explicitly supported within font
@@ -1609,71 +1621,71 @@ endard/OT:script=math;language=dflt;slant=0.2;+ssty=1;"
 nguage=dflt;slant=0.2;"
 
 LaTeX Font Info:    Font shape `TU/Pretendard(4)/m/n' will be
-(Font)              scaled to size 10.95pt on input line 29.
+(Font)              scaled to size 10.95pt on input line 32.
 \sym__um_fam2=\mathgroup7
 LaTeX Font Info:    Overwriting symbol font `__um_fam2' in version `normal'
 (Font)                  TU/Pretendard(4)/m/n --> TU/Pretendard(4)/m/n on input 
-line 29.
+line 32.
 LaTeX Font Info:    Overwriting symbol font `__um_fam2' in version `bold'
 (Font)                  TU/Pretendard(4)/m/n --> TU/Pretendard(4)/b/n on input 
-line 29.
+line 32.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `\\' on input line 43.
+(hyperref)                removing `\\' on input line 46.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `\@ifnextchar' on input line 43.
+(hyperref)                removing `\@ifnextchar' on input line 46.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `\scalebox' on input line 43.
+(hyperref)                removing `\scalebox' on input line 46.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `\faPreselectedIcon' on input line 43.
+(hyperref)                removing `\faPreselectedIcon' on input line 46.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
 (hyperref)                \hskip 10.95pt
-(hyperref)                replaced by space on input line 43.
+(hyperref)                replaced by space on input line 46.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `\scalebox' on input line 43.
+(hyperref)                removing `\scalebox' on input line 46.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `\faPreselectedIcon' on input line 43.
+(hyperref)                removing `\faPreselectedIcon' on input line 46.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `\scalebox' on input line 43.
+(hyperref)                removing `\scalebox' on input line 46.
 
 (./lecture.aux)
 \openout1 = `lecture.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 49.
-LaTeX Font Info:    ... okay on input line 49.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 49.
-LaTeX Font Info:    ... okay on input line 49.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 49.
-LaTeX Font Info:    ... okay on input line 49.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 49.
-LaTeX Font Info:    ... okay on input line 49.
-LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 49.
-LaTeX Font Info:    ... okay on input line 49.
-LaTeX Font Info:    Checking defaults for TU/lmr/m/n on input line 49.
-LaTeX Font Info:    ... okay on input line 49.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 49.
-LaTeX Font Info:    ... okay on input line 49.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 49.
-LaTeX Font Info:    ... okay on input line 49.
-LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 49.
-LaTeX Font Info:    ... okay on input line 49.
-LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 49.
-LaTeX Font Info:    ... okay on input line 49.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 52.
+LaTeX Font Info:    ... okay on input line 52.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 52.
+LaTeX Font Info:    ... okay on input line 52.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 52.
+LaTeX Font Info:    ... okay on input line 52.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 52.
+LaTeX Font Info:    ... okay on input line 52.
+LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 52.
+LaTeX Font Info:    ... okay on input line 52.
+LaTeX Font Info:    Checking defaults for TU/lmr/m/n on input line 52.
+LaTeX Font Info:    ... okay on input line 52.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 52.
+LaTeX Font Info:    ... okay on input line 52.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 52.
+LaTeX Font Info:    ... okay on input line 52.
+LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 52.
+LaTeX Font Info:    ... okay on input line 52.
+LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 52.
+LaTeX Font Info:    ... okay on input line 52.
 
 *geometry* driver: auto-detecting
 *geometry* detected driver: xetex
@@ -1709,14 +1721,10 @@ LaTeX Font Info:    ... okay on input line 49.
 * \@reversemarginfalse
 * (1in=72.27pt=25.4mm, 1cm=28.453pt)
 
-Package hyperref Info: Link coloring OFF on input line 49.
+Package hyperref Info: Link coloring OFF on input line 52.
 (./lecture.out) (./lecture.out)
 \@outlinefile=\write5
 \openout5 = `lecture.out'.
-
-
-
-Package hyperref Warning: Rerun to get /PageLabels entry.
 
 
 (c:/texlive/2025/texmf-dist/tex/latex/translator/translator-basic-dictionary-En
@@ -1760,115 +1768,123 @@ Package fontspec Info:
 Package caption Info: Begin \AtBeginDocument code.
 Package caption Info: End \AtBeginDocument code.
 LaTeX Font Info:    Overwriting math alphabet `\mathtt' in version `normal'
-(Font)                  OT1/cmtt/m/n --> TU/FiraMono(0)/m/n on input line 49.
+(Font)                  OT1/cmtt/m/n --> TU/FiraMono(0)/m/n on input line 52.
 LaTeX Font Info:    Overwriting math alphabet `\mathtt' in version `bold'
-(Font)                  OT1/cmtt/m/n --> TU/FiraMono(0)/b/n on input line 49.
+(Font)                  OT1/cmtt/m/n --> TU/FiraMono(0)/b/n on input line 52.
  (./lecture.nav)
 
 LaTeX Font Warning: Font shape `TU/Pretendard(2)/solid/n' undefined
-(Font)              using `TU/Pretendard(2)/m/n' instead on input line 54.
+(Font)              using `TU/Pretendard(2)/m/n' instead on input line 57.
 
 
 LaTeX Font Warning: Font shape `TU/Pretendard(2)/regular/n' undefined
-(Font)              using `TU/Pretendard(2)/m/n' instead on input line 54.
+(Font)              using `TU/Pretendard(2)/m/n' instead on input line 57.
 
 
-Overfull \vbox (15.63992pt too high) detected at line 54
+Overfull \vbox (15.63992pt too high) detected at line 57
  []
 
 [1
 
 ]
 LaTeX Font Info:    Font shape `TU/FiraMath(2)/m/n' will be
-(Font)              scaled to size 10.95116pt on input line 63.
+(Font)              scaled to size 10.95116pt on input line 79.
 LaTeX Font Info:    Font shape `TU/FiraMath(2)/m/n' will be
-(Font)              scaled to size 7.88484pt on input line 63.
+(Font)              scaled to size 7.88484pt on input line 79.
 LaTeX Font Info:    Font shape `TU/FiraMath(2)/m/n' will be
-(Font)              scaled to size 6.35167pt on input line 63.
+(Font)              scaled to size 6.35167pt on input line 79.
 LaTeX Font Info:    Font shape `TU/FiraMath(3)/m/n' will be
-(Font)              scaled to size 10.94882pt on input line 63.
+(Font)              scaled to size 10.94882pt on input line 79.
 LaTeX Font Info:    Font shape `TU/FiraMath(3)/m/n' will be
-(Font)              scaled to size 7.88315pt on input line 63.
+(Font)              scaled to size 7.88315pt on input line 79.
 LaTeX Font Info:    Font shape `TU/FiraMath(3)/m/n' will be
-(Font)              scaled to size 6.35031pt on input line 63.
-LaTeX Font Info:    Trying to load font information for U+msa on input line 63.
+(Font)              scaled to size 6.35031pt on input line 79.
+LaTeX Font Info:    Trying to load font information for U+msa on input line 79.
 
  (c:/texlive/2025/texmf-dist/tex/latex/amsfonts/umsa.fd
 File: umsa.fd 2013/01/14 v3.01 AMS symbols A
 )
-LaTeX Font Info:    Trying to load font information for U+msb on input line 63.
+LaTeX Font Info:    Trying to load font information for U+msb on input line 79.
 
 
 (c:/texlive/2025/texmf-dist/tex/latex/amsfonts/umsb.fd
 File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 )
 LaTeX Font Info:    Font shape `TU/Pretendard(3)/m/n' will be
-(Font)              scaled to size 7.884pt on input line 63.
+(Font)              scaled to size 7.884pt on input line 79.
 LaTeX Font Info:    Font shape `TU/Pretendard(3)/m/n' will be
-(Font)              scaled to size 6.351pt on input line 63.
+(Font)              scaled to size 6.351pt on input line 79.
 LaTeX Font Info:    Font shape `TU/Pretendard(4)/m/n' will be
-(Font)              scaled to size 7.884pt on input line 63.
+(Font)              scaled to size 7.884pt on input line 79.
 LaTeX Font Info:    Font shape `TU/Pretendard(4)/m/n' will be
-(Font)              scaled to size 6.351pt on input line 63.
- [2
+(Font)              scaled to size 6.351pt on input line 79.
+
+Overfull \vbox (12.48567pt too high) detected at line 79
+ []
+
+[2
+
+] [3
+
+] [4
 
 ]
 File: ../../assets/fig_ch02_unit_step.pdf Graphic file (type pdf)
 <use ../../assets/fig_ch02_unit_step.pdf>
- [3
+ [5
 
 ]
 File: ../../assets/fig_ch02_operations.pdf Graphic file (type pdf)
 <use ../../assets/fig_ch02_operations.pdf>
 LaTeX Font Info:    Font shape `TU/FiraMath(2)/m/n' will be
-(Font)              scaled to size 10.00107pt on input line 113.
+(Font)              scaled to size 10.00107pt on input line 150.
 LaTeX Font Info:    Font shape `TU/FiraMath(2)/m/n' will be
-(Font)              scaled to size 7.00075pt on input line 113.
+(Font)              scaled to size 7.00075pt on input line 150.
 LaTeX Font Info:    Font shape `TU/FiraMath(2)/m/n' will be
-(Font)              scaled to size 5.00053pt on input line 113.
+(Font)              scaled to size 5.00053pt on input line 150.
 LaTeX Font Info:    Font shape `TU/FiraMath(3)/m/n' will be
-(Font)              scaled to size 9.99893pt on input line 113.
+(Font)              scaled to size 9.99893pt on input line 150.
 LaTeX Font Info:    Font shape `TU/FiraMath(3)/m/n' will be
-(Font)              scaled to size 6.99925pt on input line 113.
+(Font)              scaled to size 6.99925pt on input line 150.
 LaTeX Font Info:    Font shape `TU/FiraMath(3)/m/n' will be
-(Font)              scaled to size 4.99947pt on input line 113.
+(Font)              scaled to size 4.99947pt on input line 150.
 LaTeX Font Info:    Font shape `TU/Pretendard(3)/m/n' will be
-(Font)              scaled to size 10.0pt on input line 113.
+(Font)              scaled to size 10.0pt on input line 150.
 LaTeX Font Info:    Font shape `TU/Pretendard(3)/m/n' will be
-(Font)              scaled to size 7.0pt on input line 113.
+(Font)              scaled to size 7.0pt on input line 150.
 LaTeX Font Info:    Font shape `TU/Pretendard(3)/m/n' will be
-(Font)              scaled to size 5.0pt on input line 113.
+(Font)              scaled to size 5.0pt on input line 150.
 LaTeX Font Info:    Font shape `TU/Pretendard(4)/m/n' will be
-(Font)              scaled to size 10.0pt on input line 113.
+(Font)              scaled to size 10.0pt on input line 150.
 LaTeX Font Info:    Font shape `TU/Pretendard(4)/m/n' will be
-(Font)              scaled to size 7.0pt on input line 113.
+(Font)              scaled to size 7.0pt on input line 150.
 LaTeX Font Info:    Font shape `TU/Pretendard(4)/m/n' will be
-(Font)              scaled to size 5.0pt on input line 113.
+(Font)              scaled to size 5.0pt on input line 150.
 LaTeX Font Info:    Font shape `TU/FiraMath(2)/m/n' will be
-(Font)              scaled to size 12.00128pt on input line 113.
+(Font)              scaled to size 12.00128pt on input line 150.
 LaTeX Font Info:    Font shape `TU/FiraMath(2)/m/n' will be
-(Font)              scaled to size 8.00085pt on input line 113.
+(Font)              scaled to size 8.00085pt on input line 150.
 LaTeX Font Info:    Font shape `TU/FiraMath(2)/m/n' will be
-(Font)              scaled to size 6.00064pt on input line 113.
+(Font)              scaled to size 6.00064pt on input line 150.
 LaTeX Font Info:    Font shape `TU/FiraMath(3)/m/n' will be
-(Font)              scaled to size 11.99872pt on input line 113.
+(Font)              scaled to size 11.99872pt on input line 150.
 LaTeX Font Info:    Font shape `TU/FiraMath(3)/m/n' will be
-(Font)              scaled to size 7.99915pt on input line 113.
+(Font)              scaled to size 7.99915pt on input line 150.
 LaTeX Font Info:    Font shape `TU/FiraMath(3)/m/n' will be
-(Font)              scaled to size 5.99936pt on input line 113.
+(Font)              scaled to size 5.99936pt on input line 150.
 LaTeX Font Info:    Font shape `TU/Pretendard(3)/m/n' will be
-(Font)              scaled to size 12.0pt on input line 113.
+(Font)              scaled to size 12.0pt on input line 150.
 LaTeX Font Info:    Font shape `TU/Pretendard(3)/m/n' will be
-(Font)              scaled to size 8.0pt on input line 113.
+(Font)              scaled to size 8.0pt on input line 150.
 LaTeX Font Info:    Font shape `TU/Pretendard(3)/m/n' will be
-(Font)              scaled to size 6.0pt on input line 113.
+(Font)              scaled to size 6.0pt on input line 150.
 LaTeX Font Info:    Font shape `TU/Pretendard(4)/m/n' will be
-(Font)              scaled to size 12.0pt on input line 113.
+(Font)              scaled to size 12.0pt on input line 150.
 LaTeX Font Info:    Font shape `TU/Pretendard(4)/m/n' will be
-(Font)              scaled to size 8.0pt on input line 113.
+(Font)              scaled to size 8.0pt on input line 150.
 LaTeX Font Info:    Font shape `TU/Pretendard(4)/m/n' will be
-(Font)              scaled to size 6.0pt on input line 113.
- [4
+(Font)              scaled to size 6.0pt on input line 150.
+ [6
 
 ]
 File: ../../assets/fig_ch02_correlation.pdf Graphic file (type pdf)
@@ -1876,15 +1892,15 @@ File: ../../assets/fig_ch02_correlation.pdf Graphic file (type pdf)
 
 
 LaTeX Font Warning: Font shape `TU/Pretendard(2)/m/it' undefined
-(Font)              using `TU/Pretendard(2)/m/n' instead on input line 128.
+(Font)              using `TU/Pretendard(2)/m/n' instead on input line 165.
 
 
-Overfull \vbox (54.69365pt too high) detected at line 128
+Overfull \vbox (54.61554pt too high) detected at line 165
  []
 
-[5
+[7
 
-] [6
+] [8
 
 ]
 \tf@nav=\write6
@@ -1909,12 +1925,12 @@ Package rerunfilecheck Info: File `lecture.out' has not changed.
 (rerunfilecheck)             Checksum: D41D8CD98F00B204E9800998ECF8427E;0.
  ) 
 Here is how much of TeX's memory you used:
- 37396 strings out of 468178
- 729273 string characters out of 5436864
+ 37481 strings out of 468178
+ 730222 string characters out of 5436864
  1262578 words of memory out of 5000000
- 65398 multiletter control sequences out of 15000+600000
- 636565 words of font info for 171 fonts, out of 8000000 for 9000
+ 65478 multiletter control sequences out of 15000+600000
+ 636671 words of font info for 172 fonts, out of 8000000 for 9000
  1348 hyphenation exceptions out of 8191
  128i,13n,142p,1874b,2936s stack positions out of 10000i,1000n,20000p,200000b,200000s
 
-Output written on lecture.pdf (6 pages).
+Output written on lecture.pdf (8 pages).

@@ -1,9 +1,9 @@
 # Fdb version 4
-["pdflatex"] 1768868599.69496 "c:/Lectures_Code/ComTheory_2026/slides/02_signals/lecture.tex" "lecture.pdf" "lecture" 1768868610.35805 2
+["pdflatex"] 1768868975.34875 "c:/Lectures_Code/ComTheory_2026/slides/02_signals/lecture.tex" "lecture.pdf" "lecture" 1768868985.9253 2
   "../../assets/fig_ch02_correlation.pdf" 1768607753 14780 acac96c8c7c6e15fa1a2025e40540dbc ""
   "../../assets/fig_ch02_operations.pdf" 1768607753 13515 90c6ea9d809704b701d1d2ae45d53519 ""
   "../../assets/fig_ch02_unit_step.pdf" 1768607753 10154 e5e4069a5c4c68655d31809a37c38803 ""
-  "c:/Lectures_Code/ComTheory_2026/slides/02_signals/lecture.tex" 1768868580 4868 52e16177111e6ca98119d4c15883fcd3 ""
+  "c:/Lectures_Code/ComTheory_2026/slides/02_signals/lecture.tex" 1768868963 4974 9303b9728ec47c1c87241fa0fa4a1162 ""
   "c:/texlive/2025/texmf-dist/fonts/enc/dvips/cm-super/cm-super-ts1.enc" 1767583961 2900 1537cc8184ad1792082cd229ecc269f4 ""
   "c:/texlive/2025/texmf-dist/fonts/enc/dvips/fontawesome5/fa5brands0.enc" 1767584909 2920 d63721872b8c77041b88e51b8f7c291d ""
   "c:/texlive/2025/texmf-dist/fonts/enc/dvips/fontawesome5/fa5free1.enc" 1767584909 3042 0e2b14b9be7d01075a4c4591d5d1781b ""
@@ -333,10 +333,11 @@
   "c:/texlive/2025/texmf-var/fonts/map/pdftex/updmap/pdftex.map" 1767588988 5587484 30eee748fa419a911c40b0c750dd21ba ""
   "c:/texlive/2025/texmf-var/web2c/pdftex/pdflatex.fmt" 1767589451 3635444 faa46f7177bcaf9d49fcfe29bde1f5e4 ""
   "c:/texlive/2025/texmf.cnf" 1767588958 713 e69b156964470283e0530f5060668171 ""
-  "lecture.aux" 1768868607 1215 2e458073651123d6b5c5e93598efc831 "pdflatex"
-  "lecture.nav" 1768868607 747 0e276c0940a342ad38699132b0e9aa8d "pdflatex"
-  "lecture.out" 1768868606 0 d41d8cd98f00b204e9800998ecf8427e "pdflatex"
-  "lecture.tex" 1768868580 4868 52e16177111e6ca98119d4c15883fcd3 ""
+  "lecture.aux" 1768868982 1751 41389289084186b08d3d88cfba668197 "pdflatex"
+  "lecture.nav" 1768868982 1087 d2483073dab948a5875d7a943b423eb2 "pdflatex"
+  "lecture.out" 1768868982 132 0d7b45de17bddd2ad111b853ace5519b "pdflatex"
+  "lecture.tex" 1768868963 4974 9303b9728ec47c1c87241fa0fa4a1162 ""
+  "lecture.toc" 1768868982 52 9e82657cf2c6a19d3d7210f534a08cbd "pdflatex"
   (generated)
   "lecture.aux"
   "lecture.log"
