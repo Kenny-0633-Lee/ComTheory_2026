@@ -1,5 +1,5 @@
 % !TEX program = xelatex
-\documentclass[11pt, aspectratio=169]{beamer}
+\documentclass[10pt, aspectratio=169]{beamer}
 \usetheme{metropolis}
 \useoutertheme{metropolis}
 \useinnertheme{metropolis}
@@ -9,6 +9,7 @@
 \usepackage{kotex}
 \usepackage{tikz} 
 \usepackage{graphicx, caption, hyperref, fontawesome5}
+\usepackage{subcaption}
 
 % [수식 및 폰트 설정 - 기존 파일 그대로 유지]
 \usepackage{amsmath}
@@ -54,29 +55,28 @@
     BoldFont = NotoSansKR-Bold.ttf,
     AutoFakeSlant = 0.2          % 이탤릭 강제 구현
 ]
-
 \setsansfont{NotoSansKR-Regular.ttf}[
     Path = ../../fonts/,
     BoldFont = NotoSansKR-Bold.ttf,
     AutoFakeSlant = 0.2
 ]
-
 \setmainhangulfont{NotoSansKR-Regular.ttf}[
     Path = ../../fonts/,
     BoldFont = NotoSansKR-Bold.ttf,
     AutoFakeSlant = 0.2
 ]
-
 \setsanshangulfont{NotoSansKR-Regular.ttf}[
     Path = ../../fonts/,
     BoldFont = NotoSansKR-Bold.ttf,
     AutoFakeSlant = 0.2
 ]
-
 % 수식 폰트 설정
 \setmathfont{Fira Math}
 \setmathfont[range={up, bfup}, Scale=MatchLowercase, Path = ../../fonts/]{NotoSansKR-Regular.ttf}
 \setmathfont[range={it, bfit}, Scale=MatchLowercase, FakeSlant=0.2, Path = ../../fonts/]{NotoSansKR-Regular.ttf}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 \begin{document}
@@ -94,23 +94,27 @@
 
 % Definitions : Signals and Systems
 \begin{frame}{Definitions: Signals and Systems}
-    \begin{block}{\fbox{Signals}}
-        A signal is a set of information or data. \\
-        Examples: Audio signals, video signals, sensor data, etc.\\
-        In all these examples, the signals are functions of the independent variable \textbf{time $t$}.
-    \end{block}
-    \vspace{0.2cm}
-    \begin{block}{\fbox{Systems}}
-        Signals may be processed further by systems, which may modify them or extract additional infromation from them. \\
-        For example, an antiaircraft radar system processes the received signals (inputs) to determine the position and velocity of an aircraft (outputs). \\
-        Thus, a system is an entity that processes signals (\textbf{inputs}) to yield another set of signals (\textbf{outputs}). \\
-        More examples: Amplifiers, filters, modulators, demodulators, etc.
-    \end{block}
+    \fbox{Signals}
+    \small{
+    \begin{itemize}
+        \item A signal is a set of information or data.
+        \item Examples: Audio signals, video signals, sensor data, etc.
+        \item In all these examples, the signals are functions of the independent variable \textbf{time $t$}.
+    \end{itemize}}
+    %  \vspace{0.2cm}
+    \fbox{Systems}
+    \small{
+    \begin{itemize}
+        \item Signals may be processed further by systems, which may modify them or extract additional infromation from them.
+        \item For example, an antiaircraft radar system processes the received signals (inputs) to determine the position and velocity of an aircraft (outputs).
+        \item Thus, a system is an entity that processes signals (\textbf{inputs}) to yield another set of signals (\textbf{outputs}).
+        \item More examples: Amplifiers, filters, modulators, demodulators, etc.
+    \end{itemize}}
 \end{frame}
 
 % 2.1 신호의 크기
 \begin{frame}
-    \frametitle{Size of Signal}
+    \frametitle{Energy vs Power}
     \begin{columns}
         % [왼쪽 컬럼] 그림 (a), (b) 배치 및 통합 캡션
         \begin{column}{0.45\textwidth}
@@ -135,14 +139,14 @@
             \begin{block}{Energy Signal}
                 A signal is said to be an energy signal if its energy is finite and its average power is zero.
                 \[
-                E = \int_{-\infty}^{\infty} |x(t)|^2 dt < \infty, \quad P = 0
+                E = \int_{-\infty}^{\infty} |g(t)|^2 dt < \infty, \quad P = 0
                 \]
             \end{block}
             %\vspace{0.1cm}
             \begin{block}{Power Signal}
                 A signal is said to be a power signal if its average power is finite and its energy is infinite.
                 \[
-                P = \lim_{T \to \infty} \frac{1}{2T} \int_{-T}^{T} |x(t)|^2 dt < \infty, \quad E = \infty
+                P = \lim_{T \to \infty} \frac{1}{T} \int_{-T}^{T} |x(t)|^2 dt < \infty, \quad E = \infty
                 \]
             \end{block}
         \end{column}

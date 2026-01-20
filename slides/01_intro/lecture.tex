@@ -4,50 +4,78 @@
 \useoutertheme{metropolis}
 \useinnertheme{metropolis}
 \usecolortheme{metropolis}
-\usefonttheme{professionalfonts} % [Beamer 설정] Beamer가 폰트를 건드리지 못하게 함 (필수)
+\usefonttheme{professionalfonts} 
 
 \usepackage{kotex}
 \usepackage{tikz} 
 \usepackage{graphicx, caption, hyperref, fontawesome5}
-% [추가] subfigure 환경을 사용하기 위해 필수입니다!
 \usepackage{subcaption}
 
-% [수식 및 폰트 핵심 설정]
+% [수식 및 폰트 설정 - 기존 파일 그대로 유지]
 \usepackage{amsmath}
-\usepackage[math-style=ISO, bold-style=ISO]{unicode-math} % unicode-math 로드
-
-% 1. Beamer가 폰트를 제멋대로 바꾸지 못하게 막음 (필수!)
+\usepackage[math-style=ISO, bold-style=ISO]{unicode-math}
 \usefonttheme{professionalfonts}
 
-% 2. 본문 폰트 설정 (Pretendard)
-% AutoFakeSlant: 이탤릭체가 없는 Pretendard를 위해 강제로 20% 기울임
-\setmainfont[Ligatures=TeX, BoldFont={* Bold}, AutoFakeSlant=0.2]{Pretendard}
-\setsansfont[Ligatures=TeX, BoldFont={* Bold}, AutoFakeSlant=0.2]{Pretendard}
-\setmainhangulfont[BoldFont={* Bold}]{Pretendard}
-\setsanshangulfont[BoldFont={* Bold}]{Pretendard}
+% [캡션 스타일 설정]
+% 1. 캡션 폰트: 굵게(bold) 제거(\mdseries), 크기는 약간 작게(\small)
+\setbeamerfont{caption}{series=\mdseries, size=\small}
+\setbeamerfont{caption name}{series=\mdseries}
+% 2. 캡션 번호 붙이기 (Figure 1: ...)
+\setbeamertemplate{caption}[numbered]
+% 3. 캡션 레이블 구분자 (Figure 1. Caption)
+\setbeamertemplate{caption label separator}[period]
 
-% 3. 수식 폰트 설정 (Fira Math + Pretendard 조합)
-% (A) 기본 수식 기호는 Fira Math (Sans-serif Math Font) 사용
-\setmathfont{Fira Math}
+% [중요] 그림 경로 수정 (슬라이드 폴더 기준 2단계 위로)
+\graphicspath{ {./} {../../assets/} {../assets/} }
 
-% (B) 수식 내의 문자(x, y, log, sin 등)는 Pretendard로 덮어씌움 (통일감)
-\setmathfont[range={up, bfup}, Scale=MatchLowercase]{Pretendard}
-\setmathfont[range={it, bfit}, Scale=MatchLowercase, FakeSlant=0.2]{Pretendard}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-% 4. 메타데이터
 \title{Communication Theory - 2026}
-\subtitle{CDMA 시스템과 Viterbi 복호화}
+\subtitle{Chapter 2. Signals and Signal Space}
 \date{\today}
 \author{
     이 경 근 \\
     {\tiny
-        \raisebox{0.1ex}{\scalebox{0.85}{\faEnvelope}} \href{mailto:infosec@knu.ac.kr}{infosec@knu.ac.kr} \quad 
-        {\scalebox{0.9}{\faLinkedin}} \scalebox{0.9}{\href{https://www.linkedin.com/in/Kenny-0633-Lee}{Kenny-0633-Lee}}
+        % \texorpdfstring{문서에 보일 내용}{PDF 속성에 들어갈 텍스트(특수문자 제외)}
+        \texorpdfstring{\raisebox{-0.1ex}{\scalebox{0.85}{\faEnvelope}}}{} \href{mailto:infosec@knu.ac.kr}{infosec@knu.ac.kr} \quad 
+        \texorpdfstring{\scalebox{0.95}{\faLinkedin}}{} \scalebox{0.9}{\href{https://www.linkedin.com/in/Kenny-0633-Lee}{Kenny-0633-Lee}}
     }
 }
 \institute{EE / KNU}
-\graphicspath{ {./} {../../assets/} {../assets/} }
 
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% [Font Settings] Project-Local Fonts (Perfect Stability)
+\usepackage{fontspec}
+
+% 시스템 폰트가 아니라, ./fonts 폴더의 파일을 직접 사용합니다.
+\setmainfont{NotoSansKR-Regular.ttf}[
+    Path = ../../fonts/,             % 폰트 파일 위치
+    BoldFont = NotoSansKR-Bold.ttf,
+    AutoFakeSlant = 0.2          % 이탤릭 강제 구현
+]
+\setsansfont{NotoSansKR-Regular.ttf}[
+    Path = ../../fonts/,
+    BoldFont = NotoSansKR-Bold.ttf,
+    AutoFakeSlant = 0.2
+]
+\setmainhangulfont{NotoSansKR-Regular.ttf}[
+    Path = ../../fonts/,
+    BoldFont = NotoSansKR-Bold.ttf,
+    AutoFakeSlant = 0.2
+]
+\setsanshangulfont{NotoSansKR-Regular.ttf}[
+    Path = ../../fonts/,
+    BoldFont = NotoSansKR-Bold.ttf,
+    AutoFakeSlant = 0.2
+]
+
+% 수식 폰트 설정
+\setmathfont{Fira Math}
+\setmathfont[range={up, bfup}, Scale=MatchLowercase, Path = ../../fonts/]{NotoSansKR-Regular.ttf}
+\setmathfont[range={it, bfit}, Scale=MatchLowercase, FakeSlant=0.2, Path = ../../fonts/]{NotoSansKR-Regular.ttf}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%

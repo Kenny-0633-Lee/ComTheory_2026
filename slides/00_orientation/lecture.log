@@ -1,4 +1,4 @@
-This is XeTeX, Version 3.141592653-2.6-0.999997 (TeX Live 2025) (preloaded format=xelatex 2026.1.2)  16 JAN 2026 10:44
+This is XeTeX, Version 3.141592653-2.6-0.999997 (TeX Live 2025) (preloaded format=xelatex 2026.1.2)  20 JAN 2026 22:34
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -921,99 +921,6 @@ Reading Unicode east Asian character class data
  (/usr/local/texlive/2025/texmf-dist/tex/latex/cjk-ko/kolabels-utf.sty
 Package: kolabels-utf 2015/03/20 v1.5 UTF-8 Hangul item labels
 )))
-(/usr/local/texlive/2025/texmf-dist/tex/latex/caption/subcaption.sty
-Package: subcaption 2023/07/28 v1.6b Sub-captions (AR)
-
-(/usr/local/texlive/2025/texmf-dist/tex/latex/caption/caption.sty
-Package: caption 2023/08/05 v3.6o Customizing captions (AR)
-
-(/usr/local/texlive/2025/texmf-dist/tex/latex/caption/caption3.sty
-Package: caption3 2023/07/31 v2.4d caption3 kernel (AR)
-\caption@tempdima=\dimen314
-\captionmargin=\dimen315
-\caption@leftmargin=\dimen316
-\caption@rightmargin=\dimen317
-\caption@width=\dimen318
-\caption@indent=\dimen319
-\caption@parindent=\dimen320
-\caption@hangindent=\dimen321
-Package caption Info: beamer document class detected.
-
-(/usr/local/texlive/2025/texmf-dist/tex/latex/caption/caption-beamer.sto
-File: caption-beamer.sto 2022/01/06 v2.0c Adaption of the caption package to th
-e beamer document classes (AR)
-))
-\c@caption@flags=\count372
-\c@continuedfloat=\count373
-Package caption Info: hyperref package is loaded.
-Package caption Info: Hyperref support is turned off
-(caption)             because hyperref has stopped early.
-)
-Package caption Info: New subtype `subfigure' on input line 238.
-\c@subfigure=\count374
-Package caption Info: New subtype `subtable' on input line 238.
-\c@subtable=\count375
-)
-(/usr/local/texlive/2025/texmf-dist/tex/latex/fontawesome5/fontawesome5.sty
-Package: fontawesome5 2022/05/02 v5.15.4 Font Awesome 5
-
-(/usr/local/texlive/2025/texmf-dist/tex/latex/l3packages/l3keys2e/l3keys2e.sty
-Package: l3keys2e 2024-08-16 LaTeX2e option processing using LaTeX3 keys
-)
-(/usr/local/texlive/2025/texmf-dist/tex/latex/fontawesome5/fontawesome5-utex-he
-lper.sty
-Package: fontawesome5-utex-helper 2022/05/02 v5.15.4 uTeX helper for fontawesom
-e5
-LaTeX Font Info:    Trying to load font information for TU+fontawesomefree on i
-nput line 69.
-
-(/usr/local/texlive/2025/texmf-dist/tex/latex/fontawesome5/tufontawesomefree.fd
-)
-LaTeX Font Info:    Trying to load font information for TU+fontawesomebrands on
- input line 70.
-
-(/usr/local/texlive/2025/texmf-dist/tex/latex/fontawesome5/tufontawesomebrands.
-fd))) (/usr/local/texlive/2025/texmf-dist/tex/latex/booktabs/booktabs.sty
-Package: booktabs 2020/01/12 v1.61803398 Publication quality tables
-\heavyrulewidth=\dimen322
-\lightrulewidth=\dimen323
-\cmidrulewidth=\dimen324
-\belowrulesep=\dimen325
-\belowbottomsep=\dimen326
-\aboverulesep=\dimen327
-\abovetopsep=\dimen328
-\cmidrulesep=\dimen329
-\cmidrulekern=\dimen330
-\defaultaddspace=\dimen331
-\@cmidla=\count376
-\@cmidlb=\count377
-\@aboverulesep=\dimen332
-\@belowrulesep=\dimen333
-\@thisruleclass=\count378
-\@lastruleclass=\count379
-\@thisrulewidth=\dimen334
-)
-(/usr/local/texlive/2025/texmf-dist/tex/latex/unicode-math/unicode-math.sty
-Package: unicode-math 2023/08/13 v0.8r Unicode maths in XeLaTeX and LuaLaTeX
-
-(/usr/local/texlive/2025/texmf-dist/tex/latex/unicode-math/unicode-math-xetex.s
-ty
-Package: unicode-math-xetex 2023/08/13 v0.8r Unicode maths in XeLaTeX and LuaLa
-TeX
- (/usr/local/texlive/2025/texmf-dist/tex/latex/base/fix-cm.sty
-Package: fix-cm 2020/11/24 v1.1t fixes to LaTeX
-
-(/usr/local/texlive/2025/texmf-dist/tex/latex/base/ts1enc.def
-File: ts1enc.def 2001/06/05 v3.0e (jk/car/fm) Standard LaTeX file
-LaTeX Font Info:    Redeclaring font encoding TS1 on input line 47.
-))
-\g__um_fam_int=\count380
-\g__um_fonts_used_int=\count381
-\l__um_primecount_int=\count382
-\g__um_primekern_muskip=\muskip19
-
-(/usr/local/texlive/2025/texmf-dist/tex/latex/unicode-math/unicode-math-table.t
-ex)))
 (/usr/local/texlive/2025/texmf-dist/tex/generic/pgf/frontendlayer/tikz/librarie
 s/tikzlibraryshapes.code.tex
 File: tikzlibraryshapes.code.tex 2023-01-15 v3.1.10 (3.1.10)
@@ -1089,96 +996,182 @@ File: tikzlibraryarrows.code.tex 2023-01-15 v3.1.10 (3.1.10)
 (/usr/local/texlive/2025/texmf-dist/tex/generic/pgf/libraries/pgflibraryarrows.
 code.tex
 File: pgflibraryarrows.code.tex 2023-01-15 v3.1.10 (3.1.10)
-\arrowsize=\dimen335
+\arrowsize=\dimen314
 ))
 (/usr/local/texlive/2025/texmf-dist/tex/generic/pgf/frontendlayer/tikz/librarie
 s/tikzlibrarypositioning.code.tex
 File: tikzlibrarypositioning.code.tex 2023-01-15 v3.1.10 (3.1.10)
 )
+(/usr/local/texlive/2025/texmf-dist/tex/generic/pgf/frontendlayer/tikz/librarie
+s/tikzlibraryshadows.code.tex
+File: tikzlibraryshadows.code.tex 2023-01-15 v3.1.10 (3.1.10)
+
+(/usr/local/texlive/2025/texmf-dist/tex/generic/pgf/frontendlayer/tikz/librarie
+s/tikzlibraryfadings.code.tex
+File: tikzlibraryfadings.code.tex 2023-01-15 v3.1.10 (3.1.10)
+
+(/usr/local/texlive/2025/texmf-dist/tex/generic/pgf/libraries/pgflibraryfadings
+.code.tex
+File: pgflibraryfadings.code.tex 2023-01-15 v3.1.10 (3.1.10)
+))) (/usr/local/texlive/2025/texmf-dist/tex/latex/caption/caption.sty
+Package: caption 2023/08/05 v3.6o Customizing captions (AR)
+
+(/usr/local/texlive/2025/texmf-dist/tex/latex/caption/caption3.sty
+Package: caption3 2023/07/31 v2.4d caption3 kernel (AR)
+\caption@tempdima=\dimen315
+\captionmargin=\dimen316
+\caption@leftmargin=\dimen317
+\caption@rightmargin=\dimen318
+\caption@width=\dimen319
+\caption@indent=\dimen320
+\caption@parindent=\dimen321
+\caption@hangindent=\dimen322
+Package caption Info: beamer document class detected.
+
+(/usr/local/texlive/2025/texmf-dist/tex/latex/caption/caption-beamer.sto
+File: caption-beamer.sto 2022/01/06 v2.0c Adaption of the caption package to th
+e beamer document classes (AR)
+))
+\c@caption@flags=\count372
+\c@continuedfloat=\count373
+Package caption Info: hyperref package is loaded.
+Package caption Info: Hyperref support is turned off
+(caption)             because hyperref has stopped early.
+)
+(/usr/local/texlive/2025/texmf-dist/tex/latex/fontawesome5/fontawesome5.sty
+Package: fontawesome5 2022/05/02 v5.15.4 Font Awesome 5
+
+(/usr/local/texlive/2025/texmf-dist/tex/latex/l3packages/l3keys2e/l3keys2e.sty
+Package: l3keys2e 2024-08-16 LaTeX2e option processing using LaTeX3 keys
+)
+(/usr/local/texlive/2025/texmf-dist/tex/latex/fontawesome5/fontawesome5-utex-he
+lper.sty
+Package: fontawesome5-utex-helper 2022/05/02 v5.15.4 uTeX helper for fontawesom
+e5
+LaTeX Font Info:    Trying to load font information for TU+fontawesomefree on i
+nput line 69.
+
+(/usr/local/texlive/2025/texmf-dist/tex/latex/fontawesome5/tufontawesomefree.fd
+)
+LaTeX Font Info:    Trying to load font information for TU+fontawesomebrands on
+ input line 70.
+
+(/usr/local/texlive/2025/texmf-dist/tex/latex/fontawesome5/tufontawesomebrands.
+fd))) (/usr/local/texlive/2025/texmf-dist/tex/latex/caption/subcaption.sty
+Package: subcaption 2023/07/28 v1.6b Sub-captions (AR)
+Package caption Info: New subtype `subfigure' on input line 238.
+\c@subfigure=\count374
+Package caption Info: New subtype `subtable' on input line 238.
+\c@subtable=\count375
+)
+(/usr/local/texlive/2025/texmf-dist/tex/latex/unicode-math/unicode-math.sty
+Package: unicode-math 2023/08/13 v0.8r Unicode maths in XeLaTeX and LuaLaTeX
+
+(/usr/local/texlive/2025/texmf-dist/tex/latex/unicode-math/unicode-math-xetex.s
+ty
+Package: unicode-math-xetex 2023/08/13 v0.8r Unicode maths in XeLaTeX and LuaLa
+TeX
+ (/usr/local/texlive/2025/texmf-dist/tex/latex/base/fix-cm.sty
+Package: fix-cm 2020/11/24 v1.1t fixes to LaTeX
+
+(/usr/local/texlive/2025/texmf-dist/tex/latex/base/ts1enc.def
+File: ts1enc.def 2001/06/05 v3.0e (jk/car/fm) Standard LaTeX file
+LaTeX Font Info:    Redeclaring font encoding TS1 on input line 47.
+))
+\g__um_fam_int=\count376
+\g__um_fonts_used_int=\count377
+\l__um_primecount_int=\count378
+\g__um_primekern_muskip=\muskip19
+
+(/usr/local/texlive/2025/texmf-dist/tex/latex/unicode-math/unicode-math-table.t
+ex)))
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `\\' on input line 45.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                \hskip 10.95pt
+(hyperref)                replaced by space on input line 45.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `\scalebox' on input line 45.
+
 
 Package fontspec Info: 
-(fontspec)             Font family 'Pretendard(0)' created for font
-(fontspec)             'Pretendard' with options
-(fontspec)             [Ligatures=TeX,Ligatures=TeX,BoldFont={*
-(fontspec)             Bold},AutoFakeSlant=0.2].
+(fontspec)             Font family 'NotoSansKR-Regular.ttf(0)' created for
+(fontspec)             font 'NotoSansKR-Regular.ttf' with options
+(fontspec)             [Ligatures=TeX,Path = ../../fonts/,BoldFont =
+(fontspec)             NotoSansKR-Bold.ttf,AutoFakeSlant = 0.2].
 (fontspec)              
 (fontspec)              This font family consists of the following NFSS
 (fontspec)             series/shapes:
 (fontspec)              
 (fontspec)             - 'normal' (m/n) with NFSS spec.:
-(fontspec)             <->"Pretendard/OT:script=latn;language=dflt;mapping=tex-
-text;"
-(fontspec)             - 'bold' (b/n) with NFSS spec.: <->"Pretendard
-(fontspec)             Bold/OT:script=latn;language=dflt;mapping=tex-text;"
+(fontspec)             <->"[../../fonts/NotoSansKR-Regular.ttf]/OT:script=latn;
+language=dflt;mapping=tex-text;"
+(fontspec)             - 'bold' (b/n) with NFSS spec.:
+(fontspec)             <->"[../../fonts/NotoSansKR-Bold.ttf]/OT:script=latn;lan
+guage=dflt;mapping=tex-text;"
 (fontspec)             - 'italic' (m/it) with NFSS spec.:
-(fontspec)             <->"Pretendard/OT:script=latn;language=dflt;slant=0.2;ma
-pping=tex-text;"
-(fontspec)             - 'bold italic' (b/it) with NFSS spec.:
-(fontspec)             <->"Pretendard/B/OT:script=latn;language=dflt;mapping=te
-x-text;"
+(fontspec)             <->"[../../fonts/NotoSansKR-Regular.ttf]/OT:script=latn;
+language=dflt;slant=0.2;mapping=tex-text;"
 
 
 Package fontspec Info: 
-(fontspec)             Font family 'Pretendard(1)' created for font
-(fontspec)             'Pretendard' with options [Ligatures=TeX,BoldFont={*
-(fontspec)             Bold},AutoFakeSlant=0.2].
+(fontspec)             Font family 'NotoSansKR-Regular.ttf(1)' created for
+(fontspec)             font 'NotoSansKR-Regular.ttf' with options [Path =
+(fontspec)             ../../fonts/,BoldFont =
+(fontspec)             NotoSansKR-Bold.ttf,AutoFakeSlant = 0.2].
 (fontspec)              
 (fontspec)              This font family consists of the following NFSS
 (fontspec)             series/shapes:
 (fontspec)              
 (fontspec)             - 'normal' (m/n) with NFSS spec.:
-(fontspec)             <->"Pretendard/OT:script=latn;language=dflt;mapping=tex-
-text;"
-(fontspec)             - 'bold' (b/n) with NFSS spec.: <->"Pretendard
-(fontspec)             Bold/OT:script=latn;language=dflt;mapping=tex-text;"
+(fontspec)             <->"[../../fonts/NotoSansKR-Regular.ttf]/OT:script=latn;
+language=dflt;"
+(fontspec)             - 'bold' (b/n) with NFSS spec.:
+(fontspec)             <->"[../../fonts/NotoSansKR-Bold.ttf]/OT:script=latn;lan
+guage=dflt;"
 (fontspec)             - 'italic' (m/it) with NFSS spec.:
-(fontspec)             <->"Pretendard/OT:script=latn;language=dflt;slant=0.2;ma
-pping=tex-text;"
-(fontspec)             - 'bold italic' (b/it) with NFSS spec.:
-(fontspec)             <->"Pretendard/B/OT:script=latn;language=dflt;mapping=te
-x-text;"
+(fontspec)             <->"[../../fonts/NotoSansKR-Regular.ttf]/OT:script=latn;
+language=dflt;slant=0.2;"
 
 LaTeX Font Info:    Overwriting math alphabet `\mathrm' in version `normal'
-(Font)                  OT1/cmr/m/n --> TU/Pretendard(1)/m/n on input line 23.
+(Font)                  OT1/cmr/m/n --> TU/NotoSansKR-Regular.ttf(1)/m/n on inp
+ut line 57.
 LaTeX Font Info:    Overwriting math alphabet `\mathit' in version `normal'
-(Font)                  OT1/cmr/m/it --> TU/Pretendard(1)/m/it on input line 23
-.
+(Font)                  OT1/cmr/m/it --> TU/NotoSansKR-Regular.ttf(1)/m/it on i
+nput line 57.
 LaTeX Font Info:    Overwriting math alphabet `\mathbf' in version `normal'
-(Font)                  OT1/cmr/bx/n --> TU/Pretendard(1)/b/n on input line 23.
-
+(Font)                  OT1/cmr/bx/n --> TU/NotoSansKR-Regular.ttf(1)/b/n on in
+put line 57.
 LaTeX Font Info:    Overwriting math alphabet `\mathsf' in version `normal'
-(Font)                  OT1/cmss/m/n --> TU/Pretendard(1)/m/n on input line 24.
-
+(Font)                  OT1/cmss/m/n --> TU/NotoSansKR-Regular.ttf(1)/m/n on in
+put line 62.
 LaTeX Font Info:    Overwriting math alphabet `\mathsf' in version `bold'
-(Font)                  OT1/cmss/bx/n --> TU/Pretendard(1)/b/n on input line 24
-.
+(Font)                  OT1/cmss/bx/n --> TU/NotoSansKR-Regular.ttf(1)/b/n on i
+nput line 62.
 
 Package fontspec Info: 
-(fontspec)             Could not resolve font "Pretendard Bold/I" (it probably
-(fontspec)             doesn't exist).
-
-
-Package fontspec Info: 
-(fontspec)             Could not resolve font "Pretendard/I" (it probably
-(fontspec)             doesn't exist).
-
-
-Package fontspec Info: 
-(fontspec)             Font family 'Pretendard(2)' created for font
-(fontspec)             'Pretendard' with options [Ligatures=TeX,BoldFont={*
-(fontspec)             Bold}].
+(fontspec)             Font family 'NotoSansKR-Regular.ttf(2)' created for
+(fontspec)             font 'NotoSansKR-Regular.ttf' with options
+(fontspec)             [Ligatures=TeX,Path={../../fonts/},BoldFont={NotoSansKR-
+Bold.ttf},AutoFakeSlant={0.2}].
 (fontspec)              
 (fontspec)              This font family consists of the following NFSS
 (fontspec)             series/shapes:
 (fontspec)              
 (fontspec)             - 'normal' (m/n) with NFSS spec.:
-(fontspec)             <->"Pretendard/OT:script=latn;language=dflt;mapping=tex-
-text;"
-(fontspec)             - 'bold' (b/n) with NFSS spec.: <->"Pretendard
-(fontspec)             Bold/OT:script=latn;language=dflt;mapping=tex-text;"
-(fontspec)             - 'bold italic' (b/it) with NFSS spec.:
-(fontspec)             <->"Pretendard/BI/OT:script=latn;language=dflt;mapping=t
-ex-text;"
+(fontspec)             <->"[../../fonts/NotoSansKR-Regular.ttf]/OT:script=latn;
+language=dflt;mapping=tex-text;"
+(fontspec)             - 'bold' (b/n) with NFSS spec.:
+(fontspec)             <->"[../../fonts/NotoSansKR-Bold.ttf]/OT:script=latn;lan
+guage=dflt;mapping=tex-text;"
+(fontspec)             - 'italic' (m/it) with NFSS spec.:
+(fontspec)             <->"[../../fonts/NotoSansKR-Regular.ttf]/OT:script=latn;
+language=dflt;slant=0.2;mapping=tex-text;"
 
 
 Package fontspec Info: 
@@ -1222,13 +1215,13 @@ a
 (fontspec)             Math/OT:script=math;language=dflt;+ssty=1;"
 
 LaTeX Font Info:    Encoding `OT1' has changed to `TU' for symbol font
-(Font)              `operators' in the math version `normal' on input line 27.
+(Font)              `operators' in the math version `normal' on input line 76.
 LaTeX Font Info:    Overwriting symbol font `operators' in version `normal'
-(Font)                  OT1/cmr/m/n --> TU/FiraMath(1)/m/n on input line 27.
+(Font)                  OT1/cmr/m/n --> TU/FiraMath(1)/m/n on input line 76.
 LaTeX Font Info:    Encoding `OT1' has changed to `TU' for symbol font
-(Font)              `operators' in the math version `bold' on input line 27.
+(Font)              `operators' in the math version `bold' on input line 76.
 LaTeX Font Info:    Overwriting symbol font `operators' in version `bold'
-(Font)                  OT1/cmr/bx/n --> TU/FiraMath(1)/b/n on input line 27.
+(Font)                  OT1/cmr/bx/n --> TU/FiraMath(1)/b/n on input line 76.
 
 Package fontspec Info: 
 (fontspec)             Fira Math scale = 1.0001.
@@ -1282,13 +1275,13 @@ stment={\fontdimen
 (fontspec)             Math/OT:script=math;language=dflt;+ssty=1;"
 
 LaTeX Font Info:    Encoding `OMS' has changed to `TU' for symbol font
-(Font)              `symbols' in the math version `normal' on input line 27.
+(Font)              `symbols' in the math version `normal' on input line 76.
 LaTeX Font Info:    Overwriting symbol font `symbols' in version `normal'
-(Font)                  OMS/cmsy/m/n --> TU/FiraMath(2)/m/n on input line 27.
+(Font)                  OMS/cmsy/m/n --> TU/FiraMath(2)/m/n on input line 76.
 LaTeX Font Info:    Encoding `OMS' has changed to `TU' for symbol font
-(Font)              `symbols' in the math version `bold' on input line 27.
+(Font)              `symbols' in the math version `bold' on input line 76.
 LaTeX Font Info:    Overwriting symbol font `symbols' in version `bold'
-(Font)                  OMS/cmsy/b/n --> TU/FiraMath(2)/b/n on input line 27.
+(Font)                  OMS/cmsy/b/n --> TU/FiraMath(2)/b/n on input line 76.
 
 Package fontspec Info: 
 (fontspec)             Fira Math scale = 0.9999.
@@ -1336,161 +1329,140 @@ stment={\fontdimen
 (fontspec)             Math/OT:script=math;language=dflt;+ssty=1;"
 
 LaTeX Font Info:    Encoding `OMX' has changed to `TU' for symbol font
-(Font)              `largesymbols' in the math version `normal' on input line 2
-7.
+(Font)              `largesymbols' in the math version `normal' on input line 7
+6.
 LaTeX Font Info:    Overwriting symbol font `largesymbols' in version `normal'
-(Font)                  OMX/cmex/m/n --> TU/FiraMath(3)/m/n on input line 27.
+(Font)                  OMX/cmex/m/n --> TU/FiraMath(3)/m/n on input line 76.
 LaTeX Font Info:    Encoding `OMX' has changed to `TU' for symbol font
-(Font)              `largesymbols' in the math version `bold' on input line 27.
+(Font)              `largesymbols' in the math version `bold' on input line 76.
 
 LaTeX Font Info:    Overwriting symbol font `largesymbols' in version `bold'
-(Font)                  OMX/cmex/m/n --> TU/FiraMath(3)/b/n on input line 27.
+(Font)                  OMX/cmex/m/n --> TU/FiraMath(3)/b/n on input line 76.
 
 Package fontspec Info: 
 (fontspec)             Script 'Math' not explicitly supported within font
-(fontspec)             'Pretendard'. Check the typeset output, and if it is
-(fontspec)             okay then ignore this warning. Otherwise a different
-(fontspec)             font should be chosen.
+(fontspec)             'NotoSansKR-Regular'. Check the typeset output, and if
+(fontspec)             it is okay then ignore this warning. Otherwise a
+(fontspec)             different font should be chosen.
 
 
 Package fontspec Info: 
-(fontspec)             Pretendard scale = 0.9999973721208298.
+(fontspec)             NotoSansKR-Regular scale = 0.9999974337128018.
 
 
 Package fontspec Info: 
-(fontspec)             Pretendard scale = 0.9999973721208298.
+(fontspec)             NotoSansKR-Regular scale = 0.9999974337128018.
 
 
 Package fontspec Info: 
-(fontspec)             Pretendard scale = 0.9999973721208298.
+(fontspec)             NotoSansKR-Regular scale = 0.9999974337128018.
 
 
 Package fontspec Info: 
-(fontspec)             Pretendard scale = 0.9999973721208298.
+(fontspec)             NotoSansKR-Regular scale = 0.9999974337128018.
 
 
 Package fontspec Info: 
-(fontspec)             Pretendard/B scale = 0.9999973721208298.
-
-
-Package fontspec Info: 
-(fontspec)             Font family 'Pretendard(3)' created for font
-(fontspec)             'Pretendard' with options
+(fontspec)             Font family 'NotoSansKR-Regular.ttf(3)' created for
+(fontspec)             font 'NotoSansKR-Regular.ttf' with options
 (fontspec)             [BoldItalicFont={},ItalicFont={},SmallCapsFont={},Script
-=Math,SizeFeatures={{Size=9.417-},{Size=7.1175-9.417,Font=Pretendard,Style=Math
-Script},{Size=-7.1175,Font=Pretendard,Style=MathScriptScript}},Scale={MatchLowe
-rcase}].
+=Math,SizeFeatures={{Size=9.417-},{Size=7.1175-9.417,Font=NotoSansKR-Regular.tt
+f,Style=MathScript},{Size=-7.1175,Font=NotoSansKR-Regular.ttf,Style=MathScriptS
+cript}},Scale={MatchLowercase},Path={../../fonts/}].
 (fontspec)              
 (fontspec)              This font family consists of the following NFSS
 (fontspec)             series/shapes:
 (fontspec)              
 (fontspec)             - 'normal' (m/n) with NFSS spec.:
-(fontspec)             <9.417->s*[0.9999973721208298]"Pretendard/OT:script=math
-;language=dflt;"<7.1175-9.417>s*[0.9999973721208298]"Pretendard/OT:script=math;
-language=dflt;+ssty=0;"<-7.1175>s*[0.9999973721208298]"Pretendard/OT:script=mat
-h;language=dflt;+ssty=1;"
-(fontspec)             - 'bold' (b/n) with NFSS spec.:
-(fontspec)             <->s*[0.9999973721208298]"Pretendard/B/OT:script=math;la
-nguage=dflt;"
+(fontspec)             <9.417->s*[0.9999974337128018]"[../../fonts/NotoSansKR-R
+egular.ttf]/OT:script=math;language=dflt;"<7.1175-9.417>s*[0.9999974337128018]"
+[../../fonts/NotoSansKR-Regular.ttf]/OT:script=math;language=dflt;+ssty=0;"<-7.
+1175>s*[0.9999974337128018]"[../../fonts/NotoSansKR-Regular.ttf]/OT:script=math
+;language=dflt;+ssty=1;"
 
-LaTeX Font Info:    Font shape `TU/Pretendard(3)/m/n' will be
-(Font)              scaled to size 10.95pt on input line 28.
+LaTeX Font Info:    Font shape `TU/NotoSansKR-Regular.ttf(3)/m/n' will be
+(Font)              scaled to size 10.95pt on input line 77.
 \sym__um_fam1=\mathgroup6
 LaTeX Font Info:    Overwriting symbol font `__um_fam1' in version `normal'
-(Font)                  TU/Pretendard(3)/m/n --> TU/Pretendard(3)/m/n on input 
-line 28.
+(Font)                  TU/NotoSansKR-Regular.ttf(3)/m/n --> TU/NotoSansKR-Regu
+lar.ttf(3)/m/n on input line 77.
 LaTeX Font Info:    Overwriting symbol font `__um_fam1' in version `bold'
-(Font)                  TU/Pretendard(3)/m/n --> TU/Pretendard(3)/b/n on input 
-line 28.
+(Font)                  TU/NotoSansKR-Regular.ttf(3)/m/n --> TU/NotoSansKR-Regu
+lar.ttf(3)/b/n on input line 77.
 
 Package fontspec Info: 
 (fontspec)             Script 'Math' not explicitly supported within font
-(fontspec)             'Pretendard'. Check the typeset output, and if it is
-(fontspec)             okay then ignore this warning. Otherwise a different
-(fontspec)             font should be chosen.
+(fontspec)             'NotoSansKR-Regular'. Check the typeset output, and if
+(fontspec)             it is okay then ignore this warning. Otherwise a
+(fontspec)             different font should be chosen.
 
 
 Package fontspec Info: 
-(fontspec)             Pretendard scale = 0.9999973721208298.
+(fontspec)             NotoSansKR-Regular scale = 0.9999974337128018.
 
 
 Package fontspec Info: 
-(fontspec)             Pretendard scale = 0.9999973721208298.
+(fontspec)             NotoSansKR-Regular scale = 0.9999974337128018.
 
 
 Package fontspec Info: 
-(fontspec)             Pretendard scale = 0.9999973721208298.
+(fontspec)             NotoSansKR-Regular scale = 0.9999974337128018.
 
 
 Package fontspec Info: 
-(fontspec)             Pretendard scale = 0.9999973721208298.
+(fontspec)             NotoSansKR-Regular scale = 0.9999974337128018.
 
 
 Package fontspec Info: 
-(fontspec)             Pretendard/B scale = 0.9999973721208298.
-
-
-Package fontspec Info: 
-(fontspec)             Font family 'Pretendard(4)' created for font
-(fontspec)             'Pretendard' with options
+(fontspec)             Font family 'NotoSansKR-Regular.ttf(4)' created for
+(fontspec)             font 'NotoSansKR-Regular.ttf' with options
 (fontspec)             [BoldItalicFont={},ItalicFont={},SmallCapsFont={},Script
-=Math,SizeFeatures={{Size=9.417-},{Size=7.1175-9.417,Font=Pretendard,Style=Math
-Script},{Size=-7.1175,Font=Pretendard,Style=MathScriptScript}},Scale={MatchLowe
-rcase},FakeSlant={0.2}].
+=Math,SizeFeatures={{Size=9.417-},{Size=7.1175-9.417,Font=NotoSansKR-Regular.tt
+f,Style=MathScript},{Size=-7.1175,Font=NotoSansKR-Regular.ttf,Style=MathScriptS
+cript}},Scale={MatchLowercase},FakeSlant={0.2},Path={../../fonts/}].
 (fontspec)              
 (fontspec)              This font family consists of the following NFSS
 (fontspec)             series/shapes:
 (fontspec)              
 (fontspec)             - 'normal' (m/n) with NFSS spec.:
-(fontspec)             <9.417->s*[0.9999973721208298]"Pretendard/OT:script=math
-;language=dflt;slant=0.2;"<7.1175-9.417>s*[0.9999973721208298]"Pretendard/OT:sc
-ript=math;language=dflt;slant=0.2;+ssty=0;"<-7.1175>s*[0.9999973721208298]"Pret
-endard/OT:script=math;language=dflt;slant=0.2;+ssty=1;"
-(fontspec)             - 'bold' (b/n) with NFSS spec.:
-(fontspec)             <->s*[0.9999973721208298]"Pretendard/B/OT:script=math;la
-nguage=dflt;slant=0.2;"
+(fontspec)             <9.417->s*[0.9999974337128018]"[../../fonts/NotoSansKR-R
+egular.ttf]/OT:script=math;language=dflt;slant=0.2;"<7.1175-9.417>s*[0.99999743
+37128018]"[../../fonts/NotoSansKR-Regular.ttf]/OT:script=math;language=dflt;sla
+nt=0.2;+ssty=0;"<-7.1175>s*[0.9999974337128018]"[../../fonts/NotoSansKR-Regular
+.ttf]/OT:script=math;language=dflt;slant=0.2;+ssty=1;"
 
-LaTeX Font Info:    Font shape `TU/Pretendard(4)/m/n' will be
-(Font)              scaled to size 10.95pt on input line 29.
+LaTeX Font Info:    Font shape `TU/NotoSansKR-Regular.ttf(4)/m/n' will be
+(Font)              scaled to size 10.95pt on input line 81.
 \sym__um_fam2=\mathgroup7
 LaTeX Font Info:    Overwriting symbol font `__um_fam2' in version `normal'
-(Font)                  TU/Pretendard(4)/m/n --> TU/Pretendard(4)/m/n on input 
-line 29.
+(Font)                  TU/NotoSansKR-Regular.ttf(4)/m/n --> TU/NotoSansKR-Regu
+lar.ttf(4)/m/n on input line 81.
 LaTeX Font Info:    Overwriting symbol font `__um_fam2' in version `bold'
-(Font)                  TU/Pretendard(4)/m/n --> TU/Pretendard(4)/b/n on input 
-line 29.
-
-
-Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `\\' on input line 41.
-
-
-Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `\faPreselectedIcon' on input line 41.
-
+(Font)                  TU/NotoSansKR-Regular.ttf(4)/m/n --> TU/NotoSansKR-Regu
+lar.ttf(4)/b/n on input line 81.
 (./lecture.aux)
 \openout1 = `lecture.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 44.
-LaTeX Font Info:    ... okay on input line 44.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 44.
-LaTeX Font Info:    ... okay on input line 44.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 44.
-LaTeX Font Info:    ... okay on input line 44.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 44.
-LaTeX Font Info:    ... okay on input line 44.
-LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 44.
-LaTeX Font Info:    ... okay on input line 44.
-LaTeX Font Info:    Checking defaults for TU/lmr/m/n on input line 44.
-LaTeX Font Info:    ... okay on input line 44.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 44.
-LaTeX Font Info:    ... okay on input line 44.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 44.
-LaTeX Font Info:    ... okay on input line 44.
-LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 44.
-LaTeX Font Info:    ... okay on input line 44.
-LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 44.
-LaTeX Font Info:    ... okay on input line 44.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 82.
+LaTeX Font Info:    ... okay on input line 82.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 82.
+LaTeX Font Info:    ... okay on input line 82.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 82.
+LaTeX Font Info:    ... okay on input line 82.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 82.
+LaTeX Font Info:    ... okay on input line 82.
+LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 82.
+LaTeX Font Info:    ... okay on input line 82.
+LaTeX Font Info:    Checking defaults for TU/lmr/m/n on input line 82.
+LaTeX Font Info:    ... okay on input line 82.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 82.
+LaTeX Font Info:    ... okay on input line 82.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 82.
+LaTeX Font Info:    ... okay on input line 82.
+LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 82.
+LaTeX Font Info:    ... okay on input line 82.
+LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 82.
+LaTeX Font Info:    ... okay on input line 82.
 
 *geometry* driver: auto-detecting
 *geometry* detected driver: xetex
@@ -1526,7 +1498,7 @@ LaTeX Font Info:    ... okay on input line 44.
 * \@reversemarginfalse
 * (1in=72.27pt=25.4mm, 1cm=28.453pt)
 
-Package hyperref Info: Link coloring OFF on input line 44.
+Package hyperref Info: Link coloring OFF on input line 82.
 (./lecture.out) (./lecture.out)
 \@outlinefile=\write5
 \openout5 = `lecture.out'.
@@ -1584,17 +1556,24 @@ e=dflt;extend=1.03;"
 Package caption Info: Begin \AtBeginDocument code.
 Package caption Info: End \AtBeginDocument code.
 LaTeX Font Info:    Overwriting math alphabet `\mathtt' in version `normal'
-(Font)                  OT1/cmtt/m/n --> TU/lmtt/m/n on input line 44.
+(Font)                  OT1/cmtt/m/n --> TU/lmtt/m/n on input line 82.
 LaTeX Font Info:    Overwriting math alphabet `\mathtt' in version `bold'
-(Font)                  OT1/cmtt/m/n --> TU/lmtt/b/n on input line 44.
+(Font)                  OT1/cmtt/m/n --> TU/lmtt/b/n on input line 82.
+ (./lecture.nav)
 
-No file lecture.nav.
+LaTeX Font Warning: Font shape `TU/NotoSansKR-Regular.ttf(2)/solid/n' undefined
 
-LaTeX Font Warning: Font shape `TU/Pretendard(2)/solid/n' undefined
-(Font)              using `TU/Pretendard(2)/m/n' instead on input line 49.
+(Font)              using `TU/NotoSansKR-Regular.ttf(2)/m/n' instead on input l
+ine 87.
 
 
-Overfull \vbox (15.63992pt too high) detected at line 49
+LaTeX Font Warning: Font shape `TU/NotoSansKR-Regular.ttf(2)/regular/n' undefin
+ed
+(Font)              using `TU/NotoSansKR-Regular.ttf(2)/m/n' instead on input l
+ine 87.
+
+
+Overfull \vbox (15.63992pt too high) detected at line 87
  []
 
 
@@ -1602,41 +1581,37 @@ Overfull \vbox (15.63992pt too high) detected at line 49
 [1
 
 ]
-
-LaTeX Font Warning: Font shape `TU/Pretendard(2)/m/it' undefined
-(Font)              using `TU/Pretendard(2)/m/n' instead on input line 73.
-
 LaTeX Font Info:    Font shape `TU/FiraMath(2)/m/n' will be
-(Font)              scaled to size 10.95116pt on input line 73.
+(Font)              scaled to size 10.95116pt on input line 111.
 LaTeX Font Info:    Font shape `TU/FiraMath(2)/m/n' will be
-(Font)              scaled to size 7.88484pt on input line 73.
+(Font)              scaled to size 7.88484pt on input line 111.
 LaTeX Font Info:    Font shape `TU/FiraMath(2)/m/n' will be
-(Font)              scaled to size 6.35167pt on input line 73.
+(Font)              scaled to size 6.35167pt on input line 111.
 LaTeX Font Info:    Font shape `TU/FiraMath(3)/m/n' will be
-(Font)              scaled to size 10.94882pt on input line 73.
+(Font)              scaled to size 10.94882pt on input line 111.
 LaTeX Font Info:    Font shape `TU/FiraMath(3)/m/n' will be
-(Font)              scaled to size 7.88315pt on input line 73.
+(Font)              scaled to size 7.88315pt on input line 111.
 LaTeX Font Info:    Font shape `TU/FiraMath(3)/m/n' will be
-(Font)              scaled to size 6.35031pt on input line 73.
-LaTeX Font Info:    Trying to load font information for U+msa on input line 73.
-
-(/usr/local/texlive/2025/texmf-dist/tex/latex/amsfonts/umsa.fd
+(Font)              scaled to size 6.35031pt on input line 111.
+LaTeX Font Info:    Trying to load font information for U+msa on input line 111
+.
+ (/usr/local/texlive/2025/texmf-dist/tex/latex/amsfonts/umsa.fd
 File: umsa.fd 2013/01/14 v3.01 AMS symbols A
 )
-LaTeX Font Info:    Trying to load font information for U+msb on input line 73.
-
+LaTeX Font Info:    Trying to load font information for U+msb on input line 111
+.
 
 (/usr/local/texlive/2025/texmf-dist/tex/latex/amsfonts/umsb.fd
 File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 )
-LaTeX Font Info:    Font shape `TU/Pretendard(3)/m/n' will be
-(Font)              scaled to size 7.884pt on input line 73.
-LaTeX Font Info:    Font shape `TU/Pretendard(3)/m/n' will be
-(Font)              scaled to size 6.351pt on input line 73.
-LaTeX Font Info:    Font shape `TU/Pretendard(4)/m/n' will be
-(Font)              scaled to size 7.884pt on input line 73.
-LaTeX Font Info:    Font shape `TU/Pretendard(4)/m/n' will be
-(Font)              scaled to size 6.351pt on input line 73.
+LaTeX Font Info:    Font shape `TU/NotoSansKR-Regular.ttf(3)/m/n' will be
+(Font)              scaled to size 7.884pt on input line 111.
+LaTeX Font Info:    Font shape `TU/NotoSansKR-Regular.ttf(3)/m/n' will be
+(Font)              scaled to size 6.351pt on input line 111.
+LaTeX Font Info:    Font shape `TU/NotoSansKR-Regular.ttf(4)/m/n' will be
+(Font)              scaled to size 7.884pt on input line 111.
+LaTeX Font Info:    Font shape `TU/NotoSansKR-Regular.ttf(4)/m/n' will be
+(Font)              scaled to size 6.351pt on input line 111.
 
 
 [2
@@ -1674,11 +1649,6 @@ File: ../../assets/fig_05_eye_diagram.pdf Graphic file (type pdf)
 
 ]
 
-LaTeX Font Warning: Font shape `TU/Pretendard(2)/regular/n' undefined
-(Font)              using `TU/Pretendard(2)/m/n' instead on input line 189.
-
-
-
 [7
 
 ]
@@ -1712,11 +1682,11 @@ Package rerunfilecheck Info: File `lecture.out' has not changed.
 (rerunfilecheck)             Checksum: D41D8CD98F00B204E9800998ECF8427E;0.
  ) 
 Here is how much of TeX's memory you used:
- 39934 strings out of 473832
- 804722 string characters out of 5729482
- 1267417 words of memory out of 5000000
- 62269 multiletter control sequences out of 15000+600000
- 562777 words of font info for 111 fonts, out of 8000000 for 9000
+ 39952 strings out of 473832
+ 807992 string characters out of 5729482
+ 1350322 words of memory out of 5000000
+ 62292 multiletter control sequences out of 15000+600000
+ 562721 words of font info for 104 fonts, out of 8000000 for 9000
  1348 hyphenation exceptions out of 8191
  128i,13n,139p,1874b,2936s stack positions out of 10000i,1000n,20000p,200000b,200000s
 
