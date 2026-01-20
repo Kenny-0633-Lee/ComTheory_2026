@@ -13,3 +13,22 @@ Thumbs.db
 # assets/*.pdf
 # assets/*.svgUSB_Lecture_Pack/
 USB_Lecture_Pack/
+
+# --- LaTeX Build Files ---
+*.aux
+*.fdb_latexmk
+*.fls
+*.log
+*.out
+*.synctex.gz
+*.toc
+*.dvi
+
+# --- Beamer Presentation Files ---
+*.nav
+*.snm
+*.vrb
+
+# --- PDF (선택사항) ---
+# 만약 PDF 결과물도 Git에 올리기 싫다면 아래 주석(#)을 제거하세요.
+# *.pdf
