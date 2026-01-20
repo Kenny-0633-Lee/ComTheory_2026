@@ -10,16 +10,22 @@ VENV_DIR=".venv"
 # ------------------------------------------------------------------
 #
 
+# ------------------------------------------------------------------
 echo "🚀 [Step 1] Python 가상환경 점검"
-# 1. 가상환경이 없으면 껍데기만 생성
 if [ ! -d "$VENV_DIR" ]; then
-    echo "   -> 가상환경 폴더 생성..."
+    echo "   -> 가상환경 생성 및 라이브러리 설치..."
     if command -v uv &> /dev/null; then
         uv venv --python 3.12
+        # [수정] scipy와 scikit-dsp-comm 추가
+        uv pip install numpy matplotlib scipy scikit-dsp-comm
     else
         python3 -m venv $VENV_DIR
+        # [수정] scipy와 scikit-dsp-comm 추가
+        $PYTHON -m pip install numpy matplotlib scipy scikit-dsp-comm
     fi
 fi
+
+# ... (하단 생략) ...
 
 # 2. Python 경로 확정
 if [ -f "$VENV_DIR/bin/python" ]; then

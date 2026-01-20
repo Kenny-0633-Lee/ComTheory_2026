@@ -13,40 +13,70 @@
 % [수식 및 폰트 설정 - 기존 파일 그대로 유지]
 \usepackage{amsmath}
 \usepackage[math-style=ISO, bold-style=ISO]{unicode-math}
-% [normalem] 옵션은 \emph{} 명령어를 이탤릭체로 유지해줍니다. 
-% (이 옵션이 없으면 \emph가 밑줄로 변해버립니다.)
-\usepackage[normalem]{ulem}
-
 \usefonttheme{professionalfonts}
 
-% 본문 폰트 (Pretendard)
-\setmainfont[Ligatures=TeX, BoldFont={* Bold}, AutoFakeSlant=0.2]{Pretendard}
-\setsansfont[Ligatures=TeX, BoldFont={* Bold}, AutoFakeSlant=0.2]{Pretendard}
-\setmainhangulfont[BoldFont={* Bold}]{Pretendard}
-\setsanshangulfont[BoldFont={* Bold}]{Pretendard}
-
-% 수식 폰트 (Fira Math + Pretendard)
-\setmathfont{Fira Math}
-\setmathfont[range={up, bfup}, Scale=MatchLowercase]{Pretendard}
-\setmathfont[range={it, bfit}, Scale=MatchLowercase, FakeSlant=0.2]{Pretendard}
+% [캡션 스타일 설정]
+% 1. 캡션 폰트: 굵게(bold) 제거(\mdseries), 크기는 약간 작게(\small)
+\setbeamerfont{caption}{series=\mdseries, size=\small}
+\setbeamerfont{caption name}{series=\mdseries}
+% 2. 캡션 번호 붙이기 (Figure 1: ...)
+\setbeamertemplate{caption}[numbered]
+% 3. 캡션 레이블 구분자 (Figure 1. Caption)
+\setbeamertemplate{caption label separator}[period]
 
 % [중요] 그림 경로 수정 (슬라이드 폴더 기준 2단계 위로)
-\graphicspath{{../../assets/}}
+\graphicspath{ {./} {../../assets/} {../assets/} }
 
-% 메타데이터 (Chapter 2로 수정)
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
 \title{Communication Theory - 2026}
 \subtitle{Chapter 2. Signals and Signal Space}
 \date{\today}
 \author{
     이 경 근 \\
     {\tiny
-        \raisebox{-0.1ex}{\scalebox{0.85}{\faEnvelope}} \href{mailto:infosec@knu.ac.kr}{infosec@knu.ac.kr} \quad 
-        {\scalebox{0.9}{\faLinkedin}} \scalebox{0.9}{\href{https://www.linkedin.com/in/Kenny-0633-Lee}{Kenny-0633-Lee}}
+        % \texorpdfstring{문서에 보일 내용}{PDF 속성에 들어갈 텍스트(특수문자 제외)}
+        \texorpdfstring{\raisebox{-0.1ex}{\scalebox{0.85}{\faEnvelope}}}{} \href{mailto:infosec@knu.ac.kr}{infosec@knu.ac.kr} \quad 
+        \texorpdfstring{\scalebox{0.9}{\faLinkedin}}{} \scalebox{0.9}{\href{https://www.linkedin.com/in/Kenny-0633-Lee}{Kenny-0633-Lee}}
     }
 }
 \institute{EE / KNU}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% [Font Settings] Project-Local Fonts (Perfect Stability)
+\usepackage{fontspec}
+
+% 시스템 폰트가 아니라, ./fonts 폴더의 파일을 직접 사용합니다.
+\setmainfont{NotoSansKR-Regular.ttf}[
+    Path = ../../fonts/,             % 폰트 파일 위치
+    BoldFont = NotoSansKR-Bold.ttf,
+    AutoFakeSlant = 0.2          % 이탤릭 강제 구현
+]
+
+\setsansfont{NotoSansKR-Regular.ttf}[
+    Path = ../../fonts/,
+    BoldFont = NotoSansKR-Bold.ttf,
+    AutoFakeSlant = 0.2
+]
+
+\setmainhangulfont{NotoSansKR-Regular.ttf}[
+    Path = ../../fonts/,
+    BoldFont = NotoSansKR-Bold.ttf,
+    AutoFakeSlant = 0.2
+]
+
+\setsanshangulfont{NotoSansKR-Regular.ttf}[
+    Path = ../../fonts/,
+    BoldFont = NotoSansKR-Bold.ttf,
+    AutoFakeSlant = 0.2
+]
+
+% 수식 폰트 설정
+\setmathfont{Fira Math}
+\setmathfont[range={up, bfup}, Scale=MatchLowercase, Path = ../../fonts/]{NotoSansKR-Regular.ttf}
+\setmathfont[range={it, bfit}, Scale=MatchLowercase, FakeSlant=0.2, Path = ../../fonts/]{NotoSansKR-Regular.ttf}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 \begin{document}
@@ -67,28 +97,57 @@
     \begin{block}{\fbox{Signals}}
         A signal is a set of information or data. \\
         Examples: Audio signals, video signals, sensor data, etc.\\
-        In all these examples, the signals are mostly functions of the independent variable \textbf{time $t$}.
+        In all these examples, the signals are functions of the independent variable \textbf{time $t$}.
     \end{block}
-    \vspace{0.1cm}
+    \vspace{0.2cm}
     \begin{block}{\fbox{Systems}}
         Signals may be processed further by systems, which may modify them or extract additional infromation from them. \\
         For example, an antiaircraft radar system processes the received signals (inputs) to determine the position and velocity of an aircraft (outputs). \\
         Thus, a system is an entity that processes signals (\textbf{inputs}) to yield another set of signals (\textbf{outputs}). \\
-        More examples: Amplifiers, filters, modulators, demodulators, etc. \\
+        More examples: Amplifiers, filters, modulators, demodulators, etc.
     \end{block}
 \end{frame}
 
 % 2.1 신호의 크기
 \begin{frame}
-    \frametitle{2.1 Size of A Signal}
-    \begin{itemize}
-        \item 신호의 크기(Size of a Signal)란 무엇인가?
-        \item 에너지 신호(Energy Signal)와 전력 신호(Power Signal)
-        \item 신호의 에너지(Energy)와 전력(Power) 계산 방법
-    \end{itemize}
+    \frametitle{Size of Signal}
+    \begin{columns}
+        % [왼쪽 컬럼] 그림 (a), (b) 배치 및 통합 캡션
+        \begin{column}{0.45\textwidth}
+            \begin{figure}
+                \centering
+                % (a) Energy Signal
+                \includegraphics[width=0.8\textwidth]{fig_ch02_energy_sig.pdf} \\
+                \vspace{-0.2cm} {\footnotesize (a) Signal with finite energy} \\
+                \vspace{0.3cm} % (a)와 (b) 사이 간격
+                
+                % (b) Power Signal
+                \includegraphics[width=0.8\textwidth]{fig_ch02_power_sig.pdf} \\
+                \vspace{-0.2cm} {\footnotesize (b) Signal with finite power}
+                
+                % [통합 캡션] 맨 아래에 위치, 굵은 글씨 없음
+                \caption{Examples of signals.} 
+            \end{figure}
+        \end{column}
+
+        % [오른쪽 컬럼] 텍스트 설명
+        \begin{column}{0.55\textwidth}
+            \begin{block}{Energy Signal}
+                A signal is said to be an energy signal if its energy is finite and its average power is zero.
+                \[
+                E = \int_{-\infty}^{\infty} |x(t)|^2 dt < \infty, \quad P = 0
+                \]
+            \end{block}
+            %\vspace{0.1cm}
+            \begin{block}{Power Signal}
+                A signal is said to be a power signal if its average power is finite and its energy is infinite.
+                \[
+                P = \lim_{T \to \infty} \frac{1}{2T} \int_{-T}^{T} |x(t)|^2 dt < \infty, \quad E = \infty
+                \]
+            \end{block}
+        \end{column}
+    \end{columns} 
 \end{frame}
-
-
 
 %%% Sample Frames %%%
 \begin{frame}{Overview}

@@ -1,5 +1,15 @@
 const FLASHCARD_DATA = [
   {
+    "front": "Characteristics of Energy Signals?",
+    "back": "Total Energy is finite.\nAverage Power is zero.",
+    "image": "assets/fig_ch02_energy_sig.svg"
+  },
+  {
+    "front": "Characteristics of Power Signals?",
+    "back": "Total Energy is infinite.\nAverage Power is finite.",
+    "image": "assets/fig_ch02_power_sig.svg"
+  },
+  {
     "front": "What is the Shannon-Hartley equation for Channel Capacity?",
     "back": "C = B * log2(1 + S/N)"
   },
