@@ -15,8 +15,8 @@
 \usepackage{lipsum} % 더미 텍스트 생성
 \usepackage{fancybox, tcolorbox} % 박스 생성
 \usepackage{tcolorbox}  % 박스 생성
-\tcbuselibrary{skins}   % 박스 스킨 라이브러리
-\usepackage{multicol}
+\tcbuselibrary{skins, breakable}   % 박스 스킨 라이브러리
+%\usepackage{multicol}
 
 % [수식 및 폰트 설정 - 기존 파일 그대로 유지]
 \usepackage{amsmath}
@@ -124,9 +124,7 @@
 % 2. 강의 목차
 \begin{frame}
     \frametitle{Table of Contents}
-    
     \begin{columns}[t] % [t]: 상단 정렬 (Top alignment)
-        
         % [왼쪽 컬럼] 앞쪽 섹션들 배치 (예: 1번부터 2번까지)
         \begin{column}{0.48\textwidth}
             \tableofcontents[sections={1-2}] 
@@ -136,7 +134,6 @@
         \begin{column}{0.48\textwidth}
             \tableofcontents[sections={3-6}]
         \end{column}
-        
     \end{columns}
 \end{frame}
 
@@ -191,19 +188,22 @@
 
         % [오른쪽 컬럼] 텍스트 설명
         \begin{column}{0.55\textwidth}
-            \begin{block}{Energy Signal}
-                A signal is said to be an energy signal if its energy is finite and its average power is zero.
+            {\footnotesize
+            \begin{tcolorbox}[fonttitle=\sffamily\bfseries\small,title=Energy Signal,title filled]
+                A signal is said to be an energy signal if its energy is finite and its average power approaches zero.
                 \[
-                E = \int_{-\infty}^{\infty} |g(t)|^2 dt < \infty, \quad P = 0
+                E = \int_{-\infty}^{\infty} |g(t)|^2 dt < \infty, \quad P \rightarrow 0
                 \]
-            \end{block}
-            %\vspace{0.1cm}
-            \begin{block}{Power Signal}
-                A signal is said to be a power signal if its average power is finite and its energy is infinite.
+            \end{tcolorbox}
+
+            \vspace{0.2cm}
+            
+            \begin{tcolorbox}[fonttitle=\sffamily\bfseries\small,title=Power Signal]
+                A signal is said to be a power signal if its average power is finite and its energy approaches infinite.
                 \[
-                P = \lim_{T \to \infty} \frac{1}{T} \int_{-T/2}^{T/2} |g(t)|^2 dt < \infty, \quad E = \infty
+                P = \lim_{T \to \infty} \frac{1}{T} \int_{-T/2}^{T/2} |g(t)|^2 dt < \infty, \quad E \rightarrow \infty
                 \]
-            \end{block}
+            \end{tcolorbox}}
         \end{column}
     \end{columns} 
 \end{frame}
@@ -220,12 +220,12 @@
     {\centering
     \begin{columns}
         \begin{column}{0.35\textwidth}
-            \begin{tcolorbox}[colframe=blue,colback=blue!5,before skip=6pt]
+            \begin{tcolorbox}[colback=blue!5,before skip=6pt]
                 $P_{dBw} = [10 \cdot \log_{10}P] \text{ dBw}$
             \end{tcolorbox}
         \end{column}
         \begin{column}{0.4\textwidth}
-            \begin{tcolorbox}[colframe=red,colback=blue!5,before skip=6pt]
+            \begin{tcolorbox}[colback=blue!5,before skip=6pt]
                 $P_{dBm} = [30 + 10 \cdot \log_{10}P] \text{ dBm}$
             \end{tcolorbox}
         \end{column}
@@ -238,93 +238,109 @@
 \end{frame}
 
 % Example 2.1
-\begin{frame}{Example 2.1}
-\begin{columns}
+\begin{frame}[c]{Example 2.1}
+    \begin{columns}[c]
 
-% [왼쪽 컬럼] 그림 (a), (b)
-\begin{column}{0.3\textwidth}
-\begin{figure}[h]
-    \centering
-    \begin{tikzpicture}[scale=0.5, >=latex]
-        \colorlet{signalcolor}{green!50!black}
+    % [왼쪽 컬럼] 그림 (a), (b)
+    \begin{column}{0.3\textwidth}
+        \begin{figure}[h]
+            \centering
+            \begin{tikzpicture}[scale=0.5, >=latex]
+                \colorlet{signalcolor}{green!50!black}
 
-        % --- (a) Graph ---
-        \begin{scope}[shift={(0, 3.5)}]
-            % Axes
-            \draw[->] (-2.5, 0) -- (5.5, 0) node[below] {$t$};
-            \draw[->] (0, -0.5) -- (0, 2.5) node[right] {$g(t)$};
-            
-            % [수정] 원점 '0' (크기 절반)
-            \node[below right, scale=0.55] at (0,0) {0};
+                % --- (a) Graph ---
+                \begin{scope}[shift={(0, 3.5)}]
+                    % Axes
+                    \draw[->] (-2.5, 0) -- (5.5, 0) node[below] {$t$};
+                    \draw[->] (0, -0.5) -- (0, 2.5) node[right, scale=0.6] {$g(t)$};
+                    
+                    % [수정] 원점 '0' (크기 절반)
+                    \node[below right, scale=0.55] at (0,0) {0};
 
-            % [수정] Signal Waveform (진한 녹색)
-            % 1. t < 0 구간 (0, 수직선, 상수 구간)
-            \draw[thick, color=signalcolor] (-2.5, 0) -- (-1, 0) -- (-1, 2) -- (0, 2);
-            % 2. t >= 0 구간 (지수 함수)
-            \draw[thick, color=signalcolor, domain=0:5, samples=100] plot (\x, {2*exp(-\x/2)});
-            
-            % Label & Ticks
-            \node at (2.5, 1) {$2e^{-t/2}$};
-            
-            % [수정] x축 눈금 숫자 (크기 절반)
-            \draw (2, 0.1) -- (2, -0.1) node[below, scale=0.5] {2};
-            \draw (4, 0.1) -- (4, -0.1) node[below, scale=0.5] {4};
-            \draw (-1, 0.1) -- (-1, -0.1) node[below, scale=0.5] {-1};
-            
-            % [수정] y축 눈금 숫자 (크기 절반)
-            \node[scale=0.5] at (-0.2, 2) {2};
-            
-            \node at (4.5, 2) {(a)};
-        \end{scope}
+                    % [수정] Signal Waveform (진한 녹색)
+                    % 1. t < 0 구간 (0, 수직선, 상수 구간)
+                    \draw[thick, color=signalcolor] (-2.5, 0) -- (-1, 0) -- (-1, 2) -- (0, 2);
+                    % 2. t >= 0 구간 (지수 함수)
+                    \draw[thick, color=signalcolor, domain=0:5, samples=100] plot (\x, {2*exp(-\x/2)});
+                    
+                    % Label & Ticks
+                    \node[scale=0.7] at (2.5, 1) {$2e^{-t/2}$};
+                    
+                    % [수정] x축 눈금 숫자 (크기 절반)
+                    \draw (2, 0.1) -- (2, -0.1) node[below, scale=0.5] {2};
+                    \draw (4, 0.1) -- (4, -0.1) node[below, scale=0.5] {4};
+                    \draw (-1, 0.1) -- (-1, -0.1) node[below, scale=0.5] {-1};
+                    
+                    % [수정] y축 눈금 숫자 (크기 절반)
+                    \node[scale=0.5] at (-0.2, 2) {2};
+                    
+                    \node[scale=0.7] at (4.5, 2) {(a)};
+                \end{scope}
 
-        % --- (b) Graph ---
-        \begin{scope}[shift={(0, 0)}]
-            % Axes
-            \draw[->] (-4.5, 0) -- (4.8, 0) node[below] {$t$};
-            \draw[->] (0, -1.5) -- (0, 1.5) node[right] {$g(t)$};
-            
-            % [수정] 원점 '0' (크기 절반)
-            \node[below right, scale=0.55] at (0,0) {0};
+                % --- (b) Graph ---
+                \begin{scope}[shift={(0, 0)}]
+                    % Axes
+                    \draw[->] (-4.5, 0) -- (4.8, 0) node[below] {$t$};
+                    \draw[->] (0, -1.5) -- (0, 1.5) node[right, scale=0.6] {$g(t)$};
+                    
+                    % [수정] 원점 '0' (크기 절반)
+                    \node[below right, scale=0.55] at (0,0) {0};
 
-            % [수정] Sawtooth Wave Signal (진한 녹색)
-            \foreach \x in {-3, -1, 1, 3} {
-                \draw[thick, color=signalcolor] (\x, -1) -- (\x, 1); % 수직선
-            }
-            \foreach \x in {-5, -3, -1, 1, 3} {
-                \draw[thick, color=signalcolor] (\x, -1) -- (\x+2, 1); % 빗변
-            }
-            
-            % Dashed guide lines
-            \draw[dotted, thick] (0, 1) -- (1, 1);
-            \draw[dotted, thick] (0, -1) -- (-1, -1);
-            
-            % [수정] x축 눈금 숫자 (크기 절반)
-            \foreach \x in {-4, -3, -2, -1, 1, 2, 3, 4} {
-                \draw (\x, 0.1) -- (\x, -0.1) node[below, scale=0.5] {\x};
-            }
-            
-            % [수정] y축 눈금 숫자 (크기 절반)
-            \node[scale=0.5] at (0.3, 1) {1};
-            \node[scale=0.5] at (0.4, -1) {-1};
-            
-            \node at (4, 1) {(b)};
-        \end{scope}
-    \end{tikzpicture}
-    \caption{Signal for Example}
-\end{figure}
-\end{column}
+                    % [수정] Sawtooth Wave Signal (진한 녹색)
+                    \foreach \x in {-3, -1, 1, 3} {
+                        \draw[thick, color=signalcolor] (\x, -1) -- (\x, 1); % 수직선
+                    }
+                    \foreach \x in {-5, -3, -1, 1, 3} {
+                        \draw[thick, color=signalcolor] (\x, -1) -- (\x+2, 1); % 빗변
+                    }
+                    
+                    % Dashed guide lines
+                    \draw[dotted, thick] (0, 1) -- (1, 1);
+                    \draw[dotted, thick] (0, -1) -- (-1, -1);
+                    
+                    % [수정] x축 눈금 숫자 (크기 절반)
+                    \foreach \x in {-4, -3, -2, -1, 1, 2, 3, 4} {
+                        \draw (\x, 0.1) -- (\x, -0.1) node[below, scale=0.5] {\x};
+                    }
+                    
+                    % [수정] y축 눈금 숫자 (크기 절반)
+                    \node[scale=0.5] at (0.3, 1) {1};
+                    \node[scale=0.5] at (0.4, -1) {-1};
+                    
+                    \node[scale=0.7] at (4.5, 1.5) {(b)};
+                \end{scope}
+            \end{tikzpicture}
+            \caption{Signal for Example}
+        \end{figure}
+    \end{column}
 
-\hfill
+    \hfill
 
-%% [오른쪽 컬럼] 문제 및 풀이
-\begin{column}{0.5\textwidth}
-\textbf{Problem:} Determine whether each of the following signals is an energy signal, a power signal, or neither. \\
-\vspace{0.3cm}
-\textbf{Solution:} \\
-(a) $g(t) = \begin{cases} 2e^{-t/2}, & t \ge 0 \\ 0, & t < 0 \end{cases}$ \\
-\quad Energy:
-\end{column}
-\end{columns}
+    %% [오른쪽 컬럼] 문제 및 풀이
+    \begin{column}{0.6\textwidth}
+        {\footnotesize
+        Determine the suitable measures of the signals in the left Figure.
+        {\scriptsize
+        \begin{tcolorbox}[fonttitle=\bfseries,title=(a) Energy signal,title filled]
+            Energy signal. Power approaches $0$ as $|t| \rightarrow \infty$.
+            \[
+                E_g = \int_{-\infty}^{\infty} |g(t)|^2 dt = \int_{-1}^{0}(2)^2 dt + \int_{0}^{\infty} 4e^{-t} dt = 4 + 4 = 8
+            \]
+        \end{tcolorbox}
+
+        \vspace{0.05cm}
+
+        \begin{tcolorbox}[fonttitle=\bfseries,title=(b) Power signal]
+            Averaging $g^2(t)$ over an infinitely large interval is equivalent to averaging it over one period (2 seconds).
+            \begin{eqnarray*}
+            P_g  & = & \lim_{T \to \infty} \frac{1}{T} \int_{-T/2}^{T/2} |g(t)|^2 dt  = \frac{1}{T} \int_{-T/2}^{T/2} |g(t)|^2 dt \\
+              & = & \frac{1}{2} \int_{-1}^{1} t^2 dt = \frac{1}{3}
+            \end{eqnarray*}
+        \end{tcolorbox}
+        }}
+    \end{column}
+
+    \end{columns}
 \end{frame}
 
 

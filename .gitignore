@@ -24,6 +24,7 @@ Thumbs.db
 *.synctex.gz
 *.fls
 *.fdb_latexmk
+*.xdv
 
 # Python 임시 파일 무시
 __pycache__/
