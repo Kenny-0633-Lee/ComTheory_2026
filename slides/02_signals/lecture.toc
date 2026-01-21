@@ -1,0 +1,2 @@
+\beamer@sectionintoc {1}{Size of A Signal}{3}{0}{1}
+\beamer@subsectionintoc {1}{1}{Energy vs Power Signals}{4}{0}{1}
