@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <title>Lecture Flashcards</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.js"></script>
+    
+    <link rel="stylesheet" as="style" crossorigin href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/pretendard.min.css" />
+
+    <style>
+        body { 
+            font-family: 'Pretendard', 'Malgun Gothic', sans-serif;
+            background: #222; color: white; display: flex; flex-direction: column; 
+            align-items: center; justify-content: center; height: 100vh; margin: 0; overflow: hidden; 
+        }
+        .card-container { width: 800px; height: 500px; perspective: 1000px; cursor: pointer; }
+        .card { width: 100%; height: 100%; position: relative; transition: transform 0.6s; transform-style: preserve-3d; }
+        .card.flipped { transform: rotateY(180deg); }
+        
+        .face { 
+            position: absolute; width: 100%; height: 100%; backface-visibility: hidden; 
+            border-radius: 20px; display: flex; flex-direction: column; 
+            align-items: center; justify-content: center; 
+            background: white; color: #333; padding: 30px; box-sizing: border-box; 
+            text-align: center;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.3);
+        }
+        
+        /* Front: 질문 (Question) */
+        .front h2 { font-size: 2.2rem; margin-bottom: 10px; word-break: keep-all; }
+        .front p { color: #666; font-size: 1rem; margin-top: 20px; }
+
+        /* Back: 정답 (Answer) */
+        .back { background: #2c3e50; color: white; transform: rotateY(180deg); }
+        .answer-text { font-size: 1.8rem; line-height: 1.5; word-break: keep-all; }
+        
+        /* Navigation Buttons */
+        .nav { margin-top: 25px; display: flex; align-items: center; gap: 20px;}
+        button { 
+            padding: 12px 24px; font-size: 1rem; cursor: pointer; 
+            background: #444; color: white; border: none; border-radius: 8px; 
+            font-family: inherit; transition: background 0.2s;
+        }
+        button:hover { background: #666; }
+        #counter { font-size: 1.2rem; font-weight: bold; min-width: 80px; text-align: center; }
+
+        /* Image Styling */
+        img { max-width: 100%; max-height: 280px; margin-bottom: 20px; border-radius: 8px; background: white; padding: 5px; }
+
+        /* [NEW] KaTeX 수식 폰트 강제 변경 (Serif -> Sans-serif) */
+        .katex { 
+            font-family: 'Pretendard', sans-serif !important; 
+            font-size: 1.1em; /* 가독성을 위해 살짝 키움 */
+        }
+        
+        /* 수식 내부의 모든 요소들도 강제로 상속 */
+        .katex .base, .katex .mathdefault, .katex .mord, .katex .mrel, .katex .mops {
+            font-family: 'Pretendard', sans-serif !important;
+        }
+        
+        /* (선택) 그리스 문자나 특수기호 위치 미세 조정 */
+        .katex .mord.mathnormal { 
+            font-family: 'Pretendard', sans-serif !important; 
+            font-style: italic; /* 변수(x, y)는 기울임 유지 */
+        }
+    </style>
+</head>
+<body>
+
+    <div class="card-container" onclick="flipCard()">
+        <div class="card" id="card">
+            <div class="face front">
+                <h2 id="card-question">Loading...</h2>
+                <p>Click card to show answer</p>
+            </div>
+            <div class="face back">
+                <div id="image-container"></div>
+                <div id="card-answer" class="answer-text"></div>
+            </div>
+        </div>
+    </div>
+
+    <div class="nav">
+        <button onclick="prevCard()">◀ Prev</button>
+        <span id="counter">1 / 1</span>
+        <button onclick="nextCard()">Next ▶</button>
+    </div>
+
+    <script src="flashcard_data.js" onerror="alert('Error: flashcard_data.js not found. Please run ./run.sh first!')"></script> 
+    
+    <script>
+        // 데이터 안전장치
+        const cards = (typeof FLASHCARD_DATA !== 'undefined') ? FLASHCARD_DATA : [
+            { front: "데이터 로드 실패", back: "run.sh를 실행하여 flashcard_data.js를 생성해주세요.", image: null }
+        ];
+
+        let idx = 0;
+        const cardEl = document.getElementById('card');
+        const questionEl = document.getElementById('card-question');
+        const answerEl = document.getElementById('card-answer');
+        const imgContainer = document.getElementById('image-container');
+        const counterEl = document.getElementById('counter');
+
+        function render() {
+            const data = cards[idx];
+
+            // 1. 질문 처리 (Hybrid: title 혹은 front 키 지원)
+            const questionText = data.front || data.title || "No Question";
+            questionEl.innerText = questionText;
+            
+            // 2. 이미지 처리
+            imgContainer.innerHTML = '';
+            if(data.image) {
+                const img = document.createElement('img');
+                img.src = data.image; 
+                imgContainer.appendChild(img);
+            }
+
+            // 3. 정답(수식/텍스트) 처리 (Hybrid: latex 혹은 back 키 지원)
+            answerEl.innerHTML = ''; // 초기화
+
+            if (data.latex && window.katex) {
+                // (Case A) 'latex' 키가 있는 경우 -> 무조건 수식으로 렌더링
+                katex.render(data.latex, answerEl, { throwOnError: false, displayMode: true });
+            } else if (data.back) {
+                // (Case B) 'back' 키가 있는 경우 -> 텍스트로 표시
+                // (만약 back 내용이 수식처럼 보이면 KaTeX 시도, 아니면 텍스트)
+                if (data.back.includes('=') || data.back.includes('\\')) {
+                    // 간단한 수식 감지 시도 (옵션) - 현재는 텍스트로 출력하되 가독성 좋게
+                    answerEl.innerText = data.back; 
+                } else {
+                    answerEl.innerText = data.back;
+                }
+            } else {
+                answerEl.innerText = "No Answer Content";
+            }
+            
+            // 카운터 및 카드 상태 리셋
+            counterEl.innerText = `${idx + 1} / ${cards.length}`;
+            cardEl.classList.remove('flipped');
+        }
+
+        function flipCard() { cardEl.classList.toggle('flipped'); }
+        function nextCard() { idx = (idx + 1) % cards.length; render(); }
+        function prevCard() { idx = (idx - 1 + cards.length) % cards.length; render(); }
+
+        // 키보드 이벤트
+        document.addEventListener('keydown', e => {
+            if(e.key === 'ArrowRight') nextCard();
+            if(e.key === 'ArrowLeft') prevCard();
+            if(e.key === ' ' || e.key === 'Enter') flipCard();
+        });
+
+        // 초기 실행
+        render();
+    </script>
+</body>
+</html>

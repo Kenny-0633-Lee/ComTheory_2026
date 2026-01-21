@@ -12,22 +12,24 @@ Thumbs.db
 # 원본 코드만 관리하고 싶다면 아래 주석 해제
 # assets/*.pdf
 # assets/*.svgUSB_Lecture_Pack/
-USB_Lecture_Pack/
+# USB_Lecture_Pack/
 
-# --- LaTeX Build Files ---
+# LaTeX 임시 파일 무시
 *.aux
-*.fdb_latexmk
-*.fls
 *.log
-*.out
-*.synctex.gz
-*.toc
-*.dvi
-
-# --- Beamer Presentation Files ---
 *.nav
+*.out
 *.snm
-*.vrb
+*.toc
+*.synctex.gz
+*.fls
+*.fdb_latexmk
+
+# Python 임시 파일 무시
+__pycache__/
+*.py[cod]
+.venv/
+EOF
 
 # --- PDF (선택사항) ---
 # 만약 PDF 결과물도 Git에 올리기 싫다면 아래 주석(#)을 제거하세요.
