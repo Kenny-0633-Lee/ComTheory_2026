@@ -76,24 +76,50 @@
 \makeatother
 
 % [중요] 그림 경로 수정 (슬라이드 폴더 기준 2단계 위로)
-\graphicspath{ {./} {../../assets/} {../assets/} }
+% \graphicspath 명령은 중괄호 {} 안에 경로들을 나열하는 방식입니다.
+% 마지막에 반드시 슬래시(/)를 붙여야 합니다.
+\graphicspath{
+    {./}                            % 1. 현재 tex 파일과 같은 폴더
+    {../../assets/}                 % 2. 직접 만든 공용 벡터 이미지 (TikZ 결과물 등)
+    {../../assets_extracted/ch02/}  % 3. (중요) 이 챕터의 자동 추출 이미지 폴더
+}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 % 1. 캡션 번호 활성화
 \setbeamertemplate{caption}[numbered]
-
 % 2. 캡션 폰트 크기 설정
 \setbeamerfont{caption}{size=\scriptsize,shape=\itshape}
 \setbeamerfont{section}{size=\footnotesize,shape=\bfseries}
 \setbeamerfont{subsection}{size=\scriptsize,shape=\itshape}
 
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% 1. chapter라는 새로운 카운터 생성
+\newcounter{chapter}
+% 2. 챕터 번호 설정 (여기서 숫자를 바꾸면 됩니다)
+\setcounter{chapter}{2}
+
 % [Chapter Numbering] 현재 문서를 "Chapter 2"로 설정
 % 섹션 번호 모양을 "2.1", "2.2" 형태로 강제 변경
-\renewcommand{\thesection}{2.\arabic{section}}
+\renewcommand{\thesection}{\thechapter.\arabic{section}}
 % (선택사항) 서브섹션은 자동으로 "2.1.1"이 되지만, 확실하게 하려면 아래 줄도 추가
 \renewcommand{\thesubsection}{\thesection.\arabic{subsection}}
-% Figure 2.x 형태로 출력 (section 번호 기준)
-\renewcommand{\thefigure}{2.\arabic{figure}}
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Figure 2.x 형태로 출력 (chapter 번호 기준)
+\renewcommand{\thefigure}{\thechapter.\arabic{figure}}
+% Equation 2.x 형태로 출력 (chapter 번호 기준)
+\renewcommand{\theequation}{\thechapter.\arabic{equation}}
+
+% --- 매크로 정의 ---
+% 사용법: \incfig{파일명(확장자제외)}{너비비율(0.0~1.0)}{캡션}
+\newcommand{\incfig}[3]{%
+    \begin{figure}
+        \centering
+        % 확장자를 생략하면 graphicspath에서 찾은 파일의 형식을 자동 인식합니다.
+        \includegraphics[width=#2\textwidth]{#1} 
+        \caption{#3}
+    \end{figure}
+}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 \title{Chapter 2. Signals and Signal Space}
@@ -123,10 +149,11 @@
 % 2. 강의 목차
 \begin{frame}
     \frametitle{Table of Contents}
+    \footnotesize
     \begin{columns}[t] % [t]: 상단 정렬 (Top alignment)
         % [왼쪽 컬럼] 앞쪽 섹션들 배치 (예: 1번부터 2번까지)
         \begin{column}{0.48\textwidth}
-            \tableofcontents[sections={1-2}] 
+            \tableofcontents[sections={1-2},] 
         \end{column}
         
         % [오른쪽 컬럼] 뒤쪽 섹션들 배치 (예: 3번부터 끝까지)
@@ -162,8 +189,7 @@
     \end{tcolorbox}}
 \end{frame}
 
-% 2.1 Energy vs Power Signals
-\subsection{Energy vs Power Signals}
+% Energy vs Power Signals
 \begin{frame}[c]
     \frametitle{Energy vs Power Signals}
     \begin{columns}
@@ -172,12 +198,12 @@
             \begin{figure}
                 \centering
                 % (a) Energy Signal
-                \includegraphics[width=0.8\textwidth]{fig_ch02_energy_sig.pdf} \\
+                \includegraphics[width=0.8\textwidth]{fig_ch02_energy_sig} \\
                 \vspace{-0.2cm} {\footnotesize (a) Signal with finite energy} \\
                 \vspace{0.3cm} % (a)와 (b) 사이 간격
                 
                 % (b) Power Signal
-                \includegraphics[width=0.8\textwidth]{fig_ch02_power_sig.pdf} \\
+                \includegraphics[width=0.8\textwidth]{fig_ch02_power_sig} \\
                 \vspace{-0.2cm} {\footnotesize (b) Signal with finite power}
                 
                 % [통합 캡션] 맨 아래에 위치, 굵은 글씨 없음
@@ -250,7 +276,7 @@
                 % --- (a) Graph ---
                 \begin{scope}[shift={(0, 3.5)}]
                     % Axes
-                    \draw[->] (-2.5, 0) -- (5.5, 0) node[below] {$t$};
+                    \draw[->] (-2.5, 0) -- (5.5, 0) node[below, scale=0.6] {$t$};
                     \draw[->] (0, -0.5) -- (0, 2.5) node[right, scale=0.6] {$g(t)$};
                     
                     % [수정] 원점 '0' (크기 절반)
@@ -279,7 +305,7 @@
                 % --- (b) Graph ---
                 \begin{scope}[shift={(0, 0)}]
                     % Axes
-                    \draw[->] (-4.5, 0) -- (4.8, 0) node[below] {$t$};
+                    \draw[->] (-4.5, 0) -- (4.8, 0) node[below, scale=0.6] {$t$};
                     \draw[->] (0, -1.5) -- (0, 1.5) node[right, scale=0.6] {$g(t)$};
                     
                     % [수정] 원점 '0' (크기 절반)
@@ -344,7 +370,7 @@
 
 
 % 2.2 Classification of signals
-\subsection{Classification of Signals}
+\section{Classification of Signals}
 \begin{frame}{Classification of Signals}
     \begin{enumerate}
         \item Continuous time and discrete time signals
@@ -356,6 +382,7 @@
 \end{frame}
 
 % 2.2.1 Continuous time vs discrete time signals
+\subsection{Continuous Time vs Discrete Time Signals}
 \begin{frame}[fragile]
     \frametitle{Figure 2.3 Continuous vs Discrete Time Signals}
     \centering
@@ -455,8 +482,9 @@
 \end{columns}
 \end{frame}
 
-
+% 2.2.2 Analog and Digital Signals
 % Figure 2.4 Exam ples of signals: (a) analog andconti nuous time,(b) digita and continuous time,(c) analog and discrete time, (d) digital and discrete time
+\subsection{Analog and Digital Signals}
 \begin{frame}[fragile]
     \frametitle{Figure 2.4 Classification of Signals}
     \centering
@@ -536,7 +564,23 @@
 \end{frame}
 
 
+% 2.2.3 Periodic and Aperiodic Signals
+\subsection{Periodic and Aperiodic Signals}
+\begin{frame}{Periodic and Aperiodic Signals}
+    \small        
+    \incfig{fig_ch02_05}{0.6}{Periodic signal of period $T_0$}
 
+    A signal $g(t)$ is \textbf{periodic} if there exists a positive constant $T_0$.
+    \addtocounter{equation}{4}
+    \begin{equation}
+    g(t) = g(t + T_0) \text{\quad for all t}
+    \end{equation}
+    The smallest value of $T_0$ in Eq. (\theequation) is the \textbf{period} of $g(t)$.
+
+    
+
+
+\end{frame}
 
 
 
