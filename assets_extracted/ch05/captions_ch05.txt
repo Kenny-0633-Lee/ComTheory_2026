@@ -1,0 +1,31 @@
+[fig_ch05_01.jpg] Source: Chapter05.pptx | Slide: 2 | Caption: Figure 5.1 Concept of instantaneous frequency.
+[fig_ch05_02.jpg] Source: Chapter05.pptx | Slide: 3 | Caption: Figure 5.2 Phase and frequency modulation are equivalent and interchangeable.
+[fig_ch05_03.jpg] Source: Chapter05.pptx | Slide: 4 | Caption: Figure 5.3 Generalized phase modulation by means of the filter H(s) and recovery of the message
+from the modulated phase through the inverse filter 1/H(s).
+[fig_ch05_04.jpg] Source: Chapter05.pptx | Slide: 5 | Caption: Figure 5.4 FM and PM waveforms.
+[fig_ch05_05.jpg] Source: Chapter05.pptx | Slide: 6 | Caption: Figure 5.5 FM and PM waveforms.
+[fig_ch05_06.jpg] Source: Chapter05.pptx | Slide: 7 | Caption: Figure 5.6 Estimation of FM wave bandwidth.
+[fig_ch05_07.jpg] Source: Chapter05.pptx | Slide: 8 | Caption: Figure 5.7 (a) Variations of Jn (β) as a function of n for various values of β. (b) Tone modulated FM wave spectrum.
+[fig_ch05_08.jpg] Source: Chapter05.pptx | Slide: 9 | Caption: Figure 5.8 (a) Narrowband PM generator. (b) Narrowband FM signal generator.
+[fig_ch05_09.jpg] Source: Chapter05.pptx | Slide: 10 | Caption: Figure 5.9 (a) Hard limiter and bandpass filter used to remove amplitude variations in FM wave. (b) Hard limiter input-output characteristic.
+(c) Hard limiter input and the corresponding output. (d) Hard limiter output as a function of θ.
+[fig_ch05_10.jpg] Source: Chapter05.pptx | Slide: 11 | Caption: Figure 5.10 Block diagram of the Armstrong indirect FM transmitter.
+[fig_ch05_11.jpg] Source: Chapter05.pptx | Slide: 12 | Caption: Figure 5.11 Designing an Armstrong indirect modulator.
+[fig_ch05_12.jpg] Source: Chapter05.pptx | Slide: 13 | Caption: Figure 5.12 (a) FM demodulator frequency response. (b) Output of a differentiator to the input FM wave.
+(c) FM demodulation by direct differentiation.
+[fig_ch05_13.jpg] Source: Chapter05.pptx | Slide: 14 | Caption: Figure 5.13 (a) RC  high-pass filter. (b) Segment of positive slope in amplitude response
+[fig_ch05_14.jpg] Source: Chapter05.pptx | Slide: 15 | Caption: Figure 5.14 Effect of interference in PM, FM, and FM with preemphasis-deemphasis (PDE).
+[fig_ch05_15.jpg] Source: Chapter05.pptx | Slide: 16 | Caption: Figure 5.15 Preemphasis-deemphasis in an FM system.
+[fig_ch05_16.jpg] Source: Chapter05.pptx | Slide: 17 | Caption: Figure 5.16 (a) Preemphasis filter and (b) its frequency response. (c) Deemphasis filter and (d) its frequency response.
+[fig_ch05_17.jpg] Source: Chapter05.pptx | Slide: 18 | Caption: Figure 5.17 Superheterodyne receiver.
+[fig_ch05_18.jpg] Source: Chapter05.pptx | Slide: 19 | Caption: Figure 5.18 (a) FM stereo transmitter. (b) Spectrum of a baseband stereo signal. (c) FM stereo receiver.
+[fig_ch05_19.jpg] Source: Chapter05.pptx | Slide: 20 | Caption: Figure 5.19
+[fig_ch05_20.jpg] Source: Chapter05.pptx | Slide: 21 | Caption: Figure 5.19 FM and PM signals in the time and frequency domains.
+[fig_ch05_21.jpg] Source: Chapter05.pptx | Slide: 22 | Caption: Figure 5.20 Signals at the demodulator: (a) after differentiator; (b) after rectifier.
+[fig_ch05_22.jpg] Source: Chapter05.pptx | Slide: 23 | Caption: Figure 5.21 FM modulation and demodulation: (a) original message; (b) recovered signal.
+[fig_ch05_23.jpg] Source: Chapter05.pptx | Slide: 24 | Caption: Figure P.5.1-1
+[fig_ch05_24.jpg] Source: Chapter05.pptx | Slide: 25 | Caption: Figure P.5.1-2
+[fig_ch05_25.jpg] Source: Chapter05.pptx | Slide: 26 | Caption: Figure P.5.1-3
+[fig_ch05_26.jpg] Source: Chapter05.pptx | Slide: 27 | Caption: Figure P.5.1-5
+[fig_ch05_27.jpg] Source: Chapter05.pptx | Slide: 28 | Caption: Figure P.5.4-1
+[fig_ch05_28.jpg] Source: Chapter05.pptx | Slide: 29 | Caption: Figure P.5.4-2

@@ -1,0 +1,69 @@
+[fig_ch11_01.jpg] Source: Chapter11a.pptx | Slide: 2 | Caption: Figure 11.1 Typical binary polar signaling and linear receiver.
+[fig_ch11_02.jpg] Source: Chapter11a.pptx | Slide: 3 | Caption: Figure 11.2 Optimum choice for sampling instant.
+[fig_ch11_03.jpg] Source: Chapter11a.pptx | Slide: 4 | Caption: Figure 11.3 Correlation detector.
+[fig_ch11_04.jpg] Source: Chapter11a.pptx | Slide: 5 | Caption: Figure 11.4 Optimum binary threshold detection.
+[fig_ch11_05.jpg] Source: Chapter11a.pptx | Slide: 6 | Caption: Figure 11.5 Realization of the optimum binary threshold detector.
+[fig_ch11_06.jpg] Source: Chapter11a.pptx | Slide: 7 | Caption: Figure 11.6 (a) Optimum threshold detector and (b) its error probability for polar signaling.
+[fig_ch11_07.jpg] Source: Chapter11a.pptx | Slide: 8 | Caption: Figure 11.7 Examples of orthogonal signals.
+[fig_ch11_08.jpg] Source: Chapter11a.pptx | Slide: 9 | Caption: Figure 11.8 Digital modulated waveforms.
+[fig_ch11_09.jpg] Source: Chapter11a.pptx | Slide: 10 | Caption: Figure 11.9 Coherent detection of digital modulated signals.
+[fig_ch11_10.jpg] Source: Chapter11a.pptx | Slide: 11 | Caption: Figure 11.10 Optimum coherent detection of binary FSK signals.
+[fig_ch11_11.jpg] Source: Chapter11a.pptx | Slide: 12 | Caption: Figure 11.11 (a) The minimum of the sinc function and (b) the MSK spectrum.
+[fig_ch11_12.jpg] Source: Chapter11a.pptx | Slide: 13 | Caption: Figure 11.12 Signals and their representation in signal space.
+[fig_ch11_13.jpg] Source: Chapter11a.pptx | Slide: 14 | Caption: Figure 11.13 Geometrical representation of a Gaussian random process.
+[fig_ch11_14.jpg] Source: Chapter11a.pptx | Slide: 15 | Caption: Figure 11.14 M-ary communication system.
+[fig_ch11_15.jpg] Source: Chapter11a.pptx | Slide: 16 | Caption: Figure 11.15 Effect of Gaussian channel noise on the received signal.
+[fig_ch11_16.jpg] Source: Chapter11a.pptx | Slide: 17 | Caption: Figure 11.16 Binary communication in the presence of noise.
+[fig_ch11_17.jpg] Source: Chapter11a.pptx | Slide: 18 | Caption: Figure 11.17 Eliminating the noise orthogonal to signal space.
+[fig_ch11_18.jpg] Source: Chapter11a.pptx | Slide: 19 | Caption: Figure 11.18 Optimum M-ary receiver: (a) matched filter detector; (b) correlation detector.
+[fig_ch11_19.jpg] Source: Chapter11a.pptx | Slide: 20 | Caption: Figure 11.19 Another form of optimum M-ary receiver: (a) correlator; (b) matched filter.
+[fig_ch11_20.jpg] Source: Chapter11a.pptx | Slide: 21 | Caption: Figure 11.20 Determining optimum decision regions in a binary case.
+[fig_ch11_21.jpg] Source: Chapter11a.pptx | Slide: 22 | Caption: Figure 11.21 Determining optimum decision regions.
+[fig_ch11_22.jpg] Source: Chapter11a.pptx | Slide: 23 | Caption: Figure 11.22 Decision regions for the binary case in this example.
+[fig_ch11_23.jpg] Source: Chapter11a.pptx | Slide: 24 | Caption: Figure 11.23 (a) Conditional PDFs in PAM. (b) Error probability in PAM.
+[fig_ch11_24.jpg] Source: Chapter11a.pptx | Slide: 25 | Caption: Figure 11.24 16-ary QAM.
+[fig_ch11_25.jpg] Source: Chapter11a.pptx | Slide: 26 | Caption: Figure 11.25 MPSK signals.
+[fig_ch11_26.jpg] Source: Chapter11a.pptx | Slide: 27 | Caption: Figure 11.26 Error probability of MPSK.
+[fig_ch11_27.jpg] Source: Chapter11a.pptx | Slide: 28 | Caption: Figure 11.27 Orthogonal signals.
+[fig_ch11_28.jpg] Source: Chapter11a.pptx | Slide: 29 | Caption: Figure 11.28 Error probability of orthogonal signaling and coherent MFSK.
+[fig_ch11_29.jpg] Source: Chapter11a.pptx | Slide: 30 | Caption: Figure 11.29 Coherent MFSK receiver.
+[fig_ch11_30.jpg] Source: Chapter11a.pptx | Slide: 31 | Caption: Figure 11.30 Translation and rotation of coordinate axes.
+[fig_ch11_31.jpg] Source: Chapter11a.pptx | Slide: 32 | Caption: Figure 11.31 Analysis of QPSK.
+[fig_ch11_32.jpg] Source: Chapter11b.pptx | Slide: 1 | Caption: Figure 11.31 Analysis of QPSK.
+[fig_ch11_33.jpg] Source: Chapter11b.pptx | Slide: 2 | Caption: Figure 11.32 Equivalent signal sets.
+[fig_ch11_34.jpg] Source: Chapter11b.pptx | Slide: 3 | Caption: Figure 11.33 Simplex signals.
+[fig_ch11_35.jpg] Source: Chapter11b.pptx | Slide: 4 | Caption: Figure 11.34 Optimum M-ary receiver for nonwhite channel noise.
+[fig_ch11_36.jpg] Source: Chapter11b.pptx | Slide: 5 | Caption: Figure 11.35 Explanation of minimax concept.
+[fig_ch11_37.jpg] Source: Chapter11b.pptx | Slide: 6 | Caption: Figure 11.36 Noncoherent detection of digital modulated signals for ASK.
+[fig_ch11_38.jpg] Source: Chapter11b.pptx | Slide: 7 | Caption: Figure 11.37 Conditional PDFs in the noncoherent detection of ASK signals.
+[fig_ch11_39.jpg] Source: Chapter11b.pptx | Slide: 8 | Caption: Figure 11.38 Error probability of noncoherent ASK detection.
+[fig_ch11_40.jpg] Source: Chapter11b.pptx | Slide: 9 | Caption: Figure 11.39 Noncoherent detection of binary FSK.
+[fig_ch11_41.jpg] Source: Chapter11b.pptx | Slide: 10 | Caption: Figure 11.40 Error probability of noncoherent MFSK.
+[fig_ch11_42.jpg] Source: Chapter11b.pptx | Slide: 11 | Caption: Figure 11.41 Differential PSK detection.
+[fig_ch11_43.jpg] Source: Chapter11b.pptx | Slide: 12 | Caption: Figure 11.42 Error probability of PSK, DPSK, and coherent and noncoherent FSK.
+[fig_ch11_44.jpg] Source: Chapter11b.pptx | Slide: 13 | Caption: Figure 11.43 Snapshot of the modulated signals from three difference pulse shapes:
+(a) root-raised cosine pulses, of roll off factor=0.5; (b) rectangular pulse; (c) half-sine pulse pulse.
+[fig_ch11_45.jpg] Source: Chapter11b.pptx | Slide: 14 | Caption: Figure 11.44 BER of optimum (matched filter) detection of polar signaling using three difference pulse shapes:
+(a) root-raised cosine pulse of roll-off factor 0.5; (b) rectangular pulse; (c) half-sine pulse.
+[fig_ch11_46.jpg] Source: Chapter11b.pptx | Slide: 15 | Caption: Figure 11.45 Power spectral density of the binary polar transmission using three difference pulse shapes: (a) root-raised
+cosine pulse of roll-off factor 0.5; (b) rectangular NRZ pulse; (c) half-sine pulse pulse.
+[fig_ch11_47.jpg] Source: Chapter11b.pptx | Slide: 16 | Caption: Figure 11.46 Waveforms of the two pulses used in orthogonal binary signaling: solid curver,
+half-sine pulse; curve with circles, sine pulse.
+[fig_ch11_48.jpg] Source: Chapter11b.pptx | Slide: 17 | Caption: Figure 11.47 Measured BER results in comparison with analytical BER.
+[fig_ch11_49.jpg] Source: Chapter11b.pptx | Slide: 18 | Caption: Figure 11.48 Eye diagram of the real (in-phase) component of the
+16-QAM transmission at the receiver matched filter output.
+[fig_ch11_50.jpg] Source: Chapter11b.pptx | Slide: 19 | Caption: Figure 11.49 Symbol error probability of 16-QAM using root-raised cosine
+pulse in comparison with the analytical result.
+[fig_ch11_51.jpg] Source: Chapter11b.pptx | Slide: 20 | Caption: Figure 11.50 Scatter plot of the matched filter output for the 16-QAM
+signaling with root-raised cosine pulse when Eb/N = 18 dB.
+[fig_ch11_52.jpg] Source: Chapter11b.pptx | Slide: 21 | Caption: Figure 11.51 BER from noncoherent detection of binary FSK.
+[fig_ch11_53.jpg] Source: Chapter11b.pptx | Slide: 22 | Caption: Figure 11.52 Analytical BER results from noncoherent detection
+of binary DPSK simulation (round points).
+[fig_ch11_54.jpg] Source: Chapter11b.pptx | Slide: 23 | Caption: Figure P.11.1-3
+[fig_ch11_55.jpg] Source: Chapter11b.pptx | Slide: 24 | Caption: Figure P.11.1-4
+[fig_ch11_56.jpg] Source: Chapter11b.pptx | Slide: 25 | Caption: Figure P.11.2-7
+[fig_ch11_57.jpg] Source: Chapter11b.pptx | Slide: 26 | Caption: Figure P.11.6-5
+[fig_ch11_58.jpg] Source: Chapter11b.pptx | Slide: 27 | Caption: Figure P.11.6-6
+[fig_ch11_59.jpg] Source: Chapter11b.pptx | Slide: 28 | Caption: Figure P.11.6-12
+[fig_ch11_60.jpg] Source: Chapter11b.pptx | Slide: 29 | Caption: Figure P.11.6-13
+[fig_ch11_61.jpg] Source: Chapter11b.pptx | Slide: 30 | Caption: Figure P.11.6-14

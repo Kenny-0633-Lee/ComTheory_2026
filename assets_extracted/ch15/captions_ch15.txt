@@ -1,0 +1,34 @@
+[fig_ch15_01.jpg] Source: Chapter15.pptx | Slide: 2 | Caption: Figure 15.1 Encoder for linear block codes.
+[fig_ch15_02.jpg] Source: Chapter15.pptx | Slide: 3 | Caption: Figure 15.2 Encoder for systematic cyclic code.
+[fig_ch15_03.jpg] Source: Chapter15.pptx | Slide: 4 | Caption: Figure 15.3 Performance comparison of coded (doshed) and uncoded (solid) systems.
+[fig_ch15_04.jpg] Source: Chapter15.pptx | Slide: 5 | Caption: Figure 15.4 Burst error detection.
+[fig_ch15_05.jpg] Source: Chapter15.pptx | Slide: 6 | Caption: Figure 15.5 Convolutional encoder.
+[fig_ch15_06.jpg] Source: Chapter15.pptx | Slide: 7 | Caption: Figure 15.6 Code tree for the encoder in Fig. 15.5.
+[fig_ch15_07.jpg] Source: Chapter15.pptx | Slide: 8 | Caption: Figure 15.7 (a) State and (b) state  transition diagram of the encoder in Fig. 15.5.
+[fig_ch15_08.jpg] Source: Chapter15.pptx | Slide: 9 | Caption: Figure 15.8 Trellis diagram for the encoder in Fig. 15.5.
+[fig_ch15_09.jpg] Source: Chapter15.pptx | Slide: 10 | Caption: Figure 15.9 A recursive systematic convolutional (RSC) encoder.
+[fig_ch15_10.jpg] Source: Chapter15.pptx | Slide: 11 | Caption: Figure 15.10 Viterbi decoding example in Fig. 15.5: (a) stage 1 and 2; (b) stage 3; (c) stage 4; (d) stage 5; (e) stage 6.
+[fig_ch15_11.jpg] Source: Chapter15.pptx | Slide: 11 | Caption: Figure 15.10 Viterbi decoding example in Fig. 15.5: (a) stage 1 and 2; (b) stage 3; (c) stage 4; (d) stage 5; (e) stage 6.
+[fig_ch15_12.jpg] Source: Chapter15.pptx | Slide: 12 | Caption: Figure 15.10 Continued
+[fig_ch15_13.jpg] Source: Chapter15.pptx | Slide: 13 | Caption: Figure 15.10 Continued
+[fig_ch15_14.jpg] Source: Chapter15.pptx | Slide: 13 | Caption: Figure 15.10 Continued
+[fig_ch15_15.jpg] Source: Chapter15.pptx | Slide: 14 | Caption: Figure 15.11 Convolutional encoder.
+[fig_ch15_16.jpg] Source: Chapter15.pptx | Slide: 15 | Caption: Figure 15.12 Code tree for the encoder in Fig. 15.11.
+[fig_ch15_17.jpg] Source: Chapter15.pptx | Slide: 16 | Caption: Figure 15.13 Setting the threshold in sequential decoding.
+[fig_ch15_18.jpg] Source: Chapter15.pptx | Slide: 17 | Caption: Figure 15.14 Trellis diagram of a Hamming (7, 4, 3) code with parity check matrix of Eq. (15.34).
+[fig_ch15_19.jpg] Source: Chapter15.pptx | Slide: 18 | Caption: Figure 15.15 A block (nonrandom) interleaver for correcting random and burst errors.
+[fig_ch15_20.jpg] Source: Chapter15.pptx | Slide: 19 | Caption: Figure 15.16 Product code formed by two encoders separated by a block interleaver.
+[fig_ch15_21.jpg] Source: Chapter15.pptx | Slide: 20 | Caption: Figure 15.17 Concatenated code with a nonbinary outer code and a binary inner code.
+[fig_ch15_22.jpg] Source: Chapter15.pptx | Slide: 21 | Caption: Figure 15.18 Block diagram of Chase soft-decoding algorithms.
+[fig_ch15_23.jpg] Source: Chapter15.pptx | Slide: 22 | Caption: Figure 15.19 Block diagram of Chase soft decoding algorithms.
+[fig_ch15_24.jpg] Source: Chapter15.pptx | Slide: 23 | Caption: Figure 15.20 Parallel concatenated turbo code: (a) rate 1/3 turbo encoder; (b) Implementation of recursive systematic convolutional (RSC) encoder
+g1(D)=1+D+D4, g2(D)=1+ D2+D3+D4.
+[fig_ch15_25.jpg] Source: Chapter15.pptx | Slide: 24 | Caption: Figure 15.21 Exchange of extrinsic information between two component CJR
+decoders for iterative turbo decoding.
+[fig_ch15_26.jpg] Source: Chapter15.pptx | Slide: 25 | Caption: Figure 15.22 The decoding performance of a rate 1/2 Turbo code is shown to be very close to the theoretical limit. (Reproduced with copyright permission from IEEE from Ref. 14.)
+[fig_ch15_27.jpg] Source: Chapter15.pptx | Slide: 26 | Caption: Figure 15.23 Tanner graph of the (7, 4, 3) Hamming code.
+[fig_ch15_28.jpg] Source: Chapter15.pptx | Slide: 27 | Caption: Figure 15.24 Message passing in the sum-product algorithm.
+[fig_ch15_29.jpg] Source: Chapter15.pptx | Slide: 28 | Caption: Figure 15.25 Comparison of bit error rates of uncoded polar signaling transmission and polar signaling transmission of Hamming (7, 4) encoded [(dashed) and uncoded (solid) message bits.
+[fig_ch15_30.jpg] Source: Chapter15.pptx | Slide: 29 | Caption: Figure P.15.5-2
+[fig_ch15_31.jpg] Source: Chapter15.pptx | Slide: 30 | Caption: Figure P.15.5-3
+[fig_ch15_32.jpg] Source: Chapter15.pptx | Slide: 31 | Caption: Figure P.15.5-5

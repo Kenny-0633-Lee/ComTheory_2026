@@ -1,0 +1,68 @@
+[fig_ch03_01.jpg] Source: Chapter03a.pptx | Slide: 2 | Caption: Figure 3.1 Construction of a periodic signal by periodic extension of g(t).
+[fig_ch03_02.jpg] Source: Chapter03a.pptx | Slide: 3 | Caption: Figure 3.2 Change in the Fourier spectrum when the period T0 in Fig. 3.1 is doubled.
+[fig_ch03_03.jpg] Source: Chapter03a.pptx | Slide: 4 | Caption: Figure 3.3 The Fourier series becomes the Fourier integral in the limit as T0 →∞.
+[fig_ch03_04.jpg] Source: Chapter03a.pptx | Slide: 5 | Caption: Figure 3.4 (a) e−atu(t) and (b) its Fourier spectra.
+[fig_ch03_05.jpg] Source: Chapter03a.pptx | Slide: 6 | Caption: Figure 3.5 Analogy for Fourier transform.
+[fig_ch03_06.jpg] Source: Chapter03a.pptx | Slide: 7 | Caption: Figure 3.6 Time-limited pulse.
+[fig_ch03_07.jpg] Source: Chapter03a.pptx | Slide: 8 | Caption: Figure 3.7 Rectangular pulse.
+[fig_ch03_08.jpg] Source: Chapter03a.pptx | Slide: 9 | Caption: Figure 3.8 Triangular pulse.
+[fig_ch03_09.jpg] Source: Chapter03a.pptx | Slide: 10 | Caption: Figure 3.9 Sinc pulse.
+[fig_ch03_10.jpg] Source: Chapter03a.pptx | Slide: 11 | Caption: Figure 3.10 (a) Rectangular pulse and (b) its Fourier spectrum.
+[fig_ch03_11.jpg] Source: Chapter03a.pptx | Slide: 12 | Caption: Figure 3.11 (a) Unit impulse and (b) its Fourier spectrum.
+[fig_ch03_12.jpg] Source: Chapter03a.pptx | Slide: 13 | Caption: Figure 3.12 (a) Constant (dc) signal and (b) its Fourier spectrum.
+[fig_ch03_13.jpg] Source: Chapter03a.pptx | Slide: 14 | Caption: Figure 3.13 (a) Cosine signal and (b) its Fourier spectrum.
+[fig_ch03_14.jpg] Source: Chapter03a.pptx | Slide: 15 | Caption: Figure 3.14 Sign function.
+[fig_ch03_15.jpg] Source: Chapter03a.pptx | Slide: 16 | Caption: Figure 3.15 Near symmetry between direct and inverse Fourier transforms.
+[fig_ch03_16.jpg] Source: Chapter03a.pptx | Slide: 17 | Caption: Figure 3.16 Duality property of the Fourier transform.
+[fig_ch03_17.jpg] Source: Chapter03a.pptx | Slide: 18 | Caption: Figure 3.17 The scaling property of the Fourier transform.
+[fig_ch03_18.jpg] Source: Chapter03a.pptx | Slide: 19 | Caption: Figure 3.18 (a) e−a|t| and (b) its Fourier spectrum.
+[fig_ch03_19.jpg] Source: Chapter03a.pptx | Slide: 20 | Caption: Figure 3.19 Physical explanation of the time-shifting property.
+[fig_ch03_20.jpg] Source: Chapter03a.pptx | Slide: 21 | Caption: Figure 3.20 Effect of time shifting on the Fourier spectrum of a signal.
+[fig_ch03_21.jpg] Source: Chapter03a.pptx | Slide: 22 | Caption: Figure 3.21 Amplitude modulation of a signal causes spectral shifting.
+[fig_ch03_22.jpg] Source: Chapter03a.pptx | Slide: 23 | Caption: Figure 3.22 Example of spectral shifting by amplitude modulation.
+[fig_ch03_23.jpg] Source: Chapter03a.pptx | Slide: 24 | Caption: Figure 3.23 (a) Bandpass signal and (b) its spectrum.
+[fig_ch03_24.jpg] Source: Chapter03a.pptx | Slide: 25 | Caption: Figure 3.24 (a) Impulse train and (b) its spectrum.
+[fig_ch03_25.jpg] Source: Chapter03a.pptx | Slide: 26 | Caption: Figure 3.25 Using the time differentiation property to find the Fourier transform of a piecewise-linear signal.
+[fig_ch03_26.jpg] Source: Chapter03a.pptx | Slide: 27 | Caption: Figure 3.26 Signal transmission through a linear time-invariant system.
+[fig_ch03_27.jpg] Source: Chapter03a.pptx | Slide: 28 | Caption: Figure 3.27 Linear timeinvariant system frequency response for distortionless transmission.
+[fig_ch03_28.jpg] Source: Chapter03a.pptx | Slide: 29 | Caption: Figure 3.28 (a) Simple RC filter. (b) Its frequency response and time delay.
+[fig_ch03_29.jpg] Source: Chapter03a.pptx | Slide: 30 | Caption: Figure 3.29 (a) Ideal low-pass filter frequency response and (b) its impulse response.
+[fig_ch03_30.jpg] Source: Chapter03a.pptx | Slide: 31 | Caption: Figure 3.30 Ideal high-pass and bandpass filter frequency responses.
+[fig_ch03_31.jpg] Source: Chapter03a.pptx | Slide: 32 | Caption: Figure 3.31 Approximate realization of an ideal low-pass filter by truncating its impulse response.
+[fig_ch03_32.jpg] Source: Chapter03a.pptx | Slide: 33 | Caption: Figure 3.32 Butterworth filter characteristics.
+[fig_ch03_33.jpg] Source: Chapter03a.pptx | Slide: 34 | Caption: Figure 3.33 Comparison of Butterworth filter (n = 4) and an ideal filter.
+[fig_ch03_34.jpg] Source: Chapter03a.pptx | Slide: 35 | Caption: Figure 3.34 Basic diagram of a digital filter in practical applications.
+[fig_ch03_35.jpg] Source: Chapter03a.pptx | Slide: 36 | Caption: Figure 3.35 Pulse is dispersed when it passes through a system that is not distortionless.
+[fig_ch03_36.jpg] Source: Chapter03a.pptx | Slide: 37 | Caption: Figure 3.36 Signal distortion caused by nonlinear operation: (a) desired (input) signal spectrum;
+(b) spectrum of the unwanted signal (distortion) in the received signal; (c) spectrum of the received signal;
+(d) spectrum of the received signal after low-pass filtering.
+[fig_ch03_37.jpg] Source: Chapter03a.pptx | Slide: 38 | Caption: Figure 3.37 Multipath transmission.
+[fig_ch03_38.jpg] Source: Chapter03a.pptx | Slide: 39 | Caption: Figure 3.38 Interpretation of the energy spectral density of a signal.
+[fig_ch03_39.jpg] Source: Chapter03a.pptx | Slide: 40 | Caption: Figure 3.39 Estimating the essential bandwidth of a signal.
+[fig_ch03_40.jpg] Source: Chapter03a.pptx | Slide: 41 | Caption: Figure 3.40 (a) Rectangular function; (b) its energy spectral density; (c) energy vs. WT.
+[fig_ch03_41.jpg] Source: Chapter03a.pptx | Slide: 42 | Caption: Figure 3.41 Energy spectral densities of (a) modulating and (b) modulated signals.
+[fig_ch03_42.jpg] Source: Chapter03a.pptx | Slide: 43 | Caption: Figure 3.42 Computation of the time autocorrelation function.
+[fig_ch03_43.jpg] Source: Chapter03a.pptx | Slide: 44 | Caption: Figure 3.43 Limiting process in derivation of PSD.
+[fig_ch03_44.jpg] Source: Chapter03a.pptx | Slide: 45 | Caption: Figure 3.44 Autocorrelation function and power spectral density function of a random binary pulse train.
+[fig_ch03_45.jpg] Source: Chapter03a.pptx | Slide: 46 | Caption: Figure 3.45 Power spectral densities at the input and the output of an ideal differentiator.
+[fig_ch03_46.jpg] Source: Chapter03a.pptx | Slide: 47 | Caption: Figure 3.46 Relation between the samples of g(t) and of G(f).
+[fig_ch03_47.jpg] Source: Chapter03a.pptx | Slide: 48 | Caption: Figure 3.47 Discrete Fourier transform of an exponential signal e−2tu(t).
+Notice that the horizontal axis in this case is ω (in radians per second).
+[fig_ch03_48.jpg] Source: Chapter03a.pptx | Slide: 49 | Caption: Figure 3.48 Discrete Fourier transform of a
+ rectangular pulse.
+[fig_ch03_49.jpg] Source: Chapter03a.pptx | Slide: 50 | Caption: Figure 3.49 Filtering g(t) through H(f).
+[fig_ch03_50.jpg] Source: Chapter03b.pptx | Slide: 1 | Caption: Figure P.3.1-4
+[fig_ch03_51.jpg] Source: Chapter03b.pptx | Slide: 2 | Caption: Figure P.3.1-5
+[fig_ch03_52.jpg] Source: Chapter03b.pptx | Slide: 3 | Caption: Figure P.3.1-6
+[fig_ch03_53.jpg] Source: Chapter03b.pptx | Slide: 4 | Caption: Figure P.3.1-7
+[fig_ch03_54.jpg] Source: Chapter03b.pptx | Slide: 5 | Caption: Figure P.3.3-2
+[fig_ch03_55.jpg] Source: Chapter03b.pptx | Slide: 6 | Caption: Figure P.3.3-3
+[fig_ch03_56.jpg] Source: Chapter03b.pptx | Slide: 7 | Caption: Figure P.3.3-4
+[fig_ch03_57.jpg] Source: Chapter03b.pptx | Slide: 8 | Caption: Figure P.3.3-5
+[fig_ch03_58.jpg] Source: Chapter03b.pptx | Slide: 9 | Caption: Figure P.3.3-6
+[fig_ch03_59.jpg] Source: Chapter03b.pptx | Slide: 10 | Caption: Figure P.3.4-2
+[fig_ch03_60.jpg] Source: Chapter03b.pptx | Slide: 11 | Caption: Figure P.3.6-1
+[fig_ch03_61.jpg] Source: Chapter03b.pptx | Slide: 12 | Caption: Figure P.3.6-2
+[fig_ch03_62.jpg] Source: Chapter03b.pptx | Slide: 13 | Caption: Figure P.3.7-5
+[fig_ch03_63.jpg] Source: Chapter03b.pptx | Slide: 14 | Caption: Figure P.3.8-2
+[fig_ch03_64.jpg] Source: Chapter03b.pptx | Slide: 15 | Caption: Figure P.3.8-4

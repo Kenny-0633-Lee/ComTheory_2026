@@ -1,0 +1,62 @@
+[fig_ch06_01.jpg] Source: Chapter06a.pptx | Slide: 2 | Caption: Figure 6.1 Sampled signal and its Fourier spectra.
+[fig_ch06_02.jpg] Source: Chapter06a.pptx | Slide: 3 | Caption: Figure 6.2 Ideal interpolation.
+[fig_ch06_03.jpg] Source: Chapter06a.pptx | Slide: 4 | Caption: Figure 6.3 Signal reconstructed from the Nyquist samples in Example 6.1.
+[fig_ch06_04.jpg] Source: Chapter06a.pptx | Slide: 5 | Caption: Figure 6.4 Practical reconstruction (interpolation) pulse.
+[fig_ch06_05.jpg] Source: Chapter06a.pptx | Slide: 6 | Caption: Figure 6.5 Practical signal reconstruction.
+[fig_ch06_06.jpg] Source: Chapter06a.pptx | Slide: 7 | Caption: Figure 6.6 Simple interpolation by means of simple rectangular pulse.
+[fig_ch06_07.jpg] Source: Chapter06a.pptx | Slide: 8 | Caption: Figure 6.7 Spectra of a sampled signal: (a) at the Nyquist rate; (b) above the Nyquist rate.
+[fig_ch06_08.jpg] Source: Chapter06a.pptx | Slide: 9 | Caption: Figure 6.8 Aliasing effect. (a) Spectrum of a practical signal g(t). (b) Spectrum of sampled g(t).
+(c) Reconstructed signal spectrum. (d) Sampling scheme using antialiasing filter.
+(e) Sample signal spectrum (dotted) and the reconstructed signal spectrum (solid) when antialiasing filter is used.
+[fig_ch06_09.jpg] Source: Chapter06a.pptx | Slide: 10 | Caption: Figure 6.9 (a) Non-band limited signal spectrum and its sampled spectrum G( f ).
+(b) Equivalent low-pass signal spectrum Ga( f ) constructed from uniform samples of g(t) at sampling rate 2B.
+[fig_ch06_10.jpg] Source: Chapter06a.pptx | Slide: 10 | Caption: Figure 6.9 (a) Non-band limited signal spectrum and its sampled spectrum G( f ).
+(b) Equivalent low-pass signal spectrum Ga( f ) constructed from uniform samples of g(t) at sampling rate 2B.
+[fig_ch06_11.jpg] Source: Chapter06a.pptx | Slide: 11 | Caption: Figure 6.10
+[fig_ch06_12.jpg] Source: Chapter06a.pptx | Slide: 12 | Caption: Figure 6.10 Illustration of practical sampling.
+[fig_ch06_13.jpg] Source: Chapter06a.pptx | Slide: 13 | Caption: Figure 6.11 Pulse-modulated signals. (a) The unmodulated signal. (b) The PAM signal.
+(c) The PWM (PDM) signal. (d) The PPM signal.
+[fig_ch06_14.jpg] Source: Chapter06a.pptx | Slide: 14 | Caption: Figure 6.12 Time division multiplexing of two signals.
+[fig_ch06_15.jpg] Source: Chapter06a.pptx | Slide: 15 | Caption: Figure 6.13 PCM system diagram.
+[fig_ch06_16.jpg] Source: Chapter06a.pptx | Slide: 16 | Caption: Figure 6.14 Quantization of a sampled analog signal.
+[fig_ch06_17.jpg] Source: Chapter06a.pptx | Slide: 17 | Caption: Figure 6.15 Nonuniform quantization.
+[fig_ch06_18.jpg] Source: Chapter06a.pptx | Slide: 18 | Caption: Figure 6.16 (a) μ-Law characteristic. (b) A-Law characteristic.
+[fig_ch06_19.jpg] Source: Chapter06a.pptx | Slide: 19 | Caption: Figure 6.17 Utilization of compressor and expander for nonuniform quantization.
+[fig_ch06_20.jpg] Source: Chapter06a.pptx | Slide: 20 | Caption: Figure 6.18 Ratio of signal to quantization noise in PCM with and without compression.
+[fig_ch06_21.jpg] Source: Chapter06a.pptx | Slide: 21 | Caption: Figure 6.19 Piecewise linear compressor characteristic
+[fig_ch06_22.jpg] Source: Chapter06a.pptx | Slide: 22 | Caption: Figure 6.20 T1 carrier system.
+[fig_ch06_23.jpg] Source: Chapter06a.pptx | Slide: 23 | Caption: Figure 6.21 T1 system signaling format.
+[fig_ch06_24.jpg] Source: Chapter06a.pptx | Slide: 24 | Caption: Figure 6.22 Time division multiplexing of digital signals: (a) digit interleaving; (b) word (or byte) interleaving;
+(c) interleaving channel having different bit rate; (d) alternate scheme for (c).
+[fig_ch06_25.jpg] Source: Chapter06a.pptx | Slide: 25 | Caption: Figure 6.23 DM1/2 multiplexer format.
+[fig_ch06_26.jpg] Source: Chapter06a.pptx | Slide: 26 | Caption: Figure 6.24 Pulse stuffing.
+[fig_ch06_27.jpg] Source: Chapter06a.pptx | Slide: 27 | Caption: Figure 6.25 North American digital hierarchy (AT&T system).
+[fig_ch06_28.jpg] Source: Chapter06a.pptx | Slide: 28 | Caption: Figure 6.26 Plesiochronous digital hierarchy (PDH) according to ITU-T Recommendation G.704.
+[fig_ch06_29.jpg] Source: Chapter06a.pptx | Slide: 29 | Caption: Figure 6.27 Transversal filter (tapped delay line) used as a linear predictor.
+[fig_ch06_30.jpg] Source: Chapter06a.pptx | Slide: 30 | Caption: Figure 6.28 DPCM system: (a) transmitter; (b) receiver.
+[fig_ch06_31.jpg] Source: Chapter06a.pptx | Slide: 31 | Caption: Figure 6.29 ADPCM encoder uses an adaptive quantizer controlled only by the encoder output bits.
+[fig_ch06_32.jpg] Source: Chapter06a.pptx | Slide: 32 | Caption: Figure 6.30 Delta modulation is a special case of DPCM.
+[fig_ch06_33.jpg] Source: Chapter06a.pptx | Slide: 33 | Caption: Figure 6.31 Delta modulation: (a) and (b) delta demodulators; (c) message signal versus integrator output signal
+(d) delta-modulated pulse trains; (e) modulation errors.
+[fig_ch06_34.jpg] Source: Chapter06a.pptx | Slide: 34 | Caption: Figure 6.32 Voice signal spectrum.
+[fig_ch06_35.jpg] Source: Chapter06a.pptx | Slide: 35 | Caption: Figure 6.33 (a) Conventional delta modulator. (b)Σ-Δ modulator. (c) Simpler Σ-Δ modulator.
+[fig_ch06_36.jpg] Source: Chapter06a.pptx | Slide: 36 | Caption: Figure 6.34 (a) The human speech production mechanism (b) Typical pressure impulses.
+[fig_ch06_37.jpg] Source: Chapter06a.pptx | Slide: 36 | Caption: Figure 6.34 (a) The human speech production mechanism (b) Typical pressure impulses.
+[fig_ch06_38.jpg] Source: Chapter06a.pptx | Slide: 37 | Caption: Figure 6.35 Analysis and synthesis of voice signals in an LPC encoder and decoder.
+[fig_ch06_39.jpg] Source: Chapter06b.pptx | Slide: 1 | Caption: Figure 6.36 (a) Frame 1. (b) Frame 2. (c) Information transferred between frames 1 and 2.
+[fig_ch06_40.jpg] Source: Chapter06b.pptx | Slide: 2 | Caption: Figure 6.37 Zigzag DCT coefficient scanning pattern.
+[fig_ch06_41.jpg] Source: Chapter06b.pptx | Slide: 3 | Caption: Figure 6.38 MPEG temporal frame structure.
+[fig_ch06_42.jpg] Source: Chapter06b.pptx | Slide: 4 | Caption: Figure 6.39 The relationship between the original signal and the ideal uniformly
+sampled signal in the time (a) and frequency (b, c) domains.
+[fig_ch06_43.jpg] Source: Chapter06b.pptx | Slide: 5 | Caption: Figure 6.40 Reconstructed signal spectrum and waveform from applying the ideal impulse
+sampling and ideal low-pass filter reconstruction.
+[fig_ch06_44.jpg] Source: Chapter06b.pptx | Slide: 6 | Caption: Figure 6.41 Reconstructed signal spectrum and waveform from applying the simple rectangular
+reconstruction pulse (Fig.6.6) followed by LPF without equalization.
+[fig_ch06_45.jpg] Source: Chapter06b.pptx | Slide: 7 | Caption: Figure 6.42 Original signal and the PCM signals with different numbers of quantization levels.
+[fig_ch06_46.jpg] Source: Chapter06b.pptx | Slide: 8 | Caption: Figure 6.43 Comparison between the original signal and the PCM signals after
+low-pass filtering to recover the original message.
+[fig_ch06_47.jpg] Source: Chapter06b.pptx | Slide: 9 | Caption: Figure 6.44 Examples of delta modulation output with three different step sizes: (a) small step size leads to overloading;
+(b) reasonable step size; (c) large step size causes large quantization errors.
+[fig_ch06_48.jpg] Source: Chapter06b.pptx | Slide: 10 | Caption: Figure P.6.1-1
+[fig_ch06_49.jpg] Source: Chapter06b.pptx | Slide: 11 | Caption: Figure P.6.1-5
+[fig_ch06_50.jpg] Source: Chapter06b.pptx | Slide: 12 | Caption: Figure P.6.1-6

@@ -1,0 +1,33 @@
+[fig_ch14_01.jpg] Source: Chapter14.pptx | Slide: 2 | Caption: Figure 14.1 Three-dimensional cube in Hamming space.
+[fig_ch14_02.jpg] Source: Chapter14.pptx | Slide: 3 | Caption: Figure 14.2 Binary symmetric channel.
+[fig_ch14_03.jpg] Source: Chapter14.pptx | Slide: 4 | Caption: Figure 14.3 Plot of ρ(z).
+[fig_ch14_04.jpg] Source: Chapter14.pptx | Slide: 5 | Caption: Figure 14.4 Binary symmetric channel capacity as a function of error probability Pe.
+[fig_ch14_05.jpg] Source: Chapter14.pptx | Slide: 6 | Caption: Figure 14.5 Channel capacity vs. bandwidth for a channel with white Gaussian noise and fixed signal power.
+[fig_ch14_06.jpg] Source: Chapter14.pptx | Slide: 7 | Caption: Figure 14.6 (a) Signal space representation of transmitted and received signals and noise signal. (b) Choice of signals for error-free communication.
+[fig_ch14_07.jpg] Source: Chapter14.pptx | Slide: 8 | Caption: Figure 14.7 Volume of a shell of a D-dimensional hypersphere.
+[fig_ch14_08.jpg] Source: Chapter14.pptx | Slide: 9 | Caption: Figure 14.8 Derivation of channel capacity.
+[fig_ch14_09.jpg] Source: Chapter14.pptx | Slide: 10 | Caption: Figure 14.9 Ideal exchange between SNR and bandwidth.
+[fig_ch14_10.jpg] Source: Chapter14.pptx | Slide: 11 | Caption: Figure 14.10 Ideal behavior of SNR vs.   or various ratios of BT to B.
+[fig_ch14_11.jpg] Source: Chapter14.pptx | Slide: 12 | Caption: Figure 14.11 Comparison of ideal behavior and FM system behavior.
+[fig_ch14_12.jpg] Source: Chapter14.pptx | Slide: 13 | Caption: Figure 14.12 Comparison of ideal system behavior to that of PCM.
+[fig_ch14_13.jpg] Source: Chapter14.pptx | Slide: 14 | Caption: Figure 14.13 Illustration of water-pouring power allocation for maximizing frequency-selective channel capacity.
+[fig_ch14_14.jpg] Source: Chapter14.pptx | Slide: 15 | Caption: Figure 14.14 MIMO system with M transmit antennas and N receive antennas.
+[fig_ch14_15.jpg] Source: Chapter14.pptx | Slide: 16 | Caption: Figure 14.15 r-Channel communication system equivalent to a MIMO system
+without channel knowledge at the transmitter.
+[fig_ch14_16.jpg] Source: Chapter14.pptx | Slide: 17 | Caption: Figure 14.16 Water-filling interpretation of MIMO transmission power loading based on channel knowledge.
+[fig_ch14_17.jpg] Source: Chapter14.pptx | Slide: 18 | Caption: Figure 14.17 Water-pouring interpretation of the optimum MIMO transmission
+power loading based on channel knowledge.
+[fig_ch14_18.jpg] Source: Chapter14.pptx | Slide: 19 | Caption: Figure 14.18 Channel capacity compared with mutual information between channel output and different input signals.
+[fig_ch14_19.jpg] Source: Chapter14.pptx | Slide: 20 | Caption: Figure 14.19 Cumulative distribution function (CDF) of different MIMO configurations.
+[fig_ch14_20.jpg] Source: Chapter14.pptx | Slide: 21 | Caption: Figure
+P.14.4-2
+[fig_ch14_21.jpg] Source: Chapter14.pptx | Slide: 22 | Caption: Figure
+P.14.4-3
+[fig_ch14_22.jpg] Source: Chapter14.pptx | Slide: 23 | Caption: Figure
+P.14.4-4
+[fig_ch14_23.jpg] Source: Chapter14.pptx | Slide: 24 | Caption: Figure
+P.14.4-5
+[fig_ch14_24.jpg] Source: Chapter14.pptx | Slide: 25 | Caption: No Caption Found
+[fig_ch14_25.jpg] Source: Chapter14.pptx | Slide: 26 | Caption: No Caption Found
+[fig_ch14_26.jpg] Source: Chapter14.pptx | Slide: 27 | Caption: No Caption Found
+[fig_ch14_27.jpg] Source: Chapter14.pptx | Slide: 28 | Caption: No Caption Found

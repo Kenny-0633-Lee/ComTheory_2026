@@ -1,0 +1,49 @@
+[fig_ch07_01.jpg] Source: Chapter07a.pptx | Slide: 2 | Caption: Figure 7.1 Fundamental building blocks of digital communication systems.
+[fig_ch07_02.jpg] Source: Chapter07a.pptx | Slide: 3 | Caption: Figure 7.2 Line code examples: (a) on-off (RZ); (b) polar (RZ); (c) bipolar (RZ); (d) on-off (NRZ); (e) polar (NRZ).
+[fig_ch07_03.jpg] Source: Chapter07a.pptx | Slide: 4 | Caption: Figure 7.3 An on-off signal (a) is a sum of a random polar signal (b) and a clock frequency periodic signal (c).
+[fig_ch07_04.jpg] Source: Chapter07a.pptx | Slide: 5 | Caption: Figure 7.4 Random pulse-amplitude-modulated signal and its generation from a PAM impulse.
+[fig_ch07_05.jpg] Source: Chapter07a.pptx | Slide: 6 | Caption: Figure 7.5 Derivation of PSD of a random PAM signal with a very narrow pulse of width ε and height hk = ak/ε.
+[fig_ch07_06.jpg] Source: Chapter07a.pptx | Slide: 7 | Caption: Figure 7.6 Power spectral density of a polar signal.
+[fig_ch07_07.jpg] Source: Chapter07a.pptx | Slide: 8 | Caption: Figure 7.7 Split-phase (Manchester or twinned-binary) signal. (a) Basic pulse p(t) for Manchester signaling.
+(b) Transmitted waveform for binary data sequence using Manchester signaling.
+[fig_ch07_08.jpg] Source: Chapter07a.pptx | Slide: 9 | Caption: Figure 7.8 Power spectral density (PSD) of an on-off signal.
+[fig_ch07_09.jpg] Source: Chapter07a.pptx | Slide: 10 | Caption: Figure 7.9 PSD of bipolar, polar, and split-phase signals normalized for equal powers.
+Half-width rectangular pulses are used.
+[fig_ch07_10.jpg] Source: Chapter07a.pptx | Slide: 11 | Caption: Figure 7.10 (a) HDB3 signal and (b) its PSD.
+[fig_ch07_11.jpg] Source: Chapter07a.pptx | Slide: 12 | Caption: Figure 7.11 The minimum bandwidth pulse that satisfies Nyquist's first criterion and its spectrum.
+[fig_ch07_12.jpg] Source: Chapter07a.pptx | Slide: 13 | Caption: Figure 7.12 Derivation of the zero ISI Nyquist criterion pulse.
+[fig_ch07_13.jpg] Source: Chapter07a.pptx | Slide: 14 | Caption: Figure 7.13 Vestigial (raised-cosine) spectrum.
+[fig_ch07_14.jpg] Source: Chapter07a.pptx | Slide: 15 | Caption: Figure 7.14 Pulses satisfying Nyquist's first criterion: solid curve, ideal fx = 0 (r = 0); light dashed curve,
+fx = Rb/4 (r = 0.5); heavy dashed curve, fx = Rb/2 (r = 1).
+[fig_ch07_15.jpg] Source: Chapter07a.pptx | Slide: 16 | Caption: Figure 7.15 Communication using controlled ISI or Nyquist second criterion pulses.
+[fig_ch07_16.jpg] Source: Chapter07a.pptx | Slide: 17 | Caption: Figure 7.16 (a) The minimum bandwidth pulse that satisfies
+the duobinary pulse criterion and (b) its spectrum.
+[fig_ch07_17.jpg] Source: Chapter07a.pptx | Slide: 18 | Caption: Figure 7.17 Equivalent duobinary signaling.
+[fig_ch07_18.jpg] Source: Chapter07a.pptx | Slide: 19 | Caption: Figure 7.18 Differential encoded duobinary signaling.
+[fig_ch07_19.jpg] Source: Chapter07a.pptx | Slide: 20 | Caption: Figure 7.19 Pulse generation by transversal filter.
+[fig_ch07_20.jpg] Source: Chapter07a.pptx | Slide: 21 | Caption: Figure 7.20 (a) Scrambler. (b) Descrambler.
+[fig_ch07_21.jpg] Source: Chapter07a.pptx | Slide: 22 | Caption: Figure 7.21 Regenerative repeater.
+[fig_ch07_22.jpg] Source: Chapter07a.pptx | Slide: 23 | Caption: Figure 7.22 Zero-forcing equalizer analysis.
+[fig_ch07_23.jpg] Source: Chapter07a.pptx | Slide: 24 | Caption: Figure 7.23 Timing extraction.
+[fig_ch07_24.jpg] Source: Chapter07a.pptx | Slide: 25 | Caption: Figure 7.24 Error probability in threshold detection.
+[fig_ch07_25.jpg] Source: Chapter07a.pptx | Slide: 26 | Caption: Figure 7.25 The eye diagram.
+[fig_ch07_26.jpg] Source: Chapter07a.pptx | Slide: 26 | Caption: Figure 7.25 The eye diagram.
+[fig_ch07_27.jpg] Source: Chapter07a.pptx | Slide: 26 | Caption: Figure 7.25 The eye diagram.
+[fig_ch07_28.jpg] Source: Chapter07a.pptx | Slide: 27 | Caption: Figure 7.26 Reading an eye diagram.
+[fig_ch07_29.jpg] Source: Chapter07a.pptx | Slide: 28 | Caption: Figure 7.27 Eye diagrams of a polar signaling system using a raised cosine pulse with roll-off factor 0.5: (a) over 2 symbol periods 2Tb with a time shift Tb/2; (b) without time shift.
+[fig_ch07_30.jpg] Source: Chapter07a.pptx | Slide: 29 | Caption: Figure 7.28 4-Ary PAM signaling: (a) four RZ symbols; (b) baseband transmission; (c) the 4-ary RZ eye diagram.
+[fig_ch07_31.jpg] Source: Chapter07a.pptx | Slide: 30 | Caption: Figure 7.29 Eye diagrams of a 4-ary PAM signaling system using a raised-cosine pulse with roll-off factor 0.5: (a) over two symbol periods 2Tb with time offset Tb/2; (b) without time offset.
+[fig_ch07_32.jpg] Source: Chapter07a.pptx | Slide: 31 | Caption: Figure 7.30 (a) The carrier cos ωct. (b) The modulating signal m(t). (c) ASK: the modulated signal m(t) cos ωct.
+[fig_ch07_33.jpg] Source: Chapter07b.pptx | Slide: 1 | Caption: Figure 7.31 (a) The modulating signal m(t). (b) PSK: the modulated signal m(t) cos ωct. (c) FSK: the modulated signal.
+[fig_ch07_34.jpg] Source: Chapter07b.pptx | Slide: 2 | Caption: Figure 7.32 PSD of (a) ASK, (b) PSK, and (c) FSK.
+[fig_ch07_35.jpg] Source: Chapter07b.pptx | Slide: 3 | Caption: Figure 7.33  (a) Noncoherent detection of FSK. (b) Coherent detection of FSK.
+[fig_ch07_36.jpg] Source: Chapter07b.pptx | Slide: 4 | Caption: Figure 7.34 Coherent binary PSK detector (similar to a DSB-SC demodulator).
+[fig_ch07_37.jpg] Source: Chapter07b.pptx | Slide: 5 | Caption: Figure 7.35 (a) Differential encoding; (b) encoded signal; (c) differential PSK receiver.
+[fig_ch07_38.jpg] Source: Chapter07b.pptx | Slide: 6 | Caption: Figure 7.36 Binary FSK symbols in the two-dimensional orthogonal signal space.
+[fig_ch07_39.jpg] Source: Chapter07b.pptx | Slide: 7 | Caption: Figure 7.37 M-ary PSK symbols in the orthogonal signal space: (a) M = 2; (b) M = 4; (c) M = 8.
+[fig_ch07_40.jpg] Source: Chapter07b.pptx | Slide: 8 | Caption: Figure 7.38 (a) QAM or quadrature multiplexing and (b) 16-point QAM (M = 16).
+[fig_ch07_41.jpg] Source: Chapter07b.pptx | Slide: 9 | Caption: Figure P.7.3-6
+[fig_ch07_42.jpg] Source: Chapter07b.pptx | Slide: 10 | Caption: Figure P.7.3-7
+[fig_ch07_43.jpg] Source: Chapter07b.pptx | Slide: 11 | Caption: Figure P.7.4-2
+[fig_ch07_44.jpg] Source: Chapter07b.pptx | Slide: 12 | Caption: Figure P.7.4-3
+[fig_ch07_45.jpg] Source: Chapter07b.pptx | Slide: 13 | Caption: Figure P.7.8-1

@@ -1,0 +1,37 @@
+[fig_ch12_01.jpg] Source: Chapter12.pptx | Slide: 2 | Caption: Figure 12.1 Frequency hopping spread spectrum system.
+[fig_ch12_02.jpg] Source: Chapter12.pptx | Slide: 3 | Caption: Figure 12.2 Typical Bluetooth frequency hopping pattern.
+[fig_ch12_03.jpg] Source: Chapter12.pptx | Slide: 4 | Caption: Figure 12.3 Effects of (a) narrowband jamming, (b) FHSS under broadband jamming, and (c) partial band jamming.
+[fig_ch12_04.jpg] Source: Chapter12.pptx | Slide: 5 | Caption: Figure 12.4 CDMA in FHSS in which each of the M users is assigned a unique PN code.
+[fig_ch12_05.jpg] Source: Chapter12.pptx | Slide: 6 | Caption: Figure 12.5 An area with the coverage of three piconets: m, master nodes; s, slave nodes; s/m,
+slave/master. A node can be both a master of one piconet (no. 1) and a slave of another (no. 3).
+[fig_ch12_06.jpg] Source: Chapter12.pptx | Slide: 7 | Caption: Figure 12.6 FHSS modulation in 802.11 and Bluetooth.
+[fig_ch12_07.jpg] Source: Chapter12.pptx | Slide: 8 | Caption: Figure 12.7 Figure 1 from the Lamarr-Antheil patent (From U.S. Patent and Trademark Office.)
+[fig_ch12_08.jpg] Source: Chapter12.pptx | Slide: 9 | Caption: Figure 12.8 DSSS system.
+[fig_ch12_09.jpg] Source: Chapter12.pptx | Slide: 10 | Caption: Figure 12.9 (a) PN sequence autocorrelation function.
+(b) Six-stage generator of a maximum length PN sequence.
+[fig_ch12_10.jpg] Source: Chapter12.pptx | Slide: 11 | Caption: Figure 12.10 Narrowband interference mitigation by the DSSS despreader.
+[fig_ch12_11.jpg] Source: Chapter12.pptx | Slide: 12 | Caption: Figure 12.11 Equivalent baseband diagram of DSSS system.
+[fig_ch12_12.jpg] Source: Chapter12.pptx | Slide: 13 | Caption: Figure 12.12 A code division multiple-access (CDMA) system based on DSSS.
+[fig_ch12_13.jpg] Source: Chapter12.pptx | Slide: 14 | Caption: Figure 12.13 Maximum likelihood multiuser detection (MUD) receiver.
+[fig_ch12_14.jpg] Source: Chapter12.pptx | Slide: 15 | Caption: Figure 12.14 Decorrelator MUD receiver.
+[fig_ch12_15.jpg] Source: Chapter12.pptx | Slide: 16 | Caption: Figure 12.15 Minimum mean square error MUD receiver.
+[fig_ch12_16.jpg] Source: Chapter12.pptx | Slide: 17 | Caption: Figure 12.16 Decision feedback MUD receiver based on successive interference
+cancellation (assuming that all M users are ranked in the order of descending gains).
+[fig_ch12_17.jpg] Source: Chapter12.pptx | Slide: 18 | Caption: Figure 12.17 Cellular telephone system.
+[fig_ch12_18.jpg] Source: Chapter12.pptx | Slide: 19 | Caption: Figure 12.18 RF bandwidth requirements for IS-95 uplink and downlink.
+[fig_ch12_19.jpg] Source: Chapter12.pptx | Slide: 20 | Caption: Figure 12.19 Forward link modulation and Walsh code spreading of cdma One (IS-95).
+[fig_ch12_20.jpg] Source: Chapter12.pptx | Slide: 21 | Caption: Figure 12.20 (a) Receiver location from one satellite measurement. (b) Location narrowed down by two
+satellite measurements. (c) Location narrowed down by three satellite measurements.
+(d) Practical global positioning system using four satellites. (e) Block diagram of a GPS receiver.
+[fig_ch12_21.jpg] Source: Chapter12.pptx | Slide: 22 | Caption: Figure 12.21 A wireless LAN with one access point and four computer nodes.
+[fig_ch12_22.jpg] Source: Chapter12.pptx | Slide: 23 | Caption: Figure 12.22 Performance of FHSS noncoherent detection under partial band jamming.
+[fig_ch12_23.jpg] Source: Chapter12.pptx | Slide: 24 | Caption: Figure 12.23 (a) Power spectral densities of DSSS signal using Barker code of length 11 for spreading: (a) without
+Narrowband jamming; (b) with narrowband jamming at SIR=10 dB.
+[fig_ch12_24.jpg] Source: Chapter12.pptx | Slide: 25 | Caption: Figure 12.24 Bit error probabilities of DSSS with QPSK
+modulation under narrowband jamming.
+[fig_ch12_25.jpg] Source: Chapter12.pptx | Slide: 26 | Caption: Figure 12.25 Performance of DS-CDMA conventional
+single-user detection without the near-far effect.
+[fig_ch12_26.jpg] Source: Chapter12.pptx | Slide: 27 | Caption: Figure 12.26 Performance comparison of decorrelator MUD in
+comparison with the conventional single-user receiver.
+[fig_ch12_27.jpg] Source: Chapter12.pptx | Slide: 28 | Caption: Figure 12.27 Performance comparison of decision feedback MUD in
+Comparison with the conventional single-user receiver.

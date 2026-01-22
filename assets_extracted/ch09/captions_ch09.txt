@@ -1,0 +1,33 @@
+[fig_ch09_01.jpg] Source: Chapter09.pptx | Slide: 2 | Caption: Figure 9.1 Random process for representing the temperature of a city.
+[fig_ch09_02.jpg] Source: Chapter09.pptx | Slide: 3 | Caption: Figure 9.2 Ensemble with a finite number of sample functions.
+[fig_ch09_03.jpg] Source: Chapter09.pptx | Slide: 4 | Caption: Figure 9.3 Random process for representing a channel noise.
+[fig_ch09_04.jpg] Source: Chapter09.pptx | Slide: 5 | Caption: Figure 9.4 Autocorrelation functions for a slowly varying and a rapidly varying random process.
+[fig_ch09_05.jpg] Source: Chapter09.pptx | Slide: 6 | Caption: Figure 9.5 An ensemble for the random process A cos (ωct + Θ).
+[fig_ch09_06.jpg] Source: Chapter09.pptx | Slide: 7 | Caption: Figure 9.6 Classification of random processes.
+[fig_ch09_07.jpg] Source: Chapter09.pptx | Slide: 8 | Caption: Figure 9.7 Derivation of the Wiener-Khintchine theorem.
+[fig_ch09_08.jpg] Source: Chapter09.pptx | Slide: 9 | Caption: Figure 9.8 Lowpass white noise PSD and its autocorrelation function.
+[fig_ch09_09.jpg] Source: Chapter09.pptx | Slide: 10 | Caption: Figure 9.9 Derivation of the autocorrelation function and PSD of a random binary process.
+[fig_ch09_10.jpg] Source: Chapter09.pptx | Slide: 11 | Caption: Figure 9.10 Random PAM process.
+[fig_ch09_11.jpg] Source: Chapter09.pptx | Slide: 12 | Caption: Figure 9.11 Basic pulse for a random binary polar signal.
+[fig_ch09_12.jpg] Source: Chapter09.pptx | Slide: 13 | Caption: Figure 9.12 Transmission of a random process through a linear time-invariant system.
+[fig_ch09_13.jpg] Source: Chapter09.pptx | Slide: 14 | Caption: Figure 9.13 Representation of thermal noise in a resistor.
+[fig_ch09_14.jpg] Source: Chapter09.pptx | Slide: 15 | Caption: Figure 9.14 Noise calculations in a resistive circuit.
+[fig_ch09_15.jpg] Source: Chapter09.pptx | Slide: 16 | Caption: Figure 9.15 Wiener-Hopf filter operation.
+[fig_ch09_16.jpg] Source: Chapter09.pptx | Slide: 17 | Caption: Figure 9.16 Using delay to achieve a close realization of an unrealizable filter.
+[fig_ch09_17.jpg] Source: Chapter09.pptx | Slide: 18 | Caption: Figure 9.17 Communication system model.
+[fig_ch09_18.jpg] Source: Chapter09.pptx | Slide: 19 | Caption: Figure 9.18 Optimum preemphasis and deemphasis filters in baseband systems.
+[fig_ch09_19.jpg] Source: Chapter09.pptx | Slide: 20 | Caption: Figure 9.19 PSD of a bandpass random process.
+[fig_ch09_20.jpg] Source: Chapter09.pptx | Slide: 21 | Caption: Figure 9.20 (a) Equivalent circuit of an ideal bandpass filter. (b) Ideal low-pass filter frequency response. (c) Ideal bandpass filter frequency response.
+[fig_ch09_21.jpg] Source: Chapter09.pptx | Slide: 22 | Caption: Figure 9.21 Derivation of PSDs of quadrature components of a bandpass random process.
+[fig_ch09_22.jpg] Source: Chapter09.pptx | Slide: 23 | Caption: Figure 9.22 (a) PSD of a bandpass white noise process. (b) PSD of the quadrature components of the process.
+[fig_ch09_23.jpg] Source: Chapter09.pptx | Slide: 24 | Caption: Figure 9.23 Nonunique nature of quadrature component representation of a bandpass process.
+[fig_ch09_24.jpg] Source: Chapter09.pptx | Slide: 25 | Caption: Figure 9.24 A possible form of quadrature component representation of noise in SSB.
+[fig_ch09_25.jpg] Source: Chapter09.pptx | Slide: 26 | Caption: Figure 9.25 Phasor representation of a sinusoid and a narrowband Gaussian noise.
+[fig_ch09_26.jpg] Source: Chapter09.pptx | Slide: 27 | Caption: Figure 9.26 Ricean PDF.
+[fig_ch09_27.jpg] Source: Chapter09.pptx | Slide: 28 | Caption: Figure P.9.2-10
+[fig_ch09_28.jpg] Source: Chapter09.pptx | Slide: 29 | Caption: Figure P.9.2-13
+[fig_ch09_29.jpg] Source: Chapter09.pptx | Slide: 30 | Caption: Figure P.9.3-4
+[fig_ch09_30.jpg] Source: Chapter09.pptx | Slide: 31 | Caption: Figure P.9.4-3
+[fig_ch09_31.jpg] Source: Chapter09.pptx | Slide: 32 | Caption: Figure P.9.4-4
+[fig_ch09_32.jpg] Source: Chapter09.pptx | Slide: 33 | Caption: Figure P.9.8-1
+[fig_ch09_33.jpg] Source: Chapter09.pptx | Slide: 34 | Caption: Figure P.9.8-3

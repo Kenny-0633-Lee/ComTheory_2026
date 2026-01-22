@@ -1,0 +1,47 @@
+[fig_ch02_01.jpg] Source: Chapter02a.pptx | Slide: 2 | Caption: Figure 2.1 Examples of signals: (a) signal with finite energy;
+(b) signal with finite power.
+[fig_ch02_02.jpg] Source: Chapter02a.pptx | Slide: 3 | Caption: Figure 2.2 Signal for Example 2.1.
+[fig_ch02_03.jpg] Source: Chapter02a.pptx | Slide: 4 | Caption: Figure 2.3 (a) Continuous time and (b) discrete time signals.
+[fig_ch02_04.jpg] Source: Chapter02a.pptx | Slide: 5 | Caption: Figure 2.4 Examples of signals: (a) analog and continuous time; (b) digital and continuous time;
+(c) analog and discrete time; (d) digital and discrete time.
+[fig_ch02_05.jpg] Source: Chapter02a.pptx | Slide: 6 | Caption: Figure 2.5 Periodic signal of period T0.
+[fig_ch02_06.jpg] Source: Chapter02a.pptx | Slide: 7 | Caption: Figure 2.6 Time shifting a signal.
+[fig_ch02_07.jpg] Source: Chapter02a.pptx | Slide: 8 | Caption: Figure 2.7 Time scaling a signal.
+[fig_ch02_08.jpg] Source: Chapter02a.pptx | Slide: 9 | Caption: Figure 2.8 Examples of time compression and time expansion of signals.
+[fig_ch02_09.jpg] Source: Chapter02a.pptx | Slide: 10 | Caption: Figure 2.9 Time inversion (reflection) of a signal.
+[fig_ch02_10.jpg] Source: Chapter02a.pptx | Slide: 11 | Caption: Figure 2.10 Example of time inversion.
+[fig_ch02_11.jpg] Source: Chapter02a.pptx | Slide: 12 | Caption: Figure 2.11 (a) Unit impulse and (b) its approximation.
+[fig_ch02_12.jpg] Source: Chapter02a.pptx | Slide: 13 | Caption: Figure 2.12 (a) Unit step function u(t). (b) Causal exponential e−atu(t).
+[fig_ch02_13.jpg] Source: Chapter02a.pptx | Slide: 14 | Caption: Figure 2.13 Component (projection) of a vector along another vector.
+[fig_ch02_14.jpg] Source: Chapter02a.pptx | Slide: 15 | Caption: Figure 2.14 Approximations of a vector in terms of another vector.
+[fig_ch02_15.jpg] Source: Chapter02a.pptx | Slide: 16 | Caption: Figure 2.15 Approximation of square signal in terms of a single sinusoid.
+[fig_ch02_16.jpg] Source: Chapter02a.pptx | Slide: 17 | Caption: Figure 2.16 Signals for Example 2.6.
+[fig_ch02_17.jpg] Source: Chapter02a.pptx | Slide: 18 | Caption: Figure 2.17 Physical explanation of the auto-correlation function.
+[fig_ch02_18.jpg] Source: Chapter02a.pptx | Slide: 19 | Caption: Figure 2.18 Representation of a vector in three-dimensional space.
+[fig_ch02_19.jpg] Source: Chapter02a.pptx | Slide: 20 | Caption: Figure 2.19 (a, b) Periodic signal and (c, d) its Fourier spectra.
+[fig_ch02_20.jpg] Source: Chapter02a.pptx | Slide: 21 | Caption: Figure 2.20 (a) Square pulse periodic signal and (b) its Fourier spectrum.
+[fig_ch02_21.jpg] Source: Chapter02a.pptx | Slide: 22 | Caption: Figure 2.21 Bipolar square pulse periodic signal.
+[fig_ch02_22.jpg] Source: Chapter02a.pptx | Slide: 23 | Caption: Figure 2.22 (a) Impulse train and (b) its Fourier spectrum.
+[fig_ch02_23.jpg] Source: Chapter02a.pptx | Slide: 24 | Caption: Figure 2.23 Exponential Fourier spectra for the signal in Fig. 2.19a.
+[fig_ch02_24.jpg] Source: Chapter02a.pptx | Slide: 25 | Caption: Figure 2.24 (a) Unit length complex variable with positive frequency (rotating counterclockwise)
+and (b) unit length complex variable with negative frequency (rotating clockwise).
+[fig_ch02_25.jpg] Source: Chapter02b.pptx | Slide: 1 | Caption: Figure 2.25 Exponential Fourier spectrum of the square pulse periodic signal.
+[fig_ch02_26.jpg] Source: Chapter02b.pptx | Slide: 2 | Caption: Figure 2.26 (a) Impulse train and (b) its exponential Fourier spectrum.
+[fig_ch02_27.jpg] Source: Chapter02b.pptx | Slide: 3 | Caption: Figure 2.27 Graphing a signal.
+[fig_ch02_28.jpg] Source: Chapter02b.pptx | Slide: 4 | Caption: Figure 2.28 Examples of basic signal operations.
+[fig_ch02_29.jpg] Source: Chapter02b.pptx | Slide: 5 | Caption: Figure 2.29 Generating a periodic signal.
+[fig_ch02_30.jpg] Source: Chapter02b.pptx | Slide: 6 | Caption: Figure 2.30 Signals from Example 2.6.
+[fig_ch02_31.jpg] Source: Chapter02b.pptx | Slide: 7 | Caption: Figure 2.31 Exponential Fourier series coefficients of a repeated Δ(t/2) with period T = 4 showing 
+(a) amplitude and (b) angle of Du .
+[fig_ch02_32.jpg] Source: Chapter02b.pptx | Slide: 8 | Caption: Figure P.2.1-1
+[fig_ch02_33.jpg] Source: Chapter02b.pptx | Slide: 9 | Caption: Figure P.2.1-2
+[fig_ch02_34.jpg] Source: Chapter02b.pptx | Slide: 10 | Caption: Figure P.2.1-5
+[fig_ch02_35.jpg] Source: Chapter02b.pptx | Slide: 11 | Caption: Figure P.2.1-6
+[fig_ch02_36.jpg] Source: Chapter02b.pptx | Slide: 12 | Caption: Figure P.2.3-1
+[fig_ch02_37.jpg] Source: Chapter02b.pptx | Slide: 13 | Caption: Figure P.2.3-2
+[fig_ch02_38.jpg] Source: Chapter02b.pptx | Slide: 14 | Caption: Figure P.2.3-3
+[fig_ch02_39.jpg] Source: Chapter02b.pptx | Slide: 15 | Caption: Figure P.2.5-2
+[fig_ch02_40.jpg] Source: Chapter02b.pptx | Slide: 16 | Caption: Figure P.2.5-4
+[fig_ch02_41.jpg] Source: Chapter02b.pptx | Slide: 17 | Caption: Figure P.2.6-1
+[fig_ch02_42.jpg] Source: Chapter02b.pptx | Slide: 18 | Caption: Figure P.2.8-2
+[fig_ch02_43.jpg] Source: Chapter02b.pptx | Slide: 19 | Caption: Figure P.2.8-4

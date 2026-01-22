@@ -1,0 +1,18 @@
+[fig_ch10_01.jpg] Source: Chapter10.pptx | Slide: 2 | Caption: Figure 10.1 Communication system model.
+[fig_ch10_02.jpg] Source: Chapter10.pptx | Slide: 3 | Caption: Figure 10.2 DSB-SC system.
+[fig_ch10_03.jpg] Source: Chapter10.pptx | Slide: 4 | Caption: Figure 10.3 SSB-SC system.
+[fig_ch10_04.jpg] Source: Chapter10.pptx | Slide: 5 | Caption: Figure 10.4 Performance of AM (synchronous detection and envelope detection).
+[fig_ch10_05.jpg] Source: Chapter10.pptx | Slide: 6 | Caption: Figure 10.5 Optimum PDE in an amplitude-modulated system.
+[fig_ch10_06.jpg] Source: Chapter10.pptx | Slide: 7 | Caption: Figure 10.6 Angle-modulated system.
+[fig_ch10_07.jpg] Source: Chapter10.pptx | Slide: 8 | Caption: Figure 10.7 Phasor representation of signals in an angle-modulated system.
+[fig_ch10_08.jpg] Source: Chapter10.pptx | Slide: 9 | Caption: Figure 10.8 FM system as a special case of PM system.
+[fig_ch10_09.jpg] Source: Chapter10.pptx | Slide: 10 | Caption: Figure 10.9 PSD of output noise in FM receiver.
+[fig_ch10_10.jpg] Source: Chapter10.pptx | Slide: 11 | Caption: Figure 10.10 Performance of FM system.
+[fig_ch10_11.jpg] Source: Chapter10.pptx | Slide: 12 | Caption: Figure 10.11 The nature of output noise in FM receiver for small (a, c) and large (b, d) channel noise.
+[fig_ch10_12.jpg] Source: Chapter10.pptx | Slide: 13 | Caption: Figure 10.12 Threshold phenomena in FM.
+[fig_ch10_13.jpg] Source: Chapter10.pptx | Slide: 14 | Caption: Figure 10.13 Frequency compression feedback (FCF).
+[fig_ch10_14.jpg] Source: Chapter10.pptx | Slide: 15 | Caption: Figure 10.14 (a) Optimum PDE in FM system. (b) Equivalent of system in part (a).
+[fig_ch10_15.jpg] Source: Chapter10.pptx | Slide: 16 | Caption: Figure 10.15 Performance of PCM.
+[fig_ch10_16.jpg] Source: Chapter10.pptx | Slide: 17 | Caption: Figure 10.16 Input-output characteristic of a PCM compressor.
+[fig_ch10_17.jpg] Source: Chapter10.pptx | Slide: 18 | Caption: Figure 10.17 PCM performance with and without companding.
+[fig_ch10_18.jpg] Source: Chapter10.pptx | Slide: 19 | Caption: Figure P.10.3-2

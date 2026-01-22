@@ -1,0 +1,9 @@
+[fig_ch01_01.jpg] Source: Chapter01.pptx | Slide: 2 | Caption: Figure 1.1 Some examples of communications systems.
+[fig_ch01_02.jpg] Source: Chapter01.pptx | Slide: 3 | Caption: Figure 1.2 Communication system.
+[fig_ch01_03.jpg] Source: Chapter01.pptx | Slide: 4 | Caption: Figure 1.3 (a) Transmitted signal. (b) Received distorted signal (without noise).
+(c) Received distorted signal (with noise). (d) Regenerated signal (delayed).
+[fig_ch01_04.jpg] Source: Chapter01.pptx | Slide: 5 | Caption: Figure 1.4  Analog-to-digital conversion of a signal.
+[fig_ch01_05.jpg] Source: Chapter01.pptx | Slide: 6 | Caption: Figure 1.5 Example of  PCM encoding.
+[fig_ch01_06.jpg] Source: Chapter01.pptx | Slide: 7 | Caption: Figure 1.6 Modulation: (a) carrier; (b) modulating (base band) signal; (c) amplitude-modulated wave; (d) frequency-modulated wave.
+[fig_ch01_07.jpg] Source: Chapter01.pptx | Slide: 8 | Caption: Figure 1.7 Illustration from Bell's U.S. Patent No.174,465 issued March 7, 1876.
+(From the U.S. Patent and Trade mark Office.)

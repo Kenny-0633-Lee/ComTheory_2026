@@ -1,0 +1,27 @@
+[fig_ch08_01.jpg] Source: Chapter08.pptx | Slide: 2 | Caption: Figure 8.1 Sample space for a throw of a die.
+[fig_ch08_02.jpg] Source: Chapter08.pptx | Slide: 3 | Caption: Figure 8.2 Representation of (a) complement, (b) union, and (c) intersection of events.
+[fig_ch08_03.jpg] Source: Chapter08.pptx | Slide: 4 | Caption: Figure 8.3 A PCM repeater.
+[fig_ch08_04.jpg] Source: Chapter08.pptx | Slide: 5 | Caption: Figure 8.4 The event of interest B and the partition of S by {Ai}.
+[fig_ch08_05.jpg] Source: Chapter08.pptx | Slide: 6 | Caption: Figure 8.5 Probabilities in a coin-tossing experiment.
+[fig_ch08_06.jpg] Source: Chapter08.pptx | Slide: 7 | Caption: Figure 8.6 Representation of joint probabilities of two random variables.
+[fig_ch08_07.jpg] Source: Chapter08.pptx | Slide: 8 | Caption: Figure 8.7 Binary symmetric channel (BSC).
+[fig_ch08_08.jpg] Source: Chapter08.pptx | Slide: 9 | Caption: Figure 8.8 (a) Probabilities Px(xi) and (b) the cumulative distribution function (CDF).
+[fig_ch08_09.jpg] Source: Chapter08.pptx | Slide: 10 | Caption: Figure 8.9 (a) Cumulative distribution function (CDF). (b) Probability density function (PDF).
+[fig_ch08_10.jpg] Source: Chapter08.pptx | Slide: 11 | Caption: Figure 8.10 (a) Gaussian PDF. (b) Function Q(y). (c) CDF of the Gaussian PDF.
+[fig_ch08_11.jpg] Source: Chapter08.pptx | Slide: 12 | Caption: Figure 8.11 Gaussian PDF with mean m and variance σ2.
+[fig_ch08_12.jpg] Source: Chapter08.pptx | Slide: 13 | Caption: Figure 8.12 Error probability in threshold detection: (a) transmitted pulse; (b) noise PDF; (c) received pulses with noise;   (d) detection error probability.
+[fig_ch08_13.jpg] Source: Chapter08.pptx | Slide: 14 | Caption: Figure 8.13 (a) Joint PDF. (b) Conditional PDF.
+[fig_ch08_14.jpg] Source: Chapter08.pptx | Slide: 15 | Caption: Figure 8.14 Derivation of the Rayleigh density.
+[fig_ch08_15.jpg] Source: Chapter08.pptx | Slide: 16 | Caption: Figure 8.15 Random sampling of a sine-wave generator.
+[fig_ch08_16.jpg] Source: Chapter08.pptx | Slide: 17 | Caption: Figure 8.16 (a) Quantization error in PCM and (b) its PDF.
+[fig_ch08_17.jpg] Source: Chapter08.pptx | Slide: 18 | Caption: Figure 8.17 Gaussian PDF with standard deviations σ = 1 and σ = 3.
+[fig_ch08_18.jpg] Source: Chapter08.pptx | Slide: 19 | Caption: Figure 8.18 Scatter diagrams: (a), (b) positive correlation; (c) negative correlation; (d) zero correlation.
+[fig_ch08_19.jpg] Source: Chapter08.pptx | Slide: 20 | Caption: Figure 8.19 Second-order predictor in Example 8.24.
+[fig_ch08_20.jpg] Source: Chapter08.pptx | Slide: 21 | Caption: Figure 8.20 Demonstration of the central limit theorem.
+[fig_ch08_21.jpg] Source: Chapter08.pptx | Slide: 22 | Caption: Figure P.8.1-8
+[fig_ch08_22.jpg] Source: Chapter08.pptx | Slide: 23 | Caption: Figure P.8.1-9
+[fig_ch08_23.jpg] Source: Chapter08.pptx | Slide: 24 | Caption: Figure P.8.1-10
+[fig_ch08_24.jpg] Source: Chapter08.pptx | Slide: 25 | Caption: Figure P.8.2-6
+[fig_ch08_25.jpg] Source: Chapter08.pptx | Slide: 26 | Caption: Figure P.8.2-10
+[fig_ch08_26.jpg] Source: Chapter08.pptx | Slide: 27 | Caption: Figure P.8.3-6
+[fig_ch08_27.jpg] Source: Chapter08.pptx | Slide: 28 | Caption: Figure P.8.6-1
