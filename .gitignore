@@ -25,12 +25,10 @@ Thumbs.db
 *.fls
 *.fdb_latexmk
 *.xdv
+*.vrb
 
-# Python 임시 파일 무시
-__pycache__/
-*.py[cod]
-.venv/
-EOF
+# source_pptx 폴더제외
+source_pptx/
 
 # --- PDF (선택사항) ---
 # 만약 PDF 결과물도 Git에 올리기 싫다면 아래 주석(#)을 제거하세요.
