@@ -13,11 +13,12 @@
 \pgfplotsset{compat=1.17}
 \usepackage{graphicx, caption, hyperref, fontawesome5}
 \usepackage{subcaption}
+\usepackage{cleveref} % hyperref보다 나중에 불러와야 함
 \usepackage{ulem} % 밑줄 긋기 (취소선 등)
 \usepackage{lipsum} % 더미 텍스트 생성
 \usepackage{fancybox, tcolorbox} % 박스 생성
 \usepackage{tcolorbox}  % 박스 생성
-\tcbuselibrary{skins, breakable}   % 박스 스킨 라이브러리
+\tcbuselibrary{skins, breakable, theorems}   % 박스 스킨 라이브러리
 \usepackage{multicol}
 % [수식 및 폰트 설정 - 기존 파일 그대로 유지]
 \usepackage{amsmath}
@@ -98,6 +99,12 @@
 % 2. 챕터 번호 설정 (여기서 숫자를 바꾸면 됩니다)
 \setcounter{chapter}{2}
 
+% --- [1] 본문 참조 설정 (\cref) ---
+% \cref{label}을 썼을 때 "Fig. 번호"로 나오게 설정
+% 형식: \crefname{타입}{단수형}{복수형}
+\crefname{figure}{Fig.}{Figs.}
+\Crefname{figure}{Fig.}{Figs.} % 문장 맨 앞 \Cref 용도
+
 % [Chapter Numbering] 현재 문서를 "Chapter 2"로 설정
 % 섹션 번호 모양을 "2.1", "2.2" 형태로 강제 변경
 \renewcommand{\thesection}{\thechapter.\arabic{section}}
@@ -107,17 +114,31 @@
 \renewcommand{\thefigure}{\thechapter.\arabic{figure}}
 % Equation 2.x 형태로 출력 (chapter 번호 기준)
 \renewcommand{\theequation}{\thechapter.\arabic{equation}}
+\renewcommand{\figurename}{Fig.}
 
 % --- 매크로 정의 ---
 % 사용법: \incfig{파일명(확장자제외)}{너비비율(0.0~1.0)}{캡션}
-\newcommand{\incfig}[3]{%
+\newcommand{\incfig}[4]{%
     \begin{figure}
         \centering
         % 확장자를 생략하면 graphicspath에서 찾은 파일의 형식을 자동 인식합니다.
         \includegraphics[width=#2\textwidth]{#1} 
-        \caption{#3}
+        \caption{#3}\label{#4}
     \end{figure}
 }
+% Preamble에 추가
+\newcommand{\fakecaption}[2]{% #1: 참조할 라벨, #2: 텍스트
+  \par\vspace{2pt}
+  {\usebeamerfont{caption name}\usebeamercolor[fg]{caption name}\figurename~\ref{#1}}%
+  \quad%
+  {\usebeamerfont{caption}\usebeamercolor[fg]{caption}\itshape #2}%
+}
+
+% 박스 매크로 정의
+\newtcbox{\xmybox}[1][red]{on line,
+arc=7pt,colback=#1!10!white,colframe=#1!50!black,
+before upper={\rule[-3pt]{0pt}{10pt}},boxrule=1pt,
+boxsep=0pt,left=6pt,right=6pt,top=2pt,bottom=2pt}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -207,7 +228,7 @@
                 \vspace{-0.2cm} {\footnotesize (b) Signal with finite power}
                 
                 % [통합 캡션] 맨 아래에 위치, 굵은 글씨 없음
-                \caption{Examples of signals} 
+                \caption{Examples of signals} \label{fig:2.1}
             \end{figure}
         \end{column}
 
@@ -264,8 +285,8 @@
 
 % Example 2.1
 \begin{frame}[c]{Example 2.1}
+\xmybox[green]{\small\textbf{Q. Determine the suitable measures of the signals in \cref{fig:2.2}.}}
     \begin{columns}[c]
-
     % [왼쪽 컬럼] 그림 (a), (b)
     \begin{column}{0.3\textwidth}
         \begin{figure}[h]
@@ -274,7 +295,7 @@
                 \colorlet{signalcolor}{green!50!black}
 
                 % --- (a) Graph ---
-                \begin{scope}[shift={(0, 3.5)}]
+                \begin{scope}[shift={(0, 5.0)}]
                     % Axes
                     \draw[->] (-2.5, 0) -- (5.5, 0) node[below, scale=0.6] {$t$};
                     \draw[->] (0, -0.5) -- (0, 2.5) node[right, scale=0.6] {$g(t)$};
@@ -303,7 +324,7 @@
                 \end{scope}
 
                 % --- (b) Graph ---
-                \begin{scope}[shift={(0, 0)}]
+                \begin{scope}[shift={(0, 1.0)}]
                     % Axes
                     \draw[->] (-4.5, 0) -- (4.8, 0) node[below, scale=0.6] {$t$};
                     \draw[->] (0, -1.5) -- (0, 1.5) node[right, scale=0.6] {$g(t)$};
@@ -335,7 +356,7 @@
                     \node[scale=0.7] at (4.5, 1.5) {(b)};
                 \end{scope}
             \end{tikzpicture}
-            \caption{Signal for Example}
+            \caption{Signal for Example} \label{fig:2.2}
         \end{figure}
     \end{column}
 
@@ -343,10 +364,8 @@
 
     %% [오른쪽 컬럼] 문제 및 풀이
     \begin{column}{0.6\textwidth}
-        {\footnotesize
-        Determine the suitable measures of the signals in the left Figure.
-        {\scriptsize
-        \begin{tcolorbox}[fonttitle=\bfseries,title=(a) Energy signal,title filled]
+        \scriptsize
+        \begin{tcolorbox}[fonttitle=\bfseries,title=\cref{fig:2.2} (a)]
             Energy signal. Power approaches $0$ as $|t| \rightarrow \infty$.
             \[
                 E_g = \int_{-\infty}^{\infty} |g(t)|^2 dt = \int_{-1}^{0}(2)^2 dt + \int_{0}^{\infty} 4e^{-t} dt = 4 + 4 = 8
@@ -355,14 +374,13 @@
 
         \vspace{0.05cm}
 
-        \begin{tcolorbox}[fonttitle=\bfseries,title=(b) Power signal,title filled]
-            Averaging $g^2(t)$ over an infinitely large interval is equivalent to averaging it over one period (2 seconds).
+        \begin{tcolorbox}[fonttitle=\bfseries,title=\cref{fig:2.2} (b)]
+            Power signal. Averaging $|g|^2(t)$ over an infinitely large interval is equivalent to averaging it over one period (2 seconds).
             \begin{eqnarray*}
             P_g  & = & \lim_{T \to \infty} \frac{1}{T} \int_{-T/2}^{T/2} |g(t)|^2 dt  = \frac{1}{T} \int_{-T/2}^{T/2} |g(t)|^2 dt \\
               & = & \frac{1}{2} \int_{-1}^{1} t^2 dt = \frac{1}{3}
             \end{eqnarray*}
         \end{tcolorbox}
-        }}
     \end{column}
 
     \end{columns}
@@ -387,15 +405,15 @@
     \frametitle{Figure 2.3 Continuous vs Discrete Time Signals}
     \centering
     
-\begin{columns}[c]
+\begin{columns}[T] % [T]: 상단 정렬
     % [왼쪽 컬럼] 그림 (a), (b)
     \begin{column}{0.35\textwidth}
-    \begin{figure}[h, font=\footnotesize]
+    \begin{figure}[T, font=\footnotesize]
         \begin{tikzpicture}[scale=0.5, font=\scriptsize, >=latex]
             
             % [수정 1] (a) 그래프 위치를 위로 조금 더 올림 (3.5 -> 4.0)
             % (b)가 커질 공간을 확보하기 위함입니다.
-            \begin{scope}[shift={(0, 4.0)}]
+            \begin{scope}[shift={(0, 5.5)}]
                 \draw[->] (-0.5, 0) -- (10.5, 0); 
                 \draw[->] (0, -1.0) -- (0, 2.5) node[right] {$g(t)$};
                 \node[below left] at (0,0) {0};
@@ -451,7 +469,7 @@
                 \node at (5, -3.2) {(b)};
             \end{scope}
         \end{tikzpicture}
-    \caption{Continuous vs Discrete Time Signals}
+    \caption{Continuous vs Discrete Time Signals} \label{fig:2.3}
     \end{figure}
     \end{column}
 
@@ -460,19 +478,18 @@
     % [오른쪽 컬럼] 설명
     \begin{column}{0.55\textwidth}
         \tcbset{colframe=red!5!black,fonttitle=\bfseries\footnotesize,fontupper=\scriptsize,fontlower=\scriptsize}
-        \begin{tcolorbox}[enhanced,title=(a) Continuous Time Signal, frame style={left color=red!75!black, right color=blue!75!black}]
-            Continous time signals are specified for every value of time $t$. Many examples including:
+        \begin{tcolorbox}[enhanced,title=\cref{fig:2.3} (a), frame style={left color=red!75!black, right color=blue!75!black}]
+            \textbf{Continous time signals} are specified for every value of time $t$. Many examples including:
         \begin{itemize}
             \item Audio recordings in analog media like LP, magnetic cassette, or reel-to-reel tapes.
             \item Signals received through AM/FM radio channel.
         \end{itemize}
         \end{tcolorbox}
 
-        \vspace{0.2cm}
+        %\vspace{0.05cm}
             
-        \tcbset{colframe=red!5!black,fonttitle=\bfseries\footnotesize,fontupper=\scriptsize,fontlower=\scriptsize}
-        \begin{tcolorbox}[enhanced,title=(b) Discrete Time Signal, frame style={left color=red!75!black, right color=blue!75!black}]
-            Discrete time signals are specified only at discrete points of $t = nT$. Many examples including:
+        \begin{tcolorbox}[enhanced,title=\cref{fig:2.3} (b), frame style={left color=red!75!black, right color=blue!75!black}]
+            \textbf{Discrete time signals} are specified only at discrete points of $t = nT$. Many examples including:
         \begin{itemize}
             \item The quarterly gross domestic product (GDP), stock market daily averages, and monthly sales of a corporation.
             \item Audio signals formatted by MP3, HE-AAC, FLAC, or ALAC.
@@ -559,29 +576,145 @@
             \node[below] at (2.5, -1.3) {(d) Digital, Discrete-time};
         \end{scope}
     \end{tikzpicture}
-    \caption{Classification of signals based on amplitude and time domains}
+    \caption{Classification of signals based on amplitude and time domains} \label{fig:2.4}
 \end{figure}
 \end{frame}
 
 
 % 2.2.3 Periodic and Aperiodic Signals
 \subsection{Periodic and Aperiodic Signals}
-\begin{frame}{Periodic and Aperiodic Signals}
-    \small        
-    \incfig{fig_ch02_05}{0.6}{Periodic signal of period $T_0$}
+\begin{frame}[fragile]
+\frametitle{Periodic and Aperiodic Signals}
+\centering
 
-    A signal $g(t)$ is \textbf{periodic} if there exists a positive constant $T_0$.
-    \addtocounter{equation}{4}
-    \begin{equation}
-    g(t) = g(t + T_0) \text{\quad for all t}
-    \end{equation}
-    The smallest value of $T_0$ in Eq. (\theequation) is the \textbf{period} of $g(t)$.
+\begin{columns}[b] % [b]: 하단 정렬
+    \begin{column}{0.45\textwidth}
+    \incfig{fig_ch02_05}{1.0}{Periodic signal of period $T_0$}{fig:2.5}
+    \end{column}
 
-    
+    \hfill
 
-
+    \begin{column}{0.5\textwidth}
+        \tcbset{colframe=red!5!black,fonttitle=\bfseries\footnotesize,fontupper=\scriptsize,fontlower=\scriptsize}
+        \begin{tcolorbox}[enhanced,title=\cref{fig:2.5}, frame style={left color=red!75!black, right color=blue!75!black}]
+            \begin{itemize}
+                \item A signal $g(t)$ is \textbf{periodic} if there exists a positive constant $T_0$.
+                \item The smallest value of $T_0$ in Eq. (\theequation) is the \textbf{period} of $g(t)$.
+            \end{itemize}
+            %\tcblower
+            \addtocounter{equation}{4}
+            \begin{equation}
+                g(t) = g(t + T_0) \text{\quad for all t}
+            \end{equation} \label{eq:2.5}
+        \end{tcolorbox}
+    \end{column}
+\end{columns}
 \end{frame}
 
+% 2.2.4 Energy and Power Signals
+\subsection{Energy and Power Signals}
+\begin{frame}[fragile]
+    \frametitle{Energy vs Power Signals}
+    \begin{columns}
+        % [왼쪽 컬럼] 그림 (a), (b) 배치 및 통합 캡션
+        \begin{column}{0.45\textwidth}
+            \centering
+            % (a) Energy Signal
+            \includegraphics[width=0.8\textwidth]{fig_ch02_energy_sig} \\
+            \vspace{-0.2cm} {\footnotesize (a) Signal with finite energy} \\
+            \vspace{0.3cm} % (a)와 (b) 사이 간격
+            
+            % (b) Power Signal
+            \includegraphics[width=0.8\textwidth]{fig_ch02_power_sig} \\
+            \vspace{-0.2cm} {\footnotesize (b) Signal with finite power}
+            
+            % [통합 캡션] 맨 아래에 위치, 굵은 글씨 없음
+            % 캡션 대신 이걸 사용 -> 번호는 Figure 2.1로 고정됨!
+            \fakecaption{fig:2.1}{Energy vs Power Signals (Recap)}
+        \end{column}
+
+        % [오른쪽 컬럼] 텍스트 설명
+        \begin{column}{0.55\textwidth}
+            \footnotesize
+            \tcbset{colframe=red!5!black,fonttitle=\bfseries\footnotesize,fontupper=\scriptsize,fontlower=\scriptsize}
+            \begin{tcolorbox}[enhanced,title=\cref{fig:2.1}(a) Energy Signal, frame style={left color=red!75!black, right color=blue!75!black}]
+                A signal is said to be an energy signal if its energy is finite and its average power approaches zero.
+                \begin{equation}
+                \int_{-\infty}^{\infty} |g(t)|^2 dt < \infty
+                \end{equation}\label{eq:2.6}
+            \end{tcolorbox}
+
+            \vspace{0.1cm}
+            
+            \begin{tcolorbox}[enhanced,title=\cref{fig:2.1}(b) Power Signal, frame style={left color=red!75!black, right color=blue!75!black}]            
+                A signal is said to be a power signal if its average power is finite and its energy approaches infinite.
+                \begin{equation}
+                0< \lim_{T \to \infty} \frac{1}{T} \int_{-T/2}^{T/2} |g(t)|^2 dt < \infty
+                \end{equation}\label{eq:2.7}
+            \end{tcolorbox}
+        \end{column}
+    \end{columns} 
+\end{frame}
+
+% 2.2.5 Deterministic and Random Signals
+\subsection{Deterministic and Random Signals}
+
+% Figure 2.6 Time shifting a signal
+\begin{frame}[fragile]
+\frametitle{Figure 2.6 Time shifting a signal}
+\centering
+
+\begin{columns}[T] % [b]: 하단 정렬
+    \begin{column}{0.45\textwidth}
+    \incfig{fig_ch02_06}{0.8}{Time shifting a signal}{fig:2.6}
+    \end{column}
+
+    \hfill
+
+    \begin{column}{0.5\textwidth}
+        \tcbset{colframe=red!5!black,fonttitle=\bfseries\footnotesize,fontupper=\scriptsize,fontlower=\scriptsize}
+        \begin{tcolorbox}[enhanced,title=Time shifting a signal, frame style={left color=red!75!black, right color=blue!75!black}]
+            \begin{itemize}
+                \item .
+                \item .
+            \end{itemize}
+            %\tcblower
+            \begin{equation}
+                g(t) = 
+            \end{equation}
+        \end{tcolorbox}
+    \end{column}
+\end{columns}
+\end{frame}
+
+
+% Figure Figure 2.7 Time scaling a signal
+\begin{frame}[fragile]
+\frametitle{Figure 2.7 Time scaling a signal}
+\centering
+
+\begin{columns}[T] % [b]: 하단 정렬
+    \begin{column}{0.45\textwidth}
+    \incfig{fig_ch02_07}{0.8}{Time scaling a signal}{fig:2.7}
+    \end{column}
+
+    \hfill
+
+    \begin{column}{0.5\textwidth}
+        \tcbset{colframe=red!5!black,fonttitle=\bfseries\footnotesize,fontupper=\scriptsize,fontlower=\scriptsize}
+        \begin{tcolorbox}[enhanced,title=Time scaling a signal, frame style={left color=red!75!black, right color=blue!75!black}]
+            \begin{itemize}
+                \item .
+                \item .
+            \end{itemize}
+            %\tcblower
+            \begin{equation}
+                g(t) = 
+            \end{equation}
+        \end{tcolorbox}
+    \end{column}
+\end{columns}
+\end{frame}
 
 
 
