@@ -23,7 +23,7 @@ Thumbs.db
 *.snm
 *.toc
 *.synctex.gz
-*.synctex
+*.synctex*
 *.fls
 *.fdb_latexmk
 *.xdv
