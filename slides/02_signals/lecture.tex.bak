@@ -27,50 +27,70 @@
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 % 시스템 폰트가 아니라, ./fonts 폴더의 파일을 직접 사용합니다.
-% 1. 영문/숫자 -> Fira Sans (Small Caps 지원)
-\usepackage{fontspec}
-
-% ---------------------------------------------------------
-% [1] 영문/숫자 폰트 설정 (Fira Sans)
-% ---------------------------------------------------------
-% SmallCapsFont 옵션을 명시하지 않아도 OpenType 기능으로 자동 지원하지만,
-% 확실하게 작동하도록 설정합니다.
-\setmainfont{FiraSans-Regular.ttf}[
+\setmainfont{NotoSansKR-Regular.ttf}[
+    Path = ../../fonts/,             % 폰트 파일 위치
+    BoldFont = NotoSansKR-Bold.ttf,
+    AutoFakeSlant = 0.2          % 이탤릭 강제 구현
+]
+\setsansfont{NotoSansKR-Regular.ttf}[
     Path = ../../fonts/,
-    BoldFont = FiraSans-Bold.ttf,
-    ItalicFont = FiraSans-Italic.ttf, % (있다면 추가, 없으면 생략 가능)
+    BoldFont = NotoSansKR-Bold.ttf,
     AutoFakeSlant = 0.2
 ]
-
-\setsansfont{FiraSans-Regular.ttf}[
-    Path = ../../fonts/,
-    BoldFont = FiraSans-Bold.ttf,
-    ItalicFont = FiraSans-Italic.ttf,
-    AutoFakeSlant = 0.2
-]
-
-% ---------------------------------------------------------
-% [2] 한글 폰트 설정 (Noto Sans KR) - 한글에만 적용됨
-% ---------------------------------------------------------
-% \setmainhangulfont, \setsanshangulfont 명령은
-% xetexko 패키지나 kotex 패키지를 사용할 때 유효합니다.
 \setmainhangulfont{NotoSansKR-Regular.ttf}[
     Path = ../../fonts/,
     BoldFont = NotoSansKR-Bold.ttf,
     AutoFakeSlant = 0.2
 ]
-
 \setsanshangulfont{NotoSansKR-Regular.ttf}[
     Path = ../../fonts/,
     BoldFont = NotoSansKR-Bold.ttf,
     AutoFakeSlant = 0.2
 ]
-
 % 수식 폰트 설정
 \setmathfont{Fira Math}
 \setmathfont[range={up, bfup}, Scale=MatchLowercase, Path = ../../fonts/]{NotoSansKR-Regular.ttf}
 \setmathfont[range={it, bfit}, Scale=MatchLowercase, FakeSlant=0.2, Path = ../../fonts/]{NotoSansKR-Regular.ttf}
 % [Font Settings] Project-Local Fonts (Perfect Stability)
+\usepackage{fontspec}
+
+\makeatletter
+% % [2단 목차용 Compact 설정]
+% \setbeamertemplate{section in toc}{
+%     \leavevmode
+%     \leftskip=0em 
+%     % 숫자 박스를 2.5em -> 3em으로 약간 여유를 줌
+%     \makebox[3em][l]{2.\inserttocsectionnumber.} 
+%     \inserttocsection
+%     \par\vspace{0.4em}
+% }
+% 1. 가짜 Small Caps 매크로 정의 (대문자로 변환 후 75% 축소)
+\newcommand{\fakesc}[1]{\scalebox{0.8}{\uppercase{#1}}}
+
+% 2. 목차(ToC) 템플릿을 직접 재정의하여 적용
+\setbeamertemplate{section in toc}{%
+  \leavevmode
+  \leftskip=2ex % 들여쓰기
+  \llap{%
+    \usebeamerfont{section number projected}%
+    \usebeamercolor[fg]{section number projected}%
+    \inserttocsectionnumber. % 섹션 번호
+    \kern1ex % 번호와 제목 사이 간격
+  }%
+  % 여기서 제목(\inserttocsection)에 가짜 Small Caps 적용
+  \fakesc{\inserttocsection}
+  \par
+}
+\setbeamertemplate{subsection in toc}{
+    \leavevmode
+    % 들여쓰기를 섹션 제목 시작점과 얼추 맞춤
+    \leftskip=1.5em 
+    % 서브섹션 숫자 박스도 3.3em -> 3.8em으로 약간 여유
+    \makebox[3.8em][l]{2.\inserttocsectionnumber.\inserttocsubsectionnumber} 
+    \inserttocsubsection
+    \par\vspace{0.2em}
+}
+\makeatother
 
 % [중요] 그림 경로 수정 (슬라이드 폴더 기준 2단계 위로)
 % \graphicspath 명령은 중괄호 {} 안에 경로들을 나열하는 방식입니다.
@@ -81,22 +101,13 @@
     {../../assets_extracted/ch02/}  % 3. (중요) 이 챕터의 자동 추출 이미지 폴더
 }
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-% 이제 Fira Sans가 scshape를 지원하므로 정상 작동합니다.
 % 1. 캡션 번호 활성화
 \setbeamertemplate{caption}[numbered]
 % 2. 캡션 폰트 크기 설정
 \setbeamerfont{caption}{size=\scriptsize,shape=\itshape}
 \setbeamerfont{section}{size=\footnotesize,shape=\scshape}
 \setbeamerfont{subsection}{size=\scriptsize,shape=\itshape}
-\setbeamerfont{section in toc}{shape=\scshape}
 
-% 1. 제목 페이지(Title Page)의 메인 제목 설정
-\setbeamerfont{subtitle}{shape=\itshape,size=\normalsize}
-\setbeamerfont{title}{shape=\upshape,size=\Large}
-% 2. 일반 슬라이드의 제목(Frame Title) 설정
-\setbeamerfont{frametitle}{shape=\scshape, series=\mdseries}
-% (선택사항) 섹션 페이지의 제목도 바꾸고 싶다면 아래 줄 추가
-\setbeamerfont{section title}{shape=\scshape}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 % 1. chapter라는 새로운 카운터 생성
@@ -164,8 +175,8 @@ boxsep=0pt,left=6pt,right=6pt,top=2pt,bottom=2pt}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-\subtitle{Communication Theory - 2026}
 \title{Chapter 2. Signals and Signal Space}
+\subtitle{Communication Theory - 2026}
 \date{\today}
 \author{
     이 경 근 \\
@@ -189,11 +200,19 @@ boxsep=0pt,left=6pt,right=6pt,top=2pt,bottom=2pt}
 \end{frame}
 
 % 2. 강의 목차
-\begin{frame}{Table of Contents}
-    \large
-    \begin{multicols}{2} % 자동으로 2컬럼 배분
-        \tableofcontents[hideallsubsections]
-    \end{multicols}
+\begin{frame}
+    \frametitle{Table of Contents}
+    \small
+    \begin{columns}[t] % [t]: 상단 정렬 (Top alignment)
+        % [왼쪽 컬럼] 앞쪽 섹션들 배치 (예: 1번부터 2번까지)
+        \begin{column}{0.48\textwidth}
+            \tableofcontents[sections={1-3},] 
+        \end{column}
+        % [오른쪽 컬럼] 뒤쪽 섹션들 배치 (예: 3번부터 끝까지)
+        \begin{column}{0.48\textwidth}
+            \tableofcontents[sections={4-6}]
+        \end{column}
+    \end{columns}
 \end{frame}
 
 %%% Section 2 : Size of Signal %%%
@@ -1155,7 +1174,7 @@ boxsep=0pt,left=6pt,right=6pt,top=2pt,bottom=2pt}
 
 
 % Section 2.7 The Exponential Fourier Series
-\section{The Exponential Fourier Series}
+
 
 
 
@@ -1190,11 +1209,11 @@ boxsep=0pt,left=6pt,right=6pt,top=2pt,bottom=2pt}
 
 % Figure 2.20
 \begin{frame}
-\frametitle{ . }
+\frametitle{ }
 \centering
 \begin{columns}[T] %
     \begin{column}{0.45\textwidth}
-    \incfig{fig_ch02_20}{1.0}{ . }{fig:2.20}
+    \incfig{fig_ch02_20}{1.0}{ }{fig:2.20}
     \end{column}
     %
     \hfill
@@ -1219,11 +1238,11 @@ boxsep=0pt,left=6pt,right=6pt,top=2pt,bottom=2pt}
 
 % Figure 2.21
 \begin{frame}
-\frametitle{ . }
+\frametitle{ }
 \centering
 \begin{columns}[T] %
     \begin{column}{0.45\textwidth}
-    \incfig{fig_ch02_21}{1.0}{ . }{fig:2.21}
+    \incfig{fig_ch02_21}{1.0}{ }{fig:2.21}
     \end{column}
     %
     \hfill
@@ -1248,11 +1267,11 @@ boxsep=0pt,left=6pt,right=6pt,top=2pt,bottom=2pt}
 
 % Figure 2.22
 \begin{frame}
-\frametitle{ . }
+\frametitle{ }
 \centering
 \begin{columns}[T] %
     \begin{column}{0.45\textwidth}
-    \incfig{fig_ch02_22}{1.0}{ . }{fig:2.22}
+    \incfig{fig_ch02_22}{1.0}{ }{fig:2.22}
     \end{column}
     %
     \hfill
@@ -1277,11 +1296,11 @@ boxsep=0pt,left=6pt,right=6pt,top=2pt,bottom=2pt}
 
 % Figure 2.23
 \begin{frame}
-\frametitle{ . }
+\frametitle{ }
 \centering
 \begin{columns}[T] %
     \begin{column}{0.45\textwidth}
-    \incfig{fig_ch02_23}{1.0}{ . }{fig:2.23}
+    \incfig{fig_ch02_23}{1.0}{ }{fig:2.23}
     \end{column}
     %
     \hfill
@@ -1310,7 +1329,7 @@ boxsep=0pt,left=6pt,right=6pt,top=2pt,bottom=2pt}
 \centering
 \begin{columns}[T] %
     \begin{column}{0.45\textwidth}
-    \incfig{fig_ch02_24}{1.0}{ . }{fig:2.24}
+    \incfig{fig_ch02_24}{1.0}{ }{fig:2.24}
     \end{column}
     %
     \hfill
@@ -1390,9 +1409,6 @@ boxsep=0pt,left=6pt,right=6pt,top=2pt,bottom=2pt}
 \end{columns}
 \end{frame}
 
-
-% Section 2.8 Matlab Exercise
-\section*{Matlab Exercise}
 
 % Figure 2.27
 \begin{frame}
@@ -1524,7 +1540,7 @@ boxsep=0pt,left=6pt,right=6pt,top=2pt,bottom=2pt}
     \begin{column}{0.5\textwidth}
     %\tcbset{colframe=red!5!black,fonttitle=\bfseries\footnotesize,fontupper=\scriptsize,fontlower=\scriptsize}
     %\begin{tcolorbox}[enhanced,title=Time scaling a signal, frame style={left color=red!75!black, right color=blue!75!black}]
-    \begin{tcolorbox}[fonttitle=\sffamily\bfseries\footnotesize,title=\cref{fig:2.31}]
+    \begin{tcolorbox}[fonttitle=\sffamily\bfseries\footnotesize,title=\cref{fig:2.27}]
         \begin{itemize}
             \item .
             \item .
@@ -1537,129 +1553,6 @@ boxsep=0pt,left=6pt,right=6pt,top=2pt,bottom=2pt}
     \end{column}
 \end{columns}
 \end{frame}
-
-
-% Figure 2.32
-\begin{frame}
-\frametitle{ . }
-\centering
-\begin{columns}[T] %
-    \begin{column}{0.45\textwidth}
-    \incfig{fig_ch02_32}{1.0}{ . }{fig:2.32}
-    \end{column}
-    %
-    \hfill
-    %
-    \begin{column}{0.5\textwidth}
-    %\tcbset{colframe=red!5!black,fonttitle=\bfseries\footnotesize,fontupper=\scriptsize,fontlower=\scriptsize}
-    %\begin{tcolorbox}[enhanced,title=Time scaling a signal, frame style={left color=red!75!black, right color=blue!75!black}]
-    \begin{tcolorbox}[fonttitle=\sffamily\bfseries\footnotesize,title=\cref{fig:2.32}]
-        \begin{itemize}
-            \item .
-            \item .
-        \end{itemize}
-        %\tcblower
-        \begin{equation}
-            g(t) = 
-        \end{equation}
-    \end{tcolorbox}
-    \end{column}
-\end{columns}
-\end{frame}
-
-
-% Figure 2.33
-\begin{frame}
-\frametitle{ . }
-\centering
-\begin{columns}[T] %
-    \begin{column}{0.45\textwidth}
-    \incfig{fig_ch02_33}{1.0}{ . }{fig:2.33}
-    \end{column}
-    %
-    \hfill
-    %
-    \begin{column}{0.5\textwidth}
-    %\tcbset{colframe=red!5!black,fonttitle=\bfseries\footnotesize,fontupper=\scriptsize,fontlower=\scriptsize}
-    %\begin{tcolorbox}[enhanced,title=Time scaling a signal, frame style={left color=red!75!black, right color=blue!75!black}]
-    \begin{tcolorbox}[fonttitle=\sffamily\bfseries\footnotesize,title=\cref{fig:2.33}]
-        \begin{itemize}
-            \item .
-            \item .
-        \end{itemize}
-        %\tcblower
-        \begin{equation}
-            g(t) = 
-        \end{equation}
-    \end{tcolorbox}
-    \end{column}
-\end{columns}
-\end{frame}
-
-
-% Figure 2.34
-\begin{frame}
-\frametitle{ . }
-\centering
-\begin{columns}[T] %
-    \begin{column}{0.45\textwidth}
-    \incfig{fig_ch02_34}{1.0}{ . }{fig:2.34}
-    \end{column}
-    %
-    \hfill
-    %
-    \begin{column}{0.5\textwidth}
-    %\tcbset{colframe=red!5!black,fonttitle=\bfseries\footnotesize,fontupper=\scriptsize,fontlower=\scriptsize}
-    %\begin{tcolorbox}[enhanced,title=Time scaling a signal, frame style={left color=red!75!black, right color=blue!75!black}]
-    \begin{tcolorbox}[fonttitle=\sffamily\bfseries\footnotesize,title=\cref{fig:2.34}]
-        \begin{itemize}
-            \item .
-            \item .
-        \end{itemize}
-        %\tcblower
-        \begin{equation}
-            g(t) = 
-        \end{equation}
-    \end{tcolorbox}
-    \end{column}
-\end{columns}
-\end{frame}
-
-% Problems
-\section*{Problems}
-
-
-% Figure 2.35
-\begin{frame}
-\frametitle{ . }
-\centering
-\begin{columns}[T] %
-    \begin{column}{0.45\textwidth}
-    \incfig{fig_ch02_35}{1.0}{ . }{fig:2.35}
-    \end{column}
-    %
-    \hfill
-    %
-    \begin{column}{0.5\textwidth}
-    %\tcbset{colframe=red!5!black,fonttitle=\bfseries\footnotesize,fontupper=\scriptsize,fontlower=\scriptsize}
-    %\begin{tcolorbox}[enhanced,title=Time scaling a signal, frame style={left color=red!75!black, right color=blue!75!black}]
-    \begin{tcolorbox}[fonttitle=\sffamily\bfseries\footnotesize,title=\cref{fig:2.35}]
-        \begin{itemize}
-            \item .
-            \item .
-        \end{itemize}
-        %\tcblower
-        \begin{equation}
-            g(t) = 
-        \end{equation}
-    \end{tcolorbox}
-    \end{column}
-\end{columns}
-\end{frame}
-
-
-% Summary
-\section*{Summary}
 
 \begin{frame}
 \frametitle{Summary}
