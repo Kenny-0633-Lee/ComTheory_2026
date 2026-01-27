@@ -1,70 +1,67 @@
 % !TEX program = xelatex
-\documentclass[11pt, aspectratio=169]{beamer}
+\documentclass[10pt, aspectratio=169]{beamer}
 \usetheme{metropolis}
+\metroset{sectionpage=none} % [핵심] 섹션 페이지(간지)를 생성하지 않음
 \useoutertheme{metropolis}
 \useinnertheme{metropolis}
 \usecolortheme{metropolis}
 \usefonttheme{professionalfonts} 
 
 \usepackage{kotex}
-\usepackage{tikz}
-% [!중요!] TikZ 라이브러리 추가 (cloud 모양 등 사용을 위해 필수)
-\usetikzlibrary{shapes, arrows, positioning, shadows}
+\usepackage{pgfplots}
+\pgfplotsset{compat=1.17}
 \usepackage{graphicx, caption, hyperref, fontawesome5}
 \usepackage{subcaption}
-
+\usepackage{cleveref} % hyperref보다 나중에 불러와야 함
+\usepackage{ulem} % 밑줄 긋기 (취소선 등)
+\usepackage{lipsum} % 더미 텍스트 생성
+\usepackage{fancybox, tcolorbox} % 박스 생성
+\usepackage{tcolorbox}  % 박스 생성
+\tcbuselibrary{skins, breakable, theorems}   % 박스 스킨 라이브러리
+\usepackage{multicol}
 % [수식 및 폰트 설정 - 기존 파일 그대로 유지]
 \usepackage{amsmath}
 \usepackage[math-style=ISO, bold-style=ISO]{unicode-math}
+\usepackage{tikz}
+\usetikzlibrary{positioning, shapes.geometric, arrows.meta, calc, fit, backgrounds, shapes.geometric, shadows.blur, shapes.symbols, decorations.pathmorphing, decorations.text}
 \usefonttheme{professionalfonts}
 
-% [캡션 스타일 설정]
-% 1. 캡션 폰트: 굵게(bold) 제거(\mdseries), 크기는 약간 작게(\small)
-\setbeamerfont{caption}{series=\mdseries, size=\small}
-\setbeamerfont{caption name}{series=\mdseries}
-% 2. 캡션 번호 붙이기 (Figure 1: ...)
-\setbeamertemplate{caption}[numbered]
-% 3. 캡션 레이블 구분자 (Figure 1. Caption)
-\setbeamertemplate{caption label separator}[period]
 
-% [중요] 그림 경로 수정 (슬라이드 폴더 기준 2단계 위로)
-\graphicspath{ {./} {../../assets/} {../assets/} }
-
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\title{Communication Theory - 2026}
-\subtitle{Chapter 2. Signals and Signal Space}
-\date{\today}
-\author{
-    이 경 근 \\
-    {\tiny
-        % \texorpdfstring{문서에 보일 내용}{PDF 속성에 들어갈 텍스트(특수문자 제외)}
-        \texorpdfstring{\raisebox{-0.1ex}{\scalebox{0.85}{\faEnvelope}}}{} \href{mailto:infosec@knu.ac.kr}{infosec@knu.ac.kr} \quad 
-        \texorpdfstring{\scalebox{0.95}{\faLinkedin}}{} \scalebox{0.9}{\href{https://www.linkedin.com/in/Kenny-0633-Lee}{Kenny-0633-Lee}}
-    }
-}
-\institute{EE / KNU}
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-% [Font Settings] Project-Local Fonts (Perfect Stability)
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% 시스템 폰트가 아니라, ./fonts 폴더의 파일을 직접 사용합니다.
+% 1. 영문/숫자 -> Fira Sans (Small Caps 지원)
 \usepackage{fontspec}
 
-% 시스템 폰트가 아니라, ./fonts 폴더의 파일을 직접 사용합니다.
-\setmainfont{NotoSansKR-Regular.ttf}[
-    Path = ../../fonts/,             % 폰트 파일 위치
-    BoldFont = NotoSansKR-Bold.ttf,
-    AutoFakeSlant = 0.2          % 이탤릭 강제 구현
-]
-\setsansfont{NotoSansKR-Regular.ttf}[
+% ---------------------------------------------------------
+% [1] 영문/숫자 폰트 설정 (Fira Sans)
+% ---------------------------------------------------------
+% SmallCapsFont 옵션을 명시하지 않아도 OpenType 기능으로 자동 지원하지만,
+% 확실하게 작동하도록 설정합니다.
+\setmainfont{FiraSans-Regular.ttf}[
     Path = ../../fonts/,
-    BoldFont = NotoSansKR-Bold.ttf,
+    BoldFont = FiraSans-Bold.ttf,
+    ItalicFont = FiraSans-Italic.ttf, % (있다면 추가, 없으면 생략 가능)
     AutoFakeSlant = 0.2
 ]
+
+\setsansfont{FiraSans-Regular.ttf}[
+    Path = ../../fonts/,
+    BoldFont = FiraSans-Bold.ttf,
+    ItalicFont = FiraSans-Italic.ttf,
+    AutoFakeSlant = 0.2
+]
+
+% ---------------------------------------------------------
+% [2] 한글 폰트 설정 (Noto Sans KR) - 한글에만 적용됨
+% ---------------------------------------------------------
+% \setmainhangulfont, \setsanshangulfont 명령은
+% xetexko 패키지나 kotex 패키지를 사용할 때 유효합니다.
 \setmainhangulfont{NotoSansKR-Regular.ttf}[
     Path = ../../fonts/,
     BoldFont = NotoSansKR-Bold.ttf,
     AutoFakeSlant = 0.2
 ]
+
 \setsanshangulfont{NotoSansKR-Regular.ttf}[
     Path = ../../fonts/,
     BoldFont = NotoSansKR-Bold.ttf,
@@ -75,201 +72,568 @@
 \setmathfont{Fira Math}
 \setmathfont[range={up, bfup}, Scale=MatchLowercase, Path = ../../fonts/]{NotoSansKR-Regular.ttf}
 \setmathfont[range={it, bfit}, Scale=MatchLowercase, FakeSlant=0.2, Path = ../../fonts/]{NotoSansKR-Regular.ttf}
+% [Font Settings] Project-Local Fonts (Perfect Stability)
+
+% [중요] 그림 경로 수정 (슬라이드 폴더 기준 2단계 위로)
+% \graphicspath 명령은 중괄호 {} 안에 경로들을 나열하는 방식입니다.
+% 마지막에 반드시 슬래시(/)를 붙여야 합니다.
+\graphicspath{
+    {./}                            % 1. 현재 tex 파일과 같은 폴더
+    {../../assets/}                 % 2. 직접 만든 공용 벡터 이미지 (TikZ 결과물 등)
+    {../../assets_extracted/ch02/}  % 3. (중요) 이 챕터의 자동 추출 이미지 폴더
+}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% 이제 Fira Sans가 scshape를 지원하므로 정상 작동합니다.
+% 1. 캡션 번호 활성화
+\setbeamertemplate{caption}[numbered]
+% 2. 캡션 폰트 크기 설정
+\setbeamerfont{caption}{size=\scriptsize,shape=\itshape}
+\setbeamerfont{section}{size=\footnotesize,shape=\scshape}
+\setbeamerfont{subsection}{size=\scriptsize,shape=\itshape}
+\setbeamerfont{section in toc}{shape=\scshape}
+
+% 1. 제목 페이지(Title Page)의 메인 제목 설정
+\setbeamerfont{subtitle}{shape=\itshape,size=\normalsize}
+\setbeamerfont{title}{shape=\upshape,size=\huge}
+% 2. 일반 슬라이드의 제목(Frame Title) 설정
+\setbeamerfont{frametitle}{shape=\scshape, series=\mdseries}
+% (선택사항) 섹션 페이지의 제목도 바꾸고 싶다면 아래 줄 추가
+\setbeamerfont{section title}{shape=\scshape}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% 1. chapter라는 새로운 카운터 생성
+\newcounter{chapter}
+% 2. 챕터 번호 설정 (여기서 숫자를 바꾸면 됩니다)
+\setcounter{chapter}{2}
+
+% [Chapter Numbering] 현재 문서를 "Chapter 2"로 설정
+% 섹션 번호 모양을 "2.1", "2.2" 형태로 강제 변경
+\renewcommand{\thesection}{\thechapter.\arabic{section}}
+% (선택사항) 서브섹션은 자동으로 "2.1.1"이 되지만, 확실하게 하려면 아래 줄도 추가
+%\renewcommand{\thesubsection}{\thesection.\arabic{subsection}}
+% Figure 2.x 형태로 출력 (chapter 번호 기준)
+\renewcommand{\thefigure}{\thechapter.\arabic{figure}}
+% Equation 2.x 형태로 출력 (chapter 번호 기준)
+\renewcommand{\theequation}{\thechapter.\arabic{equation}}
+\renewcommand{\figurename}{Fig.}
+
+% --- [1] 본문 참조 설정 (\cref) ---
+% \cref{label}을 썼을 때 "Fig. 번호"로 나오게 설정
+% 형식: \crefname{타입}{단수형}{복수형}
+\crefname{figure}{Fig.}{Figs.}
+\Crefname{figure}{Fig.}{Figs.} % 문장 맨 앞 \Cref 용도
+
+% --- [1] 번호 매기기 깊이 설정 ---
+% 0: Chapter, 1: Section, 2: Subsection, 3: Subsubsection
+% '1'로 설정하면 Section까지만 번호를 붙이고, Subsection부터는 번호를 생성하지 않습니다.
+\setcounter{secnumdepth}{1} 
+
+% --- [2] 목차(TOC) 스타일 설정 ---
+% 2-1. 섹션: 번호 표시 (예: 1. Introduction)
+\setbeamertemplate{section in toc}[sections numbered]
+\setbeamertemplate{subsection in toc}{%
+  \leavevmode
+  \leftskip=1.0em
+  {\color{gray}\textbullet} % 점을 회색으로 은은하게
+  \hspace{0.5em}            % 적당한 간격
+  {\footnotesize\inserttocsubsection}\par
+}
+
+% --- 매크로 정의 ---
+% 사용법: \incfig{파일명(확장자제외)}{너비비율(0.0~1.0)}{캡션}
+\newcommand{\incfig}[4]{%
+    \begin{figure}
+        \centering
+        % 확장자를 생략하면 graphicspath에서 찾은 파일의 형식을 자동 인식합니다.
+        \includegraphics[width=#2\textwidth]{#1} 
+        \caption{#3}\label{#4}
+    \end{figure}
+}
+% Preamble에 추가
+\newcommand{\fakecaption}[2]{% #1: 참조할 라벨, #2: 텍스트
+  \par\vspace{2pt}
+  {\usebeamerfont{caption name}\usebeamercolor[fg]{caption name}\figurename~\ref{#1}:}%
+  \hspace{1.0em}
+  {\usebeamerfont{caption}\usebeamercolor[fg]{caption}\itshape #2}%
+}
+
+% 박스 매크로 정의
+\newtcbox{\xmybox}[1][red]{on line,
+arc=7pt,colback=#1!10!white,colframe=#1!50!black,
+before upper={\rule[-3pt]{0pt}{10pt}},boxrule=1pt,
+boxsep=0pt,left=6pt,right=6pt,top=2pt,bottom=2pt}
+
+% --- [Colors] Starlink 전용 컬러 팔레트 정의 ---
+\definecolor{space_bg}{HTML}{0B0E14}      % 배경: Deep Dark Navy
+\definecolor{earth_top}{HTML}{1C2541}     % 지구 상단
+\definecolor{earth_bot}{HTML}{000000}     % 지구 하단
+\definecolor{starlink_cyan}{HTML}{00F0FF} % 레이저 링크 (Cyan Neon)
+\definecolor{signal_green}{HTML}{00FF9D}  % LTE 신호 (Green Neon)
+\definecolor{signal_orange}{HTML}{FF9E00} % Ku 신호 (Orange Neon)
+
+% --- [Preamble] TikZ 스타일 전역 정의 (여기에 추가하세요) ---
+\tikzset{
+    % 빔 효과 (파라미터 #1을 여기서 안전하게 정의)
+    beam_cone/.style={
+        shade, 
+        top color=#1, 
+        bottom color=transparent!100, 
+        shading angle=0, 
+        opacity=0.7
+    },
+    % 레이저/선 효과
+    glow_line/.style={
+        line width=2pt, 
+        color=#1, 
+        opacity=0.8, 
+        cap=round
+    }
+}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\subtitle{Communication Theory - 2026}
+\title{Orientation}
+\date{\today}
+\author{
+    이 경 근 \\
+    {\tiny
+        % \texorpdfstring{문서에 보일 내용}{PDF 속성에 들어갈 텍스트(특수문자 제외)}
+        \texorpdfstring{\raisebox{-0.1ex}{\scalebox{0.85}{\faEnvelope}}}{} \href{mailto:infosec@knu.ac.kr}{infosec@knu.ac.kr} \quad 
+        \texorpdfstring{\scalebox{0.9}{\faLinkedin}}{} \scalebox{0.9}{\href{https://www.linkedin.com/in/Kenny-0633-Lee}{Kenny-0633-Lee}}
+    }
+}
+\institute{EE / KNU}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 \begin{document}
 
-% #1. Title Page
+% 1. 표지
 \begin{frame}[plain]
     \titlepage
 \end{frame}
 
-% #2. Intro: The Black Box
-\begin{frame}{Introduction: The Black Box}
-    \begin{columns}
-        \begin{column}{0.4\textwidth}
-            \LARGE
-            \centering
-            \textbf{Smartphone}
-            
-            \vspace{1cm}
-            \normalsize
-            \textit{"We use it every day,\\but how does it work?"}
-        \end{column}
-        \begin{column}{0.6\textwidth}
-            \begin{block}{The Physical Question}
-                여러분이 카카오톡 \textbf{[전송]} 버튼을 누를 때, \\
-                0과 1의 데이터는 어떻게 \textbf{물리적인 파동(Wave)}이 되어 \\
-                공기 중으로 날아가는가?
-            \end{block}
-            \vspace{0.3cm}
-            \small \faArrowRight \ 본 강의는 그 \textbf{"물리적 변환(Transformation)"}의 과정을 배웁니다.
-        \end{column}
-    \end{columns}
-\end{frame}
+% %% 2. 강의 목차
+% \begin{frame}{Table of Contents}
+%     \large
+% %    \begin{multicols}{2} % 자동으로 2컬럼 배분
+%         \tableofcontents[hideallsubsections]
+% %    \end{multicols}
+% \end{frame}
 
-% #3. The Roadmap (Block Diagram)
-\begin{frame}{Course Roadmap: The Communication System}
-    % Lathi 교재의 블록 다이어그램을 개념적으로 설명
-    \centering
-    \begin{tikzpicture}[node distance=2cm, auto, thick]
-        % TikZ로 간단한 블록 다이어그램 그리기 (이미지 대체 가능)
-        \node (tx) [draw, rectangle, fill=orange!10, minimum height=1cm] {Transmitter};
-        \node (ch) [draw, cloud, fill=blue!10, right of=tx, node distance=4cm, minimum height=1cm] {Channel};
-        \node (rx) [draw, rectangle, fill=green!10, right of=ch, node distance=4cm, minimum height=1cm] {Receiver};
-        
-        \draw[->] (tx) -- node[above] {\small Signal} (ch);
-        \draw[->] (ch) -- node[above] {\small + Noise} (rx);
-    \end{tikzpicture}
-    
-    \vspace{1cm}
+\section{Why Communication Theory matters?}
+\begin{frame}{Why Communication Theory Matters?}
     \begin{itemize}
-        \item \textbf{Ch 1-3:} 신호와 시스템 (Signals) \hfill \textit{"Language"}
-        \item \textbf{Ch 4-5:} 아날로그 통신 (Modulation) \hfill \textit{"Transmission"}
-        \item \textbf{Ch 6-7:} 디지털 통신 (Digital/Noise) \hfill \textit{"Robustness"}
+        \setlength\itemsep{1.5em} % 항목 간 간격 조정
+        
+        % 1. 문명의 기반 (Connectivity)
+        \item \textbf{The Invisible Backbone of Modern Civilization} \\
+        \small It connects billions of people and devices, enabling the Internet, global economy, and social networks (e.g., Starlink, 5G/6G).
+        
+        % 2. 물리적 한계 극복 (Reliability)
+        \item \textbf{Order from Chaos: Overcoming Noise} \\
+        \small It provides the mathematical tools to extract reliable information from noisy, unreliable physical channels (Shannon's Limit).
+        
+        % 3. 자원 최적화 (Efficiency)
+        \item \textbf{Mastering Scarcity: Spectrum \& Energy} \\
+        \small It teaches us how to maximize data rates (bits/s) within limited frequency bandwidth (Hz) and power constraints.
+        
+        % 4. 미래 기술의 언어 (Future)
+        \item \textbf{Enabler of Future Technologies} \\
+        \small Without advanced communication, there is no AI, IoT, Autonomous Driving, or Quantum Computing.
     \end{itemize}
 \end{frame}
 
-% #4. Ch 1-3 Preview
-\begin{frame}{Part 1. Signals (Ch 1-3)}
-    \framesubtitle{The Language of Communication: Frequency}
-    
+
+% ==============================================================================
+% Section: Frequency Allocation (Detailed View)
+% ==============================================================================
+\section{Frequency Allocation Details}
+\begin{frame}
+\frametitle{우리나라의 주요 주파수 대역별 용도}
     \begin{figure}
         \centering
-        \begin{subfigure}{0.32\textwidth}
-            \includegraphics[width=\linewidth]{fourier_step_1}
-            \caption{N=1}
-        \end{subfigure}
-        \hfill
-        \begin{subfigure}{0.32\textwidth}
-            \includegraphics[width=\linewidth]{fourier_step_5}
-            \caption{N=5}
-        \end{subfigure}
-        \hfill
-        \begin{subfigure}{0.32\textwidth}
-            \includegraphics[width=\linewidth]{fourier_step_29}
-            \caption{Square Wave}
-        \end{subfigure}
-        \caption{Fourier Series: 모든 신호는 사인파의 합이다.}
+        \includegraphics[width=\textwidth, height=0.9\textheight, keepaspectratio]{freq_distribution}
+        \caption{대한민국 주파수 분배현황(\protect\href{https://www.spectrum.or.kr/bbs/board.php?bo_table=frequency&page=}{Source: 전파진흥원 Spectrum Portal})}
+    \end{figure}
+
+\end{frame}
+
+% ------------------------------------------------------------------------------
+% Slide 1: 저주파 대역 (VLF ~ MF)
+% ------------------------------------------------------------------------------
+\begin{frame}{1/3. Low Frequency Bands (VLF $\sim$ MF)}
+    % [상단] 그림을 화면 너비에 꽉 차게 배치 (높이 조절 가능)
+    \begin{figure}
+        \centering
+        \includegraphics[width=\textwidth, height=0.45\textheight, keepaspectratio]{freq_part1}
     \end{figure}
     
-    \begin{itemize}
-        \item 복잡한 정보를 주파수(Frequency) 성분으로 분해하는 법을 배웁니다.
-    \end{itemize}
-\end{frame}
-
-% #5. Ch 4-5 Preview
-\begin{frame}{Part 2. Analog Modulation (Ch 4-5)}
-    \framesubtitle{Moving the Spectrum}
+    \vspace{0.5em}
     
-    \begin{columns}
-        \begin{column}{0.5\textwidth}
-            \centering
-            \includegraphics[width=0.95\textwidth]{fig_03_am_shift}
-            \vspace{0.2cm}
-            \small \textbf{AM (Amplitude Modulation)} \\
-            주파수 이사(Frequency Shifting)
-        \end{column}
-        \begin{column}{0.5\textwidth}
-            \centering
-            \includegraphics[width=0.95\textwidth]{fig_04_fm_accordion}
-            \vspace{0.2cm}
-            \small \textbf{FM (Frequency Modulation)} \\
-            아코디언 효과 (Noise Immunity)
-        \end{column}
-    \end{columns}
-\end{frame}
-
-% #6. Ch 6-7 Preview
-\begin{frame}{Part 3. Digital Communication (Ch 6-7)}
-    \framesubtitle{Surviving the Noise}
-    
-    \begin{columns}
-        \begin{column}{0.6\textwidth}
-            \centering
-            \includegraphics[width=0.9\textwidth]{fig_05_eye_diagram}
-        \end{column}
-        \begin{column}{0.4\textwidth}
-            \textbf{The Eye Diagram}
-            \vspace{0.5cm}
+    % [하단] 설명 (2컬럼으로 나누어 가독성 확보)
+    \footnotesize
+    \begin{columns}[T] % T: Top alignment (글자 위쪽 정렬)
+        % 왼쪽 컬럼: 주요 용도
+        \begin{column}{0.48\textwidth}
+            \textbf{\textsc{Key Services}}
             \begin{itemize}
-                \item 0과 1을 아날로그 파형에 싣는 법
-                \item 잡음(Noise) 속에서 에러 없이 복구하는 법
-                \item \textit{"통신 엔지니어는 신호의 눈(Eye)을 뜨게 만드는 사람이다."}
+                \item \textbf{VLF/LF}: 해상/잠수함 통신, 항공 무선 표지 (Beacon)
+                \item \textbf{MF}: \alert{AM Radio} (535$\sim$1605 kHz), 해상 이동 업무
+            \end{itemize}
+        \end{column}
+        
+        % 오른쪽 컬럼: 전파 특성
+        \begin{column}{0.48\textwidth}
+            \textbf{\textsc{Characteristics}}
+            \begin{itemize}
+                \item \textbf{지표파(Ground Wave)}: 지표면을 따라 멀리 전파됨
+                \item 회절성이 매우 강함 (산/건물 통과 유리)
+                \item 안테나 크기가 매우 커야 함 ($\lambda$가 길기 때문)
             \end{itemize}
         \end{column}
     \end{columns}
 \end{frame}
 
-% #7. Methodology
-\begin{frame}{Methodology: Theory meets Code}
-    \begin{columns}
-        \begin{column}{0.5\textwidth}
-            \begin{block}{Textbook (Theory)}
-                \[ C = B \log_2 \left( 1 + \frac{S}{N} \right) \]
-                수학적 엄밀함을 배웁니다.
-            \end{block}
-        \end{column}
-        \begin{column}{0.5\textwidth}
-            \begin{block}{Python (Engineering)}
-                \texttt{>>> import numpy as np} \\
-                \texttt{>>> plt.plot(t, signal)} \\
-                이론을 코드로 검증합니다.
-            \end{block}
-        \end{column}
-    \end{columns}
-    
-    \vspace{0.5cm}
-    \centering
-    \faPython \ \textbf{모든 주요 이론은 Python 시뮬레이션 과제가 제공됩니다.}
-\end{frame}
 
-% #8. Outro: Starlink
-\begin{frame}{Vision: From Textbook to Universe}
-    \framesubtitle{Why we learn this?}
+
+% ------------------------------------------------------------------------------
+% Slide 2: 중/고주파 대역 (HF ~ VHF)
+% ------------------------------------------------------------------------------
+\begin{frame}{2/3. Mid-Range Frequency (HF $\sim$ VHF)}
+    % [상단] 그림
+    \begin{figure}
+        \centering
+        \includegraphics[width=\textwidth, height=0.45\textheight, keepaspectratio]{freq_part2}
+    \end{figure}
     
-    \begin{columns}
-        \begin{column}{0.6\textwidth}
-            % 스타링크 이미지가 있다면 넣고, 없으면 텍스트로 대체
-            \centering
-            \LARGE \faSatellite \ \faGlobe
-            \vspace{0.5cm}
-            \normalsize
-            \textbf{SpaceX Starlink}
-        \end{column}
-        \begin{column}{0.4\textwidth}
-            \textbf{Advanced Application}
+    \vspace{0.5em}
+    
+    % [하단] 설명
+    \footnotesize
+    \begin{columns}[T]
+        \begin{column}{0.48\textwidth}
+            \textbf{\textsc{Key Services}}
             \begin{itemize}
-                \item \textbf{Doppler Effect:} \\
-                위성의 빠른 이동 속도 보정 \\
-                (Related to Ch 4. FM)
-                \item \textbf{Link Budget:} \\
-                우주 잡음 극복 설계 \\
-                (Related to Ch 5. Noise)
+                \item \textbf{HF}: 단파 방송, 아마추어 무선(HAM), 비상 통신
+                \item \textbf{VHF}: \alert{FM Radio} (88$\sim$108 MHz), 지상파 DMB, 업무용 무전기
+            \end{itemize}
+        \end{column}
+        
+        \begin{column}{0.48\textwidth}
+            \textbf{\textsc{Characteristics}}
+            \begin{itemize}
+                \item \textbf{Sky Wave (HF)}: 전리층 반사를 이용한 원거리(국제) 통신
+                \item \textbf{Line-of-Sight (VHF)}: 직진성 시작, 장애물 영향 받음
+                \item 음질이 좋고 잡음에 강해짐
             \end{itemize}
         \end{column}
     \end{columns}
-    
-    \vspace{0.5cm}
-    \centering
-    \textit{"기본 이론(Fundamentals)이 미래 기술의 기반입니다."}
 \end{frame}
 
-% #9. Closing
-\begin{frame}[plain]
+% ------------------------------------------------------------------------------
+% Slide 3: 고주파 대역 (UHF ~ SHF)
+% ------------------------------------------------------------------------------
+\begin{frame}{3/3. High Frequency Bands (UHF $\sim$ EHF)}
+    % [상단] 그림
+    \begin{figure}
+        \centering
+        \includegraphics[width=\textwidth, height=0.45\textheight, keepaspectratio]{freq_part3}
+    \end{figure}
+    
+    \vspace{0.5em}
+    
+    % [하단] 설명
+    \footnotesize
+    \begin{columns}[T]
+        \begin{column}{0.48\textwidth}
+            \textbf{\textsc{Key Services (Most Active)}}
+            \begin{itemize}
+                \item \textbf{UHF}: \alert{Mobile (LTE/5G)}, Wi-Fi(2.4G), GPS, DTV
+                \item \textbf{SHF/EHF}: Satellite, Radar, 5G mmWave, Wi-Fi 6E/7
+            \end{itemize}
+        \end{column}
+        
+        \begin{column}{0.48\textwidth}
+            \textbf{\textsc{Characteristics}}
+            \begin{itemize}
+                \item 빛에 가까운 강한 직진성
+                \item \textbf{Wide Bandwidth}: 초고속 대용량 데이터 전송 가능
+                \item 장애물(비, 벽)에 의한 감쇄 심함
+            \end{itemize}
+        \end{column}
+    \end{columns}
+\end{frame}
+
+
+% ========================================================================
+% Starlink : Tikz diagram
+% ========================================================================
+\begin{frame}{Starlink Network Architecture}
     \centering
-    \LARGE
-    \textbf{Questions?}
+    \resizebox{0.95\textwidth}{!}{%
+        \begin{tikzpicture}[
+            font=\sffamily,
+            background rectangle/.style={fill=space_bg, rounded corners=8pt}, 
+            show background rectangle
+        ]
+            % --- [레이아웃 변수 정의] ---
+            \def\H{4.5}
+            \def\R{14}
+            
+            % [수정됨] 변수명에서 언더스코어(_) 제거 (에러 해결)
+            \def\YSide{-0.75}  % 양 끝 지표면 높이
+            \def\YCenter{0}    % 중앙 지표면 높이
+
+            % === 1. 지구 (Earth Horizon) ===
+            \begin{scope}
+                \clip (-7, -3.5) rectangle (7, \H+1);
+                \shade[top color=earth_top, bottom color=earth_bot] (0, -\R) circle (\R);
+                \draw[white!10, dashed, ultra thin] (0, -\R) circle (\R+0.05);
+                \node[text=white!40, font=\scshape\scriptsize, align=center] at (0, -2.0) {Earth Surface};
+            \end{scope}
+
+            % === 2. 위성 (Satellites) ===
+            \tikzset{
+                sat_pic/.pic={
+                    \fill[gray!50!blue, blur shadow={shadow blur steps=3}] (-0.6, -0.2) rectangle (0.6, 0.2);
+                    \draw[white!40, ultra thin] (-0.6, -0.2) grid[xstep=0.2, ystep=0.4] (0.6, 0.2);
+                    \fill[white!90!gray] (-0.2, -0.05) rectangle (0.2, 0.05);
+                    \node[text=black, scale=0.4] at (0,0) {\faSatellite};
+                }
+            }
+            \coordinate (S1) at (-3.5, \H);
+            \coordinate (S2) at (3.5, \H);
+            \path (S1) pic {sat_pic};
+            \path (S2) pic {sat_pic};
+            \node[text=white, font=\scshape\scriptsize, above=0.3cm of S1] {Starlink V2 (LEO)};
+            \node[text=white, font=\scshape\scriptsize, above=0.3cm of S2] {Starlink V2 (LEO)};
+
+            % === 3. 지상 장비 (Ground Segment) ===
+            % [수정됨] \YSide, \YCenter 사용
+            
+            % (A) 스마트폰
+            \node[text=white, scale=1.5, anchor=south] (phone) at (-4.5, \YSide) {\faMobile*};
+            \node[text=signal_green, font=\scshape\tiny, below=0.1cm of phone] {Direct to Cell};
+            \node[text=white!60, font=\tiny, align=center, below=0.35cm of phone] {Smartphone\\(LTE Band)};
+
+            % (B) 사용자 단말
+            \node[text=white, scale=1.2, anchor=south] (dish) at (-0.5, \YCenter) {\faSatelliteDish};
+            \node[text=signal_orange, font=\scshape\tiny, below=0.1cm of dish] {User Terminal (Dishy)};
+            \node[text=white!60, font=\tiny, align=center, below=0.35cm of dish] {Home/Biz\\(Ku-band)};
+
+            % (C) 게이트웨이
+            \node[text=white, scale=1.2, anchor=south] (gateway) at (4.5, \YSide) {\faBroadcastTower};
+            \node[text=starlink_cyan, font=\scshape\tiny, below=0.1cm of gateway] {Gateway};
+            \node[text=white!60, font=\tiny, align=center, below=0.35cm of gateway] {Backhaul\\(Ka/E-band)};
+
+            % === 4. 통신 링크 ===
+            % (1) Laser Link
+            \draw[glow_line=starlink_cyan] (S1) -- (S2); 
+            \fill[starlink_cyan, opacity=0.2] ($(S1)+(0,-0.05)$) rectangle ($(S2)+(0,0.05)$);
+            \node[text=starlink_cyan, font=\scshape\tiny, fill=space_bg, inner sep=2pt, rounded corners] at (0, \H) {Optical Laser Link};
+
+            % (2) Smartphone Beam
+            \path[beam_cone=signal_green] 
+                ($(S1)+(-0.2,-0.2)$) -- ($(phone.north)+(-0.3,0)$) -- ($(phone.north)+(0.3,0)$) -- cycle;
+            \node[text=signal_green, font=\tiny, rotate=-102] at (-4.35, 2.5) {1.9GHz};
+
+            % (3) User Dish Beam
+            \path[beam_cone=signal_orange] 
+                ($(S1)+(0.2,-0.2)$) -- ($(dish.north)+(-0.4,0)$) -- ($(dish.north)+(0.4,0)$) -- cycle;
+            \node[text=signal_orange, font=\tiny, rotate=-48] at (-1.5, 2.5) {Ku-band (12/14GHz)};
+
+            % (4) Gateway Beam
+            \path[beam_cone=starlink_cyan] 
+                ($(S2)+(0,-0.2)$) -- ($(gateway.north)+(-0.4,0)$) -- ($(gateway.north)+(0.4,0)$) -- cycle;
+            \node[text=starlink_cyan, font=\tiny, rotate=-80] at (3.6, 2.5) {Ka/E-band (20-30GHz)/(70-80GHz)};
+        \end{tikzpicture}
+    }
+\end{frame}
+
+
+% 5G Network
+\begin{frame}{5G Terrestrial Network Architecture (PLMN)}
+    \centering
+    \resizebox{0.95\textwidth}{!}{%
+        \begin{tikzpicture}[
+            font=\sffamily,
+            % [수정 1] 배경을 흰색으로 변경
+            background rectangle/.style={fill=white}, 
+            show background rectangle,
+            node distance=1.5cm and 2cm
+        ]
+            % --- [스타일 정의] ---
+            \tikzset{
+                % Core Network Nodes (가독성을 위해 연한 파스텔톤 배경 + 검은 글씨)
+                control_node/.style={
+                    rectangle, rounded corners=3pt, draw=blue!80!black, thick,
+                    fill=blue!5, text=black, align=center,
+                    minimum width=2.2cm, minimum height=1.2cm,
+                    drop shadow
+                },
+                user_node/.style={
+                    rectangle, rounded corners=3pt, draw=green!60!black, thick,
+                    fill=green!5, text=black, align=center,
+                    minimum width=2.2cm, minimum height=1.2cm,
+                    drop shadow
+                },
+                ran_node/.style={
+                    rectangle, rounded corners=3pt, draw=orange!80!black, thick,
+                    fill=orange!5, text=black, align=center,
+                    minimum width=1.8cm, minimum height=3cm,
+                    drop shadow
+                },
+                % [수정 2] 무선 구간 (Air Interface) - 파동 모양(Snake)
+                wireless_link/.style={
+                    decorate, decoration={snake, amplitude=.5mm, segment length=2.5mm, post length=1mm},
+                    draw=blue!70!black, thick, ->, >=stealth
+                },
+                % [수정 2] 유선 구간 - User Plane (실선)
+                wired_user/.style={
+                    draw=green!50!black, thick, ->, >=stealth
+                },
+                % [수정 2] 유선 구간 - Control Plane (점선)
+                wired_ctrl/.style={
+                    draw=blue!50!black, thick, dashed, ->, >=stealth
+                },
+                % 라벨 스타일 (흰 배경을 깔아서 선과 겹쳐도 잘 보이게)
+                label_box/.style={
+                    fill=white, inner sep=1.5pt, text=black, font=\tiny\bfseries, opacity=0.9
+                }
+            }
+
+            % === 1. User Equipment (UE) & Frequency Bands ===
+            % 왼쪽 배치
+            
+            % (A) Smartphone (Sub-6 GHz 주력)
+            \node[text=black, scale=1.5] (phone) at (-5, -2) {\faMobile*};
+            \node[text=black, font=\scriptsize, below=0.1cm of phone] {Smartphone};
+            
+            % (B) V2X Car (URLLC, Sub-6 or mmWave)
+            \node[text=black, scale=1.3] (car) at (-5, 0) {\faCar};
+            \node[text=black, font=\scriptsize, below=0.1cm of car] {V2X Car};
+            
+            % (C) Smart Factory (mmWave 주력 - 초고속/저지연)
+            \node[text=black, scale=1.3] (factory) at (-5, 2) {\faIndustry};
+            \node[text=black, font=\scriptsize, below=0.1cm of factory] {Smart Factory};
+
+
+            % === 2. RAN (gNodeB) ===
+            \node[ran_node] (gnb) at (-1, 0) {
+                \huge \faBroadcastTower \\[0.3em]
+                \textbf{gNodeB} \\
+                \tiny (5G NR)
+            };
+
+
+            % === 3. 5G Core (Control & User Plane) ===
+            
+            % AMF (Access & Mobility) - Top Left of Core
+            \node[control_node] (amf) at (3, 2.0) {\textbf{AMF} \\ \tiny Access Control};
+            
+            % SMF (Session Mgmt) - Top Right of Core
+            \node[control_node] (smf) at (6.5, 2.0) {\textbf{SMF} \\ \tiny Session Mgmt};
+            
+            % UPF (User Plane) - Bottom Center of Core
+            \node[user_node] (upf) at (4.75, -2) {\textbf{UPF} \\ \tiny Packet Routing};
+
+
+            % === 4. Data Network (Internet) ===
+            \node[cloud, draw=gray, thick, fill=gray!5, cloud puffs=11, minimum width=2.5cm, minimum height=1.8cm] (dn) at (8.5, -2) {};
+            \node[text=black, align=center, font=\small\bfseries] at (dn) {Internet\\(DN)};
+
+
+            % === 5. Links (Connections) ===
+            
+            % --- [Wireless Links (Air Interface)] ---
+            % [수정 3] 통신 밴드 명시 (FR1, FR2)
+            
+            % Phone -> gNB (Sub-6 GHz)
+            \draw[wireless_link] (phone) -- (gnb.south west) 
+                node[midway, label_box, rotate=20] {3.5 GHz (FR1)};
+                
+            % Car -> gNB (V2X band)
+            \draw[wireless_link] (car) -- (gnb.west)
+                node[midway, label_box] {5.9 GHz (C-V2X)};
+                
+            % Factory -> gNB (mmWave)
+            \draw[wireless_link] (factory) -- (gnb.north west)
+                node[midway, label_box, rotate=-20] {28 GHz (FR2)};
+
+
+            % --- [Wired Links (Backhaul)] ---
+            % [수정 4] 유선망은 광케이블(Optical)임
+            
+            % N2: gNB -> AMF (Control)
+            \draw[wired_ctrl] (gnb.north east) -- (amf.west) 
+                node[midway, label_box, sloped] {N2 (Optical)};
+            
+            % N3: gNB -> UPF (User Data)
+            \draw[wired_user] (gnb.south east) -- (upf.west)
+                node[midway, label_box, sloped] {N3 (Optical)};
+                
+            % N4: SMF -> UPF (Control)
+            \draw[wired_ctrl] (smf.south) -- (upf.north -| smf.south)
+                node[midway, label_box] {N4};
+                
+            % SBA: AMF <-> SMF
+            \draw[wired_ctrl, <->] (amf) -- (smf)
+                node[midway, label_box] {SBA (HTTP/2)};
+                
+            % N6: UPF -> Internet
+            \draw[wired_user] (upf) -- (dn)
+                node[midway, label_box] {N6 (Backbone)};
+
+
+            % === 6. 구획 표시 (Grouping) ===
+            \begin{scope}[on background layer]
+                % RAN Area Label
+                \node[text=gray, font=\bfseries\scriptsize, above=0.1cm of gnb] {Radio Access Network};
+                
+                % Core Area Box
+                \draw[dashed, gray!40, rounded corners=10pt] (1.5, -3.2) rectangle (8.0, 3.2);
+                \node[text=gray, font=\bfseries\scriptsize] at (4.75, 2.9) {5G Core Network (5GC)};
+            \end{scope}
+
+        \end{tikzpicture}
+    }
+\end{frame}
+
+
+% Sonar 통신 아키텍쳐
+\begin{frame}{Underwater Communication: SONAR System Architecture}
+    % figure 환경 시작
+    \begin{figure}[b]
+        \centering
+        % 이미지 삽입
+        \includegraphics[height=0.65\textheight, keepaspectratio]{fig_sonar_system.png}
+        
+        % 캡션 추가 (그림 제목)
+        \caption{General Architecture of SONAR System}
+        
+        % (선택사항) 캡션에 라벨을 달아두면 나중에 \ref{fig:sonar}로 참조 가능
+        \label{fig:sonar}
+    \end{figure}
     
-    \vspace{1cm}
-    \normalsize
-    See you in the next class.
-    
-    \vspace{0.5cm}
-    \small
-    \faEnvelope \ infosec@knu.ac.kr
+    % 출처는 캡션과 별도로 하단에 표시 (디자인적 선택)
+    \vfill
+    \begin{flushright}
+        \tiny \color{gray}
+        Source: \href{https://www.mdpi.com/2077-1312/11/7/1279}{MDPI J. Mar. Sci. Eng. 2023, 11(7), 1279}
+    \end{flushright}
+\end{frame}
+
+
+% Summary
+\section*{Summary}
+\begin{frame}{Summary}
+\centering
+
+{\huge \textbf{``Communication Theory is the \textcolor{red}{Foundation} of our Connected Future.''}}
 \end{frame}
 
 \end{document}
