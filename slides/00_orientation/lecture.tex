@@ -149,7 +149,7 @@
         \caption{#3}\label{#4}
     \end{figure}
 }
-% Preamble에 추가
+% Fakecaption
 \newcommand{\fakecaption}[2]{% #1: 참조할 라벨, #2: 텍스트
   \par\vspace{2pt}
   {\usebeamerfont{caption name}\usebeamercolor[fg]{caption name}\figurename~\ref{#1}:}%
@@ -171,7 +171,7 @@ boxsep=0pt,left=6pt,right=6pt,top=2pt,bottom=2pt}
 \definecolor{signal_green}{HTML}{00FF9D}  % LTE 신호 (Green Neon)
 \definecolor{signal_orange}{HTML}{FF9E00} % Ku 신호 (Orange Neon)
 
-% --- [Preamble] TikZ 스타일 전역 정의 (여기에 추가하세요) ---
+% --- [Preamble] TikZ 스타일 전역 정의 (Starlink) ---
 \tikzset{
     % 빔 효과 (파라미터 #1을 여기서 안전하게 정의)
     beam_cone/.style={
@@ -187,6 +187,27 @@ boxsep=0pt,left=6pt,right=6pt,top=2pt,bottom=2pt}
         color=#1, 
         opacity=0.8, 
         cap=round
+    }
+}
+% --- [Preamble] 피라미드 다이어그램 스타일 정의 ---
+\tikzset{
+    % 기본 레이어 스타일 (둥근 모서리 사각형, 흰색 굵은 글씨)
+    pyramid_layer/.style={
+        rectangle, rounded corners=5pt, draw=white, line width=2pt,
+        align=center, font=\sffamily\bfseries\small, text=white,
+        drop shadow={opacity=0.3}
+    },
+    % 최하단 기반층 (붉은색 강조)
+    foundation_layer/.style={
+        pyramid_layer, fill=red!80!black, minimum height=1.8cm, minimum width=10cm
+    },
+    % 중간 기술층 (파란색)
+    middle_layer/.style={
+        pyramid_layer, fill=blue!60!cyan, minimum height=1.5cm, minimum width=7.5cm
+    },
+    % 최상단 응용층 (초록색/청록색)
+    top_layer/.style={
+        pyramid_layer, fill=teal!70!green, minimum height=1.5cm, minimum width=5cm
     }
 }
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -256,7 +277,7 @@ boxsep=0pt,left=6pt,right=6pt,top=2pt,bottom=2pt}
 \frametitle{우리나라의 주요 주파수 대역별 용도}
     \begin{figure}
         \centering
-        \includegraphics[width=\textwidth, height=0.9\textheight, keepaspectratio]{freq_distribution}
+        \includegraphics[width=\textwidth, height=0.85\textheight, keepaspectratio]{freq_distribution}
         \caption{대한민국 주파수 분배현황(\protect\href{https://www.spectrum.or.kr/bbs/board.php?bo_table=frequency&page=}{Source: 전파진흥원 Spectrum Portal})}
     \end{figure}
 
@@ -630,10 +651,57 @@ boxsep=0pt,left=6pt,right=6pt,top=2pt,bottom=2pt}
 
 % Summary
 \section*{Summary}
-\begin{frame}{Summary}
+\begin{frame}{The Role of Communication Theory}
 \centering
 
-{\huge \textbf{``Communication Theory is the \textcolor{red}{Foundation} of our Connected Future.''}}
+    % 상단 문구 (Option 1을 기본으로 설정, 필요시 주석 해제하여 변경)
+    \Large \bfseries
+    % [Option 1] 시스템 관점
+    ``Communication Theory is \textcolor{red}{the Foundation} of Modern Digital \& Wireless Systems.''
+    % [Option 2] 본질 관점
+    % ``Communication Theory is \textcolor{red}{the Foundation} of Reliable Information Exchange.''
+
+    \vspace{0.5cm}
+
+    \resizebox{0.9\textwidth}{!}{%
+    \begin{tikzpicture}[node distance=0.3cm]
+        % --- 1. Foundation Layer (최하단) ---
+        \node[foundation_layer] (bottom) {
+            \Large COMMUNICATION THEORY\\[0.3em]
+            \normalsize (Signals, Noise, Probability, Limits)
+        };
+
+        % --- 2. Middle Layer (중간 기술) ---
+        \node[middle_layer, above=of bottom] (middle) {
+            \normalsize Essential Enabling Technologies\\[0.2em]
+            \footnotesize (Modulation, Coding, DSP, Multiplexing)
+        };
+
+        % --- 3. Top Layer (최상단 응용) ---
+        % [!] 교수님, 이곳에서 Option 1 또는 Option 2 텍스트를 선택하세요.
+        \node[top_layer, above=of middle] (top) {
+            % [Option 1 텍스트]
+            \normalsize MODERN DIGITAL \& WIRELESS SYSTEMS\\[0.2em]
+            \footnotesize (5G/6G, Satellite, WiFi, IoT)
+
+            % [Option 2 텍스트] - 사용 시 위 3줄 주석처리하고 아래 주석 해제
+            % \normalsize RELIABLE INFORMATION EXCHANGE\\[0.2em]
+            % \footnotesize (Global Connectivity, Data Integrity)
+        };
+
+        % --- 4. 부가 요소 (화살표 및 라벨) ---
+        % 상승 화살표 (Supporting Flow)
+        \draw[->, ultra thick, gray!50, line width=5pt, opacity=0.7]
+            ($(bottom.east)+(0.5, -0.5)$) to[out=45, in=-45] node[midway, right, font=\bfseries\small, text=gray] {Supports \& Enables} ($(top.east)+(0.5, 0.5)$);
+
+        % 왼쪽 라벨 (The Foundation)
+        \node[left=0.2cm of bottom, font=\bfseries\small, text=red!80!black, align=right] {The\\Foundation};
+        
+        % 왼쪽 라벨 (Real-world Impact)
+        \node[left=0.2cm of top, font=\bfseries\small, text=teal!80!black, align=right] {Real-world\\Impact};
+
+    \end{tikzpicture}
+    }
 \end{frame}
 
 \end{document}
